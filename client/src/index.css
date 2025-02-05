@@ -7,10 +7,9 @@
 .container {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
-    align-items: center;
-    background-color: #f1f1f1;
+ 
 }
 
 ul {
@@ -83,6 +82,20 @@ body.dark ul li a:hover {
     .navbar .bars {
         display: flex !important;
     }
+
+    .footer .row {
+display: block !important;
+/* flex-direction: column !important; */
+        /* display: none; */
+        font-size: 10px;
+    }
+    .footer .col-3 {
+      padding: 15px;
+    }
+       
+.footer .col-3 ul{
+    display: none;
+}
    
 }
 
@@ -92,8 +105,11 @@ body.dark ul li a:hover {
         background-color: blue;
     }
     .navbar {
-        padding: 0px 20px !important;
-
+        padding: 0px 30px !important;
+        gap: 200px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+      
     }
     .right-menu ul {
         display: none;
@@ -102,9 +118,50 @@ body.dark ul li a:hover {
         width: 150px;
     }
 
+    .left-menu{
+        padding-right: 80px;
+        
+      padding-left: 550PX;
+    }
     .left-menu i {
         display: none;
     }
+
+    .col-3 .icons{
+        display: flex;
+        gap: 40px;
+        font-size: 20px;
+        padding-top: 30px;
+        flex-wrap: wrap;
+    }
+    .icons i{
+        cursor: pointer;
+        width: 10%;
+        font-size: 19px;
+    }
+    
+    .row{
+        display: flex;
+        justify-content: center;
+        /* padding-top: 30px; */
+        gap: 20px;
+    }
+    .footer{
+        padding: 0px 40px;
+    }
+  
+    hr{
+        width: 1207px !important;
+        margin-top: 20px;
+    border: 0.5px solid gray ;
+    }
+    p{
+      
+      padding-left: 385PX;
+    }
+    
+    
+   
    
 
 }

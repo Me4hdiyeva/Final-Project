@@ -1,0 +1,44 @@
+.col-3 .icons{
+    display: flex;
+    gap: 40px;
+    font-size: 20px;
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+.icons i{
+    cursor: pointer;
+    width: 10%;
+    font-size: 19px;
+}
+
+.row{
+    display: flex;
+    gap: 200px;
+    justify-content: center;
+    /* padding-top: 30px; */
+}
+.col-3{
+ 
+}
+
+.col-3 ul{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.col-3 li{
+  font-size: 19px;
+}
+
+p{
+    font-size: 19px;
+text-align: center;
+color: gray;
+padding-top: 20px;
+
+}
+hr{
+    width: 100%;
+    margin-top: 20px;
+border: 0.5px solid gray ;
+}
