@@ -39,15 +39,73 @@ body {
 }
 
 body.dark {
-    background-color: black;
+    background-color: #181A20;
     color: white;
 }
 
 ul li a {
-    color: black;
+    color: 181A20;
     transition: color 0.3s ease-in-out;
 }
 
 body.dark ul li a {
     color: white;
 }
+
+body.dark ul li a:hover {
+    color: #F0B90B;
+}
+
+
+
+
+/* Mobil üçün */
+@media (max-width: 600px) {
+    body {
+        background-color: red;
+    }
+    .navbar {
+        padding: 0px 10px !important;
+
+    }
+    .right-menu ul {
+        display: none;
+    }
+    .right-menu img{
+        width: 110px;
+    }
+    .left-menu i {
+        display: none;
+    }
+    .left-menu button {
+        display: none;
+    }
+    .navbar .bars {
+        display: flex !important;
+    }
+   
+}
+
+/* Tablet üçün */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body{
+        background-color: blue;
+    }
+    .navbar {
+        padding: 0px 20px !important;
+
+    }
+    .right-menu ul {
+        display: none;
+    }
+    .right-menu img{
+        width: 150px;
+    }
+
+    .left-menu i {
+        display: none;
+    }
+   
+
+}
+

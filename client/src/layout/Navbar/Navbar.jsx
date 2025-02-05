@@ -84,10 +84,11 @@ const Navbar = () => {
                 <div className="left-menu">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <button>Log in</button>
-                    <button>Sign up</button>
+                    <button style={{backgroundColor:"#CFAF30"}}>Sign up</button>
                     <i class="fa-solid fa-globe"></i>
                     <Mode />
                 </div>
+                <i  class="fa-solid fa-bars bars"></i>
 
             </div>
 
