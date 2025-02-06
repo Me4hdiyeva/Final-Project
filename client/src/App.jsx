@@ -2,6 +2,8 @@
 import { Route, Routes } from 'react-router'
 import './App.css'
 import Main from './layout/Main'
+import Home from './pages/Home/Home'
+import Register from './pages/Register/Register'
 
 function App() {
 
@@ -9,7 +11,8 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Main/>}>
-          <Route />
+          <Route index element={<Home/>} />
+          <Route path='/register' element={<Register/>} />
 
         </Route>
 

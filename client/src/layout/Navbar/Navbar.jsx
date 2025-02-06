@@ -84,7 +84,13 @@ const Navbar = () => {
                 <div className="left-menu">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <button>Log in</button>
-                    <button style={{backgroundColor:"#CFAF30"}}>Sign up</button>
+                        <Link to={"/register"}>
+                    <button style={{backgroundColor:"#CFAF30"}}>
+                          Sign up
+                        
+                       </button>
+                        </Link>
+                        
                     <i class="fa-solid fa-globe"></i>
                     <Mode />
                 </div>
