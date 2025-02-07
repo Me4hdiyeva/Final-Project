@@ -6,6 +6,9 @@ const orderSchema = require('../models/modelsSchema.js');
 exports.createUser = async (req, res) => {
     try {
         console.log(req.body);
+        if (!username || !password) {
+            return res.status(400).json({ message: "Username and password are required" });
+        }
         
         const user = new userSchema(req.body);
         await user.save();

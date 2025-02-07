@@ -1,5 +1,6 @@
 import React from 'react'
  import './Register.css'
+import LoginGoogle from '../../components/LoginGoogle'
 
 const Register = () => {
   return (
@@ -11,6 +12,7 @@ const Register = () => {
     <input type="password"  placeholder='Password'/>
     <input type="password"  placeholder='Confirm Password'/>
     <input type="file" />
+    <LoginGoogle />
     <button>Register</button>
 
 

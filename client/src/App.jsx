@@ -4,6 +4,7 @@ import './App.css'
 import Main from './layout/Main'
 import Home from './pages/Home/Home'
 import Register from './pages/Register/Register'
+import Dashboard from './pages/Dashboard'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Route path='/' element={<Main/>}>
           <Route index element={<Home/>} />
           <Route path='/register' element={<Register/>} />
+          <Route path="/dashboard"  element={<Dashboard/>}/>
 
         </Route>
 
