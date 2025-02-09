@@ -43,14 +43,35 @@ const Home = () => {
             
 </div>
           <div className="col-6">
-<div className="coins">
+            <div className="coins">
+
+
+<div className="coin">
 
 <NewListing/>
 
 
 
 
+
+
+
 </div>
+<div className="coin">
+  <div className="hs">
+ 
+  <h2>News</h2>
+  <h3>View All News</h3>
+
+
+  </div>
+  <p>Grayscale Announces Job Openings For Key Positions</p>
+  <p>Ethereum Name Service Sees Surge In January Registrations</p>
+  <p>CleanSpark Reports January Bitcoin Mining Output</p>
+  <p>Kentucky's Bitcoin Reserve Proposal Sparks Global <br /> Accumulation Speculation</p>
+</div>
+
+            </div>
 
           </div>
 
