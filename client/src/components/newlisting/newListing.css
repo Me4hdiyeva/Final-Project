@@ -1,0 +1,26 @@
+.filter-buttons{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.filter-buttons button{
+
+
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: "BinancePlex", Arial, sans-serif;
+ color: 
+ rgb(234, 236, 239);
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* padding-top: 20px; */
+}
+.papular-list{
+ padding-left: 10%;
+ padding-top: 30px;
+}

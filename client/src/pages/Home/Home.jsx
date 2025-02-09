@@ -1,6 +1,7 @@
 import React from 'react'
 
 import './Home.css'
+import NewListing from '../../components/newlisting/NewListing'
 // import QRScanner from '../../components/QRScanner.JSX'
 
 const Home = () => {
@@ -43,9 +44,9 @@ const Home = () => {
 </div>
           <div className="col-6">
 <div className="coins">
-  
 
-s
+<NewListing/>
+
 
 
 
