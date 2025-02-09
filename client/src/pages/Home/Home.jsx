@@ -29,6 +29,10 @@ const Home = () => {
 
         <div className="col-6">
 <p>Download App</p>
+<div className="icons-google">
+
+<i class="fa-solid fa-qrcode"></i>
+</div>
 {/* <QRScanner /> */}
 
         </div>
