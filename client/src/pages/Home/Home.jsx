@@ -43,6 +43,7 @@ const Home = () => {
 </div>
           <div className="col-6">
 <div className="coins">
+  
 
 s
 

@@ -32,11 +32,15 @@
     border-radius: 5px;
     padding: 10px;
     margin-top: 10px;
+  
+    
+    
 }
 .email-phone-num-add-input button{
     width: 100%;
     height: 50px;
     width: 3 00px;
+/* color: #f0f0f0;   */
 
     border: 1px solid #f0f0f04e;
     border-radius: 5px;
@@ -47,10 +51,18 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+    /* padding-top: 20px; */
+}
+.footer-section{
+    padding-top: 100px;
 }
 .coins{
-    border: 2px solid #f0f0f0;
-    padding: 100px;
+    margin-left: 40%;
+    border: 2px solid #1E2329;
+  width: 550px;
+  height: 250px;
+    border-radius: 10px;
+    background-color: #1E2329;
 }
 .icons-google{
     display: flex;
@@ -63,3 +75,5 @@ border-radius: 10px;
 padding: 10px;
 margin-top: 10px;
 }
+
+
