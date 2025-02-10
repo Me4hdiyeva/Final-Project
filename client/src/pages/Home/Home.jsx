@@ -109,14 +109,24 @@ const Home = () => {
 
             </div>
             <div className="icons-about">
+              <div className="icons-p">
             <i class="fa-brands fa-apple"></i>
+            <p>MacOS</p>
+
+              </div>
+              <div className="icons-p">
             <i class="fa-brands fa-windows"></i>
+            <p>Windows</p>
+            
+              </div>
+              <div className="icons-p">
             <i class="fa-brands fa-linux"></i>
+            <p>Linux</p>
+            </div>
+
+                
             </div>
             <h4>More Download Options</h4>
-
-
-
           </div>
 
           </div>

@@ -175,19 +175,50 @@ margin-top: 10px;
 }
 .icons-about i{
     font-size: 40px;
-    border: 2px solid rgba(93, 79, 79, 0.589);
+    /* border: 2px solid rgba(93, 79, 79, 0.589); */
     border-radius: 10px;
+    cursor: pointer;
     padding: 10px;
     margin-top: 10px;
+  
+}
+.icons-about i:hover{
+    /* font-size: 40px; */
+    /* border: 2px solid rgba(93, 79, 79, 0.589); */
+    border-radius: 10px;
+    /* padding: 10px; */
+    /* margin-top: 10px; */
 }
 
 .about-binance h4{
-    padding-top: 80px;
+    /* padding-top: 80px; */
     font-size: 20px;
     line-height: 24px;
     font-weight: 500;
     font-family: "BinancePlex", Arial, sans-serif;
-    /* padding-left: 10%; */
+    padding-left: 5%;
     padding-top: 100px;
+    color: #f0f0f0;
+    padding-bottom: 30px;
+    
+    
+}
+.icons-p{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #1E2329;
+    border-radius: 20px;
+padding-left: 20px;
+padding-right: 20px;
+padding-bottom: 10px;
+/* padding-top: 10px; */
+  
+}
+.icons-p p{
+padding-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
     color: #f0f0f0;
 }
