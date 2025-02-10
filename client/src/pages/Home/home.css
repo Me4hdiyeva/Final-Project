@@ -123,3 +123,71 @@ margin-top: 10px;
    padding-left: 350px;
    color: gray;
 }
+
+.sections{
+    display: flex;
+    flex-direction: column;
+}
+
+.about-binance {
+    display: flex;
+  justify-content: space-between;
+    gap: 20px;
+    padding-top: 50px;
+    padding-left: 220px;
+}
+.about-binance h1{
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 600;
+    font-style:'BinancePlex', Arial, sans-serif; 
+    padding-top: 10px;
+    padding-bottom: 20px;
+    /* width: 900px; */
+}
+.qr{
+    /* margin-top: 200px; */
+    display: flex;
+    gap: 90px;
+
+}
+.qr p{
+  text-align: justify;
+  font-weight: 500;
+  line-height: 28px;
+  font-size: 20px;
+}
+.qr img{
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    border: 2px solid;
+}
+.icons-about{
+    display: flex;
+    /* gap: 10px; */
+    justify-content: space-between;
+    padding-top: 70px;
+    padding-left: 20px;
+}
+.icons-about i:hover{
+    color: gray;
+}
+.icons-about i{
+    font-size: 40px;
+    border: 2px solid rgba(93, 79, 79, 0.589);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.about-binance h4{
+    padding-top: 80px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    font-family: "BinancePlex", Arial, sans-serif;
+    /* padding-left: 10%; */
+    padding-top: 100px;
+    color: #f0f0f0;
+}

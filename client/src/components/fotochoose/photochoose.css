@@ -1,0 +1,13 @@
+.img-coin-about{
+    width: 500px;
+    height: 450px;
+    /* object-fit: cover;   */
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* .img-coin-a{
+    border: 2px solid;
+    width: 200px;
+    height: 400px;
+} */
+
