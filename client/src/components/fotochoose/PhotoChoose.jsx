@@ -19,7 +19,7 @@ const PhotoChoose = () => {
             <div className='img-coin-a'>
                 <img className='img-coin-about' src={images[selectedImage]} alt="selected"  />
             </div>
-            <div>
+            <div style={{ marginTop: '100px' }}>
                 <button onClick={() => setSelectedImage('image1')}>Image 1</button>
                 <button onClick={() => setSelectedImage('image2')}>Image 2</button>
                 <button onClick={() => setSelectedImage('image3')}>Image 3</button>

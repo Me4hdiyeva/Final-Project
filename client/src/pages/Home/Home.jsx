@@ -5,6 +5,7 @@ import NewListing from '../../components/newlisting/NewListing'
 import PhotoChoose from '../../components/fotochoose/PhotoChoose'
 // import QRScanner from '../../components/QRScanner.JSX'
 import Qrcode from '../../img/qrcode.png'
+import List from '../../components/list/List'
 
 const Home = () => {
   return (
@@ -135,6 +136,12 @@ const Home = () => {
 
         </div>
 
+</div>
+
+<div className="three-sec">
+
+
+<List/>
 </div>
 
 
