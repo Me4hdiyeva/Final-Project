@@ -96,7 +96,34 @@ display: block !important;
 .footer .col-3 ul{
     display: none;
 }
-   
+
+.first-sec .col-6 h1{
+font-size: 32px;
+font-weight: 700;
+line-height: 40px;
+text-align: center;
+}
+
+.phone-email-add{
+    display: none!important;
+}
+.email-phone-num-add-input button{
+    width: 160px!important;
+    margin: 0 auto;
+
+}
+.first-sec .footer-section{
+    display: none;
+}
+.qr{
+    display: none!important;
+}
+.second-sec .row{
+    display: block;
+}
+
+.first-sec .row{
+display: block;
 }
 
 /* Tablet üçün */
