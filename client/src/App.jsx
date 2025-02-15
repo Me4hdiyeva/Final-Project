@@ -5,6 +5,7 @@ import Main from './layout/Main'
 import Home from './pages/Home/Home'
 import Register from './pages/Register/Register'
 import Dashboard from './pages/Dashboard'
+import BuyCrypto from './pages/BuyCrypto/BuyCrypto'
 
 function App() {
 
@@ -15,6 +16,11 @@ function App() {
           <Route index element={<Home/>} />
           <Route path='/register' element={<Register/>} />
           <Route path="/dashboard"  element={<Dashboard/>}/>
+          <Route path="/buyCrypto"  element={<BuyCrypto/>}/>
+
+
+
+
 
         </Route>
 

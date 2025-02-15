@@ -104,6 +104,13 @@ line-height: 40px;
 text-align: center;
 }
 
+.first-sec .col-6 {
+    /* font-size: 16px; */
+    /* line-height: 24px; */
+    text-align: center;
+    /* margin-top: 20px; */
+}
+
 .phone-email-add{
     display: none!important;
 }
@@ -124,8 +131,21 @@ text-align: center;
 
 .first-sec .row{
 display: block;
-}
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto;
 
+}
+.container{
+    display: block;
+    padding: 0px 10px;
+}
+.coins .coin{
+    background-color: transparent;
+    border: none;
+}
+}
 /* Tablet üçün */
 @media (min-width: 601px) and (max-width: 1024px) {
     body{
