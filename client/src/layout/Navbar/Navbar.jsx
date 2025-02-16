@@ -89,6 +89,7 @@ const Navbar = () => {
                     <button>Log in</button>
                         <Link to={"/register"}>
                     <button style={{backgroundColor:"#CFAF30"}}>
+                     
                           Sign up
                         
                        </button>

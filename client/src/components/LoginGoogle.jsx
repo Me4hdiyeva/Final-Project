@@ -6,7 +6,7 @@ const LoginGoogle = () => {
       };
   return (
     <div>
-    <h2>Google ilə daxil ol</h2>
+    {/* <h2>Google ilə daxil ol</h2> */}
     <button onClick={handleGoogleLogin}>Google ilə Daxil Ol</button>
   </div>
   )

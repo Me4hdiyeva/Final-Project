@@ -1,0 +1,43 @@
+.crypto-sec h1{
+ font-size: 56px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+.crypto-sec{
+   padding-top: 90px;
+}
+
+.hot-Cryptos{
+  border: 1px solid #090909;
+ 
+
+  margin-top: 70px;
+
+}
+
+.hot-Cryptos h3{
+    padding: 12px;
+}
+
+.hot-Cryptos img{
+    width: 24px;
+    height: 24px;
+}
+.crypts{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.div-img{
+display: flex;
+}
+.price-crypyto{
+    text-align: right;
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: 0%;
+}
