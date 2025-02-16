@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import './Home.css'
 import NewListing from '../../components/newlisting/NewListing'
@@ -6,8 +6,35 @@ import PhotoChoose from '../../components/fotochoose/PhotoChoose'
 // import QRScanner from '../../components/QRScanner.JSX'
 import Qrcode from '../../img/qrcode.png'
 import List from '../../components/list/List'
+import axios from 'axios';
 
 const Home = () => {
+
+  const [userr, setUsers] = useState([])
+
+  const getQuantifyUsers = async () => {
+    try {
+      const response = await axios.get('http://localhost:3000/api/users');
+      
+      // Cavabın strukturunu yoxlayın
+      if (response && response.data) {
+        const users = response.data;
+        console.log(users); // Cavabı yoxlayın
+      } else {
+        console.log('No users data found');
+      }
+    } catch (error) {
+      console.log("Error:", error);
+    }
+  };
+  
+  useEffect(() => {
+    getQuantifyUsers();
+  }, []);
+  
+
+
+
   return (
     <>
       <div className="container">

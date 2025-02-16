@@ -34,10 +34,17 @@
 }
 .div-img{
 display: flex;
+gap: 10px;
+text-transform: uppercase ;
 }
-.price-crypyto{
+/* .price-crypyto{
     text-align: right;
 flex-grow: 1;
 flex-shrink: 1;
 flex-basis: 0%;
+} */
+
+
+.procent-crypto{
+    color: red;
 }
