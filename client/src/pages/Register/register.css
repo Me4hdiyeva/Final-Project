@@ -1,5 +1,5 @@
 .register{
-    border: 2px solid black;
+    border: 2px solid gray;
     width: 30%;
     margin: 0 auto;
     display: flex;
@@ -8,6 +8,8 @@
     padding: 20px;
     border-radius: 10px;
     margin-top: 240px;
+    margin-bottom: 40px;
+
 
 }
 input{
@@ -25,4 +27,13 @@ padding-left: 20px;
 line-height: 40px;
 font-weight: 600;
 margin-bottom: 30px;
+}
+.register p{
+display: flex;
+gap: 20px;
+}
+
+p hr{
+    width: 180px;
+    margin-bottom: 30px
 }

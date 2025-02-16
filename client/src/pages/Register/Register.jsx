@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
  import './Register.css'
 import LoginGoogle from '../../components/LoginGoogle'
 
 const Register = () => {
+
+  [register, setRegister] = useState([])
+
+  
+
+
+
+
+
   return (
     <>
  
@@ -16,8 +25,24 @@ const Register = () => {
     <input type="password"  placeholder='Password'/>
     <input type="password"  placeholder='Confirm Password'/>
     <input type="file" />
+    <button  style={{
+      padding:"10px",
+      width:"425px",
+      borderRadius:"5px",
+      // marginTop:"20px",
+      backgroundColor:"#CFAF20",
+      color:"black",
+      marginTop:"30px"
+
+    }}>
+      
+      Next</button>
+    
+
+      <p><hr />or <hr /></p>
+
+    
     <LoginGoogle />
-    <button>Register</button>
 
 
 
