@@ -86,7 +86,11 @@ const Navbar = () => {
 
                 <div className="left-menu">
                     <i class="fa-solid fa-magnifying-glass"></i>
+                    <Link to={"/login"}>
+                    
                     <button>Log in</button>
+                    
+                    </Link>
                         <Link to={"/register"}>
                     <button style={{backgroundColor:"#CFAF30"}}>
                      

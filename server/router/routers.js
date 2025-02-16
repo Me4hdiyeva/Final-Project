@@ -1,14 +1,17 @@
 const express = require('express');
-const { createUser, createProduct, createOrder, getOrders, getProducts, getUsers } = require('../controllers/controllers.js');
+const { createUser, createProduct, createOrder, getOrders, getProducts, getUsers,loginUsers } = require('../controllers/controllers.js');
 
-const router = express.Router();
+const   router = express.Router();
 // 
 const passport = require('passport');
 
 // POST routes for creating user, product, order
-router.post('/user', createUser);
+router.post('/users', createUser);
 router.post('/product', createProduct);
 router.post('/order', createOrder);
+router.post('/api/login', loginUsers);
+
+
 
 // GET routes for fetching users, products, orders
 router.get('/users', getUsers);
