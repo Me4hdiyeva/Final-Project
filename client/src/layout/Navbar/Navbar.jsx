@@ -24,7 +24,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link>
+                            <Link to={"/allCoins"}>
                                 Markets
                             </Link>
                         </li>
