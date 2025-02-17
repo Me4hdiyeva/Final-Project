@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./NewListing.css";
 import axios from "axios";
+import { Link } from "react-router";
 
 const NewListing = () => {
   const [coins, setCoins] = useState([]); 
@@ -70,7 +71,11 @@ const NewListing = () => {
       <div className="filter-buttons">
         <button onClick={() => setFilter("popular")}>Popular</button>
         <button onClick={() => setFilter("all")}>New Listing</button>
+        <Link to={"./allCoins"}>
         <button style={{ color: "gray" }}>View All 350+ Coins</button>
+        
+        
+        </Link>
       </div>
 
       <div className="papular-list">

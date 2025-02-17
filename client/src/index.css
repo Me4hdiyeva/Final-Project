@@ -55,6 +55,17 @@ body.dark ul li a:hover {
     color: #F0B90B;
 }
 
+body.dark  th{
+    background-color: #181A20;
+    color: aliceblue;
+}
+body.dark .css-fa111x-MuiPaper-root{
+    background-color: #181A20;
+}
+body.dark tr{
+    color: white;
+}
+
 
 
 

@@ -7,6 +7,7 @@ import Register from './pages/Register/Register'
 import Dashboard from './pages/Dashboard'
 import BuyCrypto from './pages/BuyCrypto/BuyCrypto'
 import Login from './pages/Login/Login'
+import AllCoins from './pages/allcoins/AllCoins'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route index element={<Home/>} />
           <Route path="/dashboard"  element={<Dashboard/>}/>
           <Route path="/buyCrypto"  element={<BuyCrypto/>}/>
+          <Route path='/allCoins'  element={<AllCoins/>}/>
 
 
 
