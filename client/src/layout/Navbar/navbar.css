@@ -24,6 +24,9 @@ img {
 .left-menu button {
     padding: 15px;
 }
+.left-menu .log{
+    background-color: #EEF0F2;
+}
 .left-menu i {
     font-size: 20px;
 }

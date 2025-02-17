@@ -89,9 +89,9 @@ const NewListing = () => {
                 </h1>
                 <p>${item.market_cap.toLocaleString()}</p>
                 <p
-                  style={{
-                    color:
-                      item.price_change_percentage_24h < 0 ? "red" : "green",
+                    style={{
+                      color:
+                          item.price_change_percentage_24h < 0 ? "red" : "green",
                   }}
                 >
                   {item.price_change_percentage_24h.toFixed(2)}%

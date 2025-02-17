@@ -88,7 +88,7 @@ const Navbar = () => {
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <Link to={"/login"}>
                     
-                    <button>Log in</button>
+                    <button className='log'>Log in</button>
                     
                     </Link>
                         <Link to={"/register"}>
