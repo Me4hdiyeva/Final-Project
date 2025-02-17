@@ -24,6 +24,7 @@
 }
 .email-phone-num-add-input{
     display: flex;
+    gap: 20px;
 }
 .email-phone-num-add-input input{
     width: 100%;
