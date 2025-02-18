@@ -64,3 +64,83 @@ margin-right: 30px;
 .procent-crypto{
     color: red;
 }
+
+.buy-crypto{
+    /* border: 1px solid gray; */
+    padding-top: 150px;
+ 
+}
+
+.spend{
+    display: flex;
+    gap: 30px;
+}
+
+.buy-crypto input{
+    border: 1px solid gray;
+    width: 400px;
+    height: 80px;
+    color: gray;
+
+}
+.receve{
+    /* border: 1px solid; */
+    display: flex;
+    gap: 30px;
+}
+.buy-crypto h1{
+    font-size: 54px;
+    font-weight: 600;
+   /* text-align: center; */
+   /* padding-top: 30px; */
+   padding-left: 25px;
+   padding-bottom: 20px;
+
+}
+.custom-select {
+    background-color: transparent;
+    color: #333;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    appearance: none; 
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.custom-select:focus {
+    border-color: gray;
+    box-shadow: 0 0 5px rgba(100, 100, 100, 0.3);
+}
+
+.custom-select {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23666'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+    height: 70px;
+    margin-top: 12px;
+}
+
+
+.custom-select option {
+    padding: 12px; 
+}
+
+ .buy-crypto button{
+width: 400px;
+height: 70px;
+margin-left: 25px;
+border: 1px solid;
+padding-top: 5px;
+margin-top: 20px;
+background-color: #e4c64de1;
+color: black;
+font-size: 24px;
+font-weight: 600;
+}
+
+  

@@ -20,20 +20,20 @@ const BuyCrypto = () => {
 
     }
     useEffect(() => {
-        
+
         getHotCoins();
 
         const interval = setInterval(() => {
             getHotCoins();
         }, 240000);
 
-       
+
         return () => clearInterval(interval);
-    }, []); 
+    }, []);
 
 
 
-   
+
 
 
     return (
@@ -52,7 +52,7 @@ const BuyCrypto = () => {
                                         <img src={coin.image} alt="" />
                                         {coin.symbol}
                                     </div>
-                                
+
                                     <div className="price-crypyto">${coin.current_price}</div>
                                     <div className="procent-crypto">{coin.price_change_percentage_24h}</div>
                                 </div>
@@ -64,6 +64,36 @@ const BuyCrypto = () => {
 
 
                     </div>
+                </div>
+
+                <div className="buy-crypto">
+                    <h1>Buy</h1>
+                    <div className="spend">
+                        <input placeholder='3.000-1,350,000' type="text" />
+                        <select class="custom-select">
+                            <option value="ARS">Ars</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                        </select>
+
+
+                    </div>
+                    <div className="receve">
+                        <input placeholder='0' type="text" />
+                        <select class="custom-select">
+                            <option value="ARS">Ars</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                        </select>
+                    </div>
+
+                    <button>Verify Identity</button>
+
+
+
+
+
+
                 </div>
             </div>
         </>
