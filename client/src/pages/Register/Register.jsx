@@ -2,49 +2,41 @@ import React, { useState } from 'react'
 import './Register.css'
 import LoginGoogle from '../../components/LoginGoogle'
 import axios from 'axios';
+import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router';
 
 const validatePassword = (password) => {
-  const passwordPattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+  const passwordPattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
   return passwordPattern.test(password);  // Əgər şifrə uyğun gəlirsə, true qaytarır
 };
 
 
 const Register = () => {
+  const navigate = useNavigate()
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  
+
   const handleSubmit = async (e) => {
 
     e.preventDefault();
 
-  if (!validatePassword(password)) {
-    alert('Password must be at least 8 characters long, contain one uppercase letter, one number, and one special character.');
-    return;
-  }
-
-
-    
+    if (!validatePassword(password)) {
+      toast.error('Xahiş edirik ən az 8 simboldan, bir böyük hərf, bir rəqəm və bir xüsusi işarədən ibarət şifrə təyin edin!');
+      return;
+    }
     const userData = { username, email, password };
-    
- 
+
     try {
-      const response = await axios.post('http://localhost:3000/api/users', userData);
-      alert(response.data.message);
-      alert('created')
+      const response = await axios.post('http://localhost:3000/api/auth/register', userData);
+      toast.success(response.data.message);
+      navigate("/login")
     } catch (error) {
+      if (error.response.status == 403) return toast.error(error.response.data.message)
       console.error('Error:', error);
-      alert('User registration failed');
     }
   };
-
-
-
-
-
-
-
 
 
   return (
@@ -86,7 +78,8 @@ const Register = () => {
           {/* <input type="file" /> */}
           <button type='submit' style={{
             padding: "10px",
-            width: "425px",
+            width:"90%",
+            maxWidth: "425px",
             borderRadius: "5px",
             // marginTop:"20px",
             backgroundColor: "#CFAF20",
@@ -98,15 +91,8 @@ const Register = () => {
             Next</button>
 
           <p><hr />or <hr /></p>
-
-
           <LoginGoogle />
         </form>
-
-
-
-
-
 
       </div>
 

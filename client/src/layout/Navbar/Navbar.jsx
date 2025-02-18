@@ -24,7 +24,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to={"/allCoins"}>
+                            <Link>
                                 Markets
                             </Link>
                         </li>
@@ -88,7 +88,7 @@ const Navbar = () => {
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <Link to={"/login"}>
                     
-                    <button className='log'>Log in</button>
+                    <button>Log in</button>
                     
                     </Link>
                         <Link to={"/register"}>

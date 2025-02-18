@@ -24,11 +24,6 @@
 }
 .email-phone-num-add-input{
     display: flex;
-    gap: 20px;
-}
-.phone-email-add{
-    color: gray;
-    border: 1px solid rgba(128, 128, 128, 0);
 }
 .email-phone-num-add-input input{
     width: 100%;
@@ -73,21 +68,12 @@
 }
 .coin{
     margin-left: 20%;
-    /* border: 2px solid #1E2329; */
+    border: 2px solid #1E2329;
   width: 650px;
   height: 300px;
     border-radius: 40px;
-    background-color: #EEF0F2;
-    
+    background-color: #1E2329;
 
-
-}
-
-.coin p{
-    color: gray !important;
-}
-.filter-buttons button{
-    color: #1E2329 !important;
 }
 .icons-google{
     display: flex;
@@ -108,7 +94,6 @@ margin-top: 10px;
     font-family: "BinancePlex", Arial, sans-serif;
     padding-left: 10%;
     padding-top: 30px;
-    color: gray;
 
 }
 .coin p{

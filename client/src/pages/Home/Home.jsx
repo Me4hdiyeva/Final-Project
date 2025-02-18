@@ -7,7 +7,6 @@ import PhotoChoose from '../../components/fotochoose/PhotoChoose'
 import Qrcode from '../../img/qrcode.png'
 import List from '../../components/list/List'
 import axios from 'axios';
-import { Helmet } from 'react-helmet-async'
 
 const Home = () => {
 
@@ -15,7 +14,7 @@ const Home = () => {
 
   const getQuantifyUsers = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/users');
+      const response = await axios.get('http://localhost:3000/api/auth/register');
       
       // Cavabın strukturunu yoxlayın
       if (response && response.data) {
@@ -38,10 +37,6 @@ const Home = () => {
 
   return (
     <>
-     <Helmet>
-        <title>Binance</title>
-     
-      </Helmet>
       <div className="container">
         <div className="sections">
 

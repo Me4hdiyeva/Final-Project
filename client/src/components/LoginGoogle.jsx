@@ -9,8 +9,9 @@ const LoginGoogle = () => {
     {/* <h2>Google ilə daxil ol</h2> */}
     <button style={{
       padding:"10px",
+      width:"90%",
       border:"1px solid gray",
-      width:"424px",
+      maxWidth:"424px",
       borderRadius:"5px",
       display:"flex",
       gap:"120px",
