@@ -1,12 +1,13 @@
 const express = require('express');
 const app = express();
 require('dotenv/config');
+const path = require("path")
 const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 const { default: mongoose } = require('mongoose');
 require("./gmailAuth");
-
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 const session = require("express-session");
 app.use(session({
   secret: process.env.JWT_SECRET_KEY,
