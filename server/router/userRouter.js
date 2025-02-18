@@ -1,5 +1,5 @@
 const express = require('express');
-const { createUser, getUsers, loginUsers, deleteAllUsers } = require('../controllers/controllers.js');
+const { createUser, getUsers, loginUsers, deleteAllUsers, getUserById } = require('../controllers/controllers.js');
 const { authenticateToken } = require('../middleware/verifyToken.js');
 const passport = require('passport');
 
@@ -8,6 +8,7 @@ const router = express.Router();
 // router.get('/deluser', deleteAllUsers);
 
 router.get('/users', getUsers);
+router.get('/users/:id', getUserById);
 router.post('/register', createUser);
 router.post('/login', loginUsers);
 
