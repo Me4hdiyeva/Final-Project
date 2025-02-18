@@ -11,6 +11,7 @@ import { Toaster } from 'react-hot-toast'
 import UserNavBar from './layout/Navbar/UserNavBar'
 import UserMain from './layout/UserMain'
 import Error404 from './pages/Error404'
+import AllCoins from './pages/allcoins/AllCoins'
 function App() {
 
   return (
@@ -23,6 +24,9 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/buyCrypto" element={<BuyCrypto />} />
+          <Route path='/allCoins' element={<AllCoins/>}/>
+          {/* <Route path='/allCoins'  element={<AllCoins/>}/> */}
+
         </Route>
 
         {

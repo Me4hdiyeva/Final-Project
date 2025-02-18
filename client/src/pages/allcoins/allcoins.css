@@ -1,0 +1,32 @@
+.procent-crypto {
+
+}
+.crypts .price{
+    font-size: 24px !important;
+    font-weight: 400 !important;
+    line-height: 20px !important;
+}
+.crypts h1 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.crypts{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.allcoins .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.allcoins .col-3{
+    width: 40%;
+  
+    
+}
+
