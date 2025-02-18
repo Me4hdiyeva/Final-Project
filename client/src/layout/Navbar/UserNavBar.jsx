@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router'
+import Mode from '../../components/Mode'
 
 function UserNavBar() {
     return (
@@ -17,7 +19,7 @@ function UserNavBar() {
     <ul>
         <li>
             <Link to={"/buyCrypto"}>
-                Buy Crypto
+                Buy Cryptos
             </Link>
         </li>
         <li>
@@ -102,6 +104,9 @@ function UserNavBar() {
 <i  class="fa-solid fa-bars bars"></i>
 
 </div>
+
+
+
         
         </>
     )
