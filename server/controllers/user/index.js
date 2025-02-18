@@ -89,6 +89,17 @@ exports.getUsers = async (req, res) => {
     }
 }
 
+exports.getUserById = async (req, res) => {
+    try {
+        const user = await User.findById({ _id: req.params.id })
+        res.status(200).json(user);
+    } catch (error) {
+        // console.log("Server error", error);
+        if (error.name == "CastError") return res.status(404).json({message: "Verilmiş id üzrə istifadəçi tapılmadı"})
+        res.status(500).json(error)
+    }
+}
+
 
 exports.deleteAllUsers = async (req, res) => {
     try {

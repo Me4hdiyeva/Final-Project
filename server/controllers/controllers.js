@@ -1,5 +1,6 @@
 const { createProduct, getProducts } = require("./products");
 const { getOrders, createOrder } = require("./orders");
-const { createUser, getUsers, loginUsers, deleteAllUsers } = require("./user");
+const { createUser, getUsers, loginUsers, deleteAllUsers, getUserById } = require("./user");
+const { addImg } = require("./uploadImg");
 
-module.exports = { createUser, getUsers, loginUsers,deleteAllUsers, createProduct, getProducts, getOrders, createOrder }
+module.exports = { createUser, getUserById, getUsers, loginUsers, deleteAllUsers, addImg, createProduct, getProducts, getOrders, createOrder }
