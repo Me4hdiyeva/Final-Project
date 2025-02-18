@@ -85,24 +85,25 @@ function UserNavBar() {
 
 <div className="left-menu">
     <i class="fa-solid fa-magnifying-glass"></i>
-    <Link to={"/login"}>
+    {/* <Link to={"/login"}>
     
     <button>Log in</button>
     
-    </Link>
-        <Link to={"/register"}>
+    </Link> */}
+        <Link to={"/"}>
     <button style={{backgroundColor:"#CFAF30"}}>
      
-          Sign up
+          Log out
         
        </button>
         </Link>
         
     <i class="fa-solid fa-globe"></i>
+    <i class="fa-solid fa-square-caret-down"></i>
+<i class="fa-solid fa-user"></i>
     <Mode />
 </div>
 <i  class="fa-solid fa-bars bars"></i>
-
 </div>
 
 
