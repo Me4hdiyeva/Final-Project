@@ -32,7 +32,10 @@ function App() {
         {
           localStorage.getItem("token") &&
           <Route path='/admin' element={<UserNavBar />}>
+            {/* <Route path="/buyCrypto" element={<BuyCrypto />} /> */}
             <Route index element={<UserMain />} />
+
+
           </Route>
         }
 
