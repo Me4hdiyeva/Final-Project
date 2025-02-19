@@ -11,6 +11,8 @@ import UserMain from './layout/UserMain'
 import Error404 from './pages/Error404'
 import AllCoins from './pages/allcoins/AllCoins'
 import UserLayout from './layout/LoginLayout/UserLayout'
+import Payment from './pages/payment/Payment'
+import Auth from './layout/Auth'
 function App() {
 
   return (
@@ -25,8 +27,10 @@ function App() {
           <Route path='/allCoins' element={<AllCoins />} />
         </Route>
 
-        <Route path='/dashboard' element={<UserLayout />}>
+        <Route path='/dashboard' element={<Auth><UserLayout /></Auth>} >
           <Route index element={<UserMain />} />
+          <Route path='payment' element={<Payment />} />
+
         </Route>
 
         <Route path='*' element={<Error404 />} />
