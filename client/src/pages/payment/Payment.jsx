@@ -3,15 +3,15 @@ import React from 'react'
 function Payment() {
     return (
         <section className="fixed inset-0 flex justify-center align-center h-screen bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
-            <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
+            <div className="w-[90%] mx-auto max-w-screen-xl px-4 2xl:px-0">
                 <div className="mx-auto max-w-5xl">
                     <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">
                         Payment
                     </h2>
-                    <div className="mt-6 sm:mt-8 lg:flex lg:items-start lg:gap-12">
+                    <div className="mt-6 sm:mt-8 lg:flex lg:items-start lg:gap-12 ">
                         <form
                             action="#"
-                            className="w-full rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6 lg:max-w-xl lg:p-8"
+                            className="w-full !ml-0 rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6 lg:max-w-xl lg:p-8"
                         >
                             <div className="mb-6 grid grid-cols-2 gap-4">
                                 <div className="col-span-2 sm:col-span-1">
