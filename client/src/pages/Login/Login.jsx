@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router'
 import "./login.css"
 import toast from 'react-hot-toast';
 import { loginUser } from '../../services/api';
+import LoginGoogle from '../../components/LoginGoogle';
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -61,9 +62,7 @@ const Login = () => {
             Create a Binance Account
           </button>
         </Link>
-
-
-
+        <LoginGoogle />
 
 
       </div>

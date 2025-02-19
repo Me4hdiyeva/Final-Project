@@ -13,6 +13,16 @@ async function loginUser(username, password) {
     }
 }
 
+async function verifyToken() {
+    try {
+        const verify = await axiosInstanse.get("/auth/verify-token")
+        return verify.data
+    } catch (error) {
+        console.log(error);
+        return error
+    }
+}
+
 export {
-    loginUser
+    loginUser, verifyToken
 }

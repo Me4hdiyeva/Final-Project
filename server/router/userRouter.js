@@ -23,7 +23,8 @@ router.get("/verify-token", authenticateToken, (req, res) => {
 router.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
 router.get('/google/callback', passport.authenticate('google', { failureRedirect: '/' }),
     (req, res) => {
-        res.json({ message: "Logged in successfully!", user: req.user.user, token: req.user.token });
+        const redirectURL = `http://localhost:5173/dashboard?token=${req.user.token }`;
+        res.redirect(redirectURL);
     }
 );
 
