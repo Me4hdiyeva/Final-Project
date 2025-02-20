@@ -5,9 +5,12 @@ import TableCoinsAll from '../../components/TableCoinsAll'
 
 const AllCoins = () => {
     const [coins, setCoins] = useState([])
-
+    const[ newCoin , setNewCoin] = useState([])
+    const [ marketCaps , setMarketCaps] = useState([])
+    const [tradingVolume, setTradingVolume] = useState([]);
+    
     const getCoin = async () => {
-        const getCryptos = await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd", {
+        const getCryptos = await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=price_change_percentage_24h_desc&per_page=3&page=1", {
             params: {
                 //   vs_currency: "usd",
                 order: "market_cap_desc",
@@ -18,6 +21,8 @@ const AllCoins = () => {
         })
         console.log(getCryptos.data);
         setCoins(getCryptos.data)
+
+
 
 
 
@@ -38,16 +43,40 @@ const AllCoins = () => {
 
     }
 
+    const getnewCoins = async () => {
+       const getCoin =  await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd")
+    //    console.log(getCoin.data);
+       const newDatas = getCoin.data.slice(-3)
+       console.log(newDatas);
+       setNewCoin(newDatas)
+    }
+
+    const marketCap = async () => {
+        const getMarketCap = await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=volume_desc&per_page=3&page=1")
+        setMarketCaps(getMarketCap.data)
+        console.log(getMarketCap.data);
+        
+    }
 
     useEffect(() => {
         getCoin();
-
+        getTradingVolume()
+        marketCap()
+        getnewCoins()
         const interval = setInterval(() => {
             getCoin();
         }, 240000);
 
         return () => clearInterval(interval);
     }, []);
+
+
+    const getTradingVolume = async () => {
+        const getVolume = await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=price_change_percentage_24h_desc&per_page=3&page=1");
+        setTradingVolume(getVolume.data);
+        console.log(getVolume.data);
+    };
+
 
 
 
@@ -109,9 +138,9 @@ const AllCoins = () => {
                         </div>
                         <div className="col-3">
                             <div className='hot-Cryptos'>
-                                <h3>Hot Cryptos</h3>
+                                <h3>New Cryptos</h3>
                                 {
-                                    coins.map((item, index) => (
+                                    newCoin.map((item, index) => (
                                         <div className="crypts">
                                             <div className="div-img">
                                                 <img src={item.image} alt="" />
@@ -159,9 +188,9 @@ const AllCoins = () => {
                         </div>
                         <div className="col-3">
                             <div className='hot-Cryptos'>
-                                <h3>Hot Cryptos</h3>
+                                <h3>Market Cap</h3>
                                 {
-                                    coins.map((item, index) => (
+                                    marketCaps.map((item, index) => (
                                         <div className="crypts">
                                             <div className="div-img">
                                                 <img src={item.image} alt="" />
@@ -209,9 +238,9 @@ const AllCoins = () => {
                         </div>
                         <div className="col-3">
                             <div className='hot-Cryptos'>
-                                <h3>Hot Cryptos</h3>
+                                <h3>Trading Volume</h3>
                                 {
-                                    coins.map((item, index) => (
+                                    tradingVolume.map((item, index) => (
                                         <div className="crypts">
                                             <div className="div-img">
                                                 <img src={item.image} alt="" />

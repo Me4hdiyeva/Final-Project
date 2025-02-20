@@ -14,6 +14,9 @@ import Paper from '@mui/material/Paper';
 import { TableVirtuoso } from 'react-virtuoso';
 import Chance from 'chance';
 import axios from 'axios';
+import NewListing from '../newlisting/NewListing';
+import TableCoinsAll from '../TableCoinsAll';
+
 
 const chance = new Chance(42);
 function createData(id) {
@@ -135,15 +138,18 @@ export default function LabTabs() {
           </TabList>
         </Box>
         <TabPanel value="1">
+     
+     
 
-        <Paper style={{ height: 400, width: '100%' }}>
+        {/* <Paper style={{ height: 400, width: '100%'}}>
       <TableVirtuoso
+    
         data={rows}
         components={VirtuosoTableComponents}
         fixedHeaderContent={fixedHeaderContent}
         itemContent={rowContent}
       />
-    </Paper>
+    </Paper> */}
         </TabPanel>
         <TabPanel value="2">Item Two</TabPanel>
         <TabPanel value="3">Item Threez</TabPanel>

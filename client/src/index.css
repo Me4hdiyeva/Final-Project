@@ -70,6 +70,13 @@ body.dark .tablecell{
     color: aliceblue;
 }
 
+body.dark .MuiStep-horizontal span{
+    color: aliceblue;
+}
+body.dark {
+    color: aliceblue;
+}
+
 
 
 /* Mobil üçün */
