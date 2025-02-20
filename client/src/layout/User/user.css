@@ -1,7 +1,11 @@
+.users-page{
+    padding-left: 180px;
+}
+
 .user-data{
     display: flex;
     gap: 100px;
-    padding-left: 180px;
+    /* padding-left: 180px;  */
     padding-top: 50px;
 }
 .user-data h1{
@@ -12,7 +16,6 @@
     display: flex;
     gap: 10px;
     color: black ;
-    font-weight: 600;
     font-size: 19px ;
     font-weight: 600 ;
     line-height: 24px ;
@@ -37,3 +40,42 @@
 .followers{
     /* display: flex; */
 }
+
+.balances{
+    margin-top: 100px;
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+.balances h1{
+    font-size: 19px ;
+    font-weight: 700 ;
+    line-height: 24px ; 
+}
+.balances h2{
+    padding-top: 10px;
+    font-size: 19px ;
+    font-weight: 700 ;
+    line-height: 24px ; 
+}
+.balances h3{
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.balances i{
+    padding-left: 10px;
+    cursor: pointer;
+}
+.balances button{
+position: absolute;
+top: 20px;
+right: 30px;
+color: rgb(38, 37, 37);
+font-weight: 500;
+padding: 9px;
+background-color: #dcdfe1d9;
+
+}
+
+
