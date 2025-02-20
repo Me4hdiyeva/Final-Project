@@ -15,6 +15,7 @@ import Payment from './pages/payment/Payment'
 import Auth from './layout/Auth'
 import Earn from './pages/earn/Earn'
 import About from './pages/about/About'
+import Settings from './pages/settings/Settings'
 function App() {
 
   return (
@@ -36,6 +37,8 @@ function App() {
           <Route index element={<UserMain />} />
 
           <Route path='payment' element={<Payment />} />
+          <Route path='settings' element={<Settings />} />
+
 
         </Route>
 

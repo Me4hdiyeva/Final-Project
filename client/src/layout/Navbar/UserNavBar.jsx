@@ -67,12 +67,7 @@ function UserNavBar() {
 
                             </Link>
                         </li>
-                        <li>
-                            <Link>
-                             Assets
-
-                            </Link>
-                        </li>
+                   
                         <li>
                             <Link>
                                 More
@@ -93,6 +88,10 @@ function UserNavBar() {
                     <i class="fa-solid fa-globe"></i>
                     <i class="fa-solid fa-square-caret-down"></i>
                     <i class="fa-solid fa-user"></i>
+                    <Link to={"settings"}>
+                    <i class="fa-solid fa-gear"></i>
+                    
+                    </Link>
                     <Mode />
                 </div>
                 <i class="fa-solid fa-bars bars"></i>
