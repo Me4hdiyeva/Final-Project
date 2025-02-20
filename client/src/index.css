@@ -62,6 +62,13 @@ body.dark .user-name h1{
     color: rgb(239, 235, 235);
 }
 
+body.dark .paper{
+    background-color: #181A20;
+}
+body.dark .tablecell{
+    background-color: #181A20;
+    color: aliceblue;
+}
 
 
 

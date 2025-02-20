@@ -56,13 +56,13 @@ const TableCoinsAll = () => {
     };
 
     return (
-        <Paper sx={{ width: '100%', overflow: 'hidden' , paddingTop:"30px", marginBottom:"200px"}}>
-            <TableContainer sx={{ maxHeight: 440 }}>
-                <Table stickyHeader aria-label="sticky table">
+        <Paper className='paper' sx={{ width: '100%', overflow: 'hidden', paddingTop:"30px", marginBottom:"200px", backgroundColor: "white",}}>
+            <TableContainer   sx={{ maxHeight: 440 }}>
+                <Table  stickyHeader aria-label="sticky table">
                     <TableHead>
-                        <TableRow>
+                        <TableRow >
                             {columns.map((column) => (
-                                <TableCell key={column.id} align={column.align} style={{ minWidth: column.minWidth }}>
+                                <TableCell className='tablecell' key={column.id} align={column.align} style={{ minWidth: column.minWidth}  }>
                                     {column.label}
                                 </TableCell>
                             ))}
@@ -72,7 +72,7 @@ const TableCoinsAll = () => {
                         {coins.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((coin) => (
                             <TableRow hover role="checkbox" tabIndex={-1} key={coin.id}>
                                 {columns.map((column) => (
-                                    <TableCell key={column.id} align={column.align}>
+                                    <TableCell className='tablecell' key={column.id} align={column.align}>
                                         {coin[column.id] ? coin[column.id].toLocaleString() : "-"}
                                     </TableCell>
                                 ))}
@@ -82,6 +82,7 @@ const TableCoinsAll = () => {
                 </Table>
             </TableContainer>
             <TablePagination
+            className='pagination'
                 rowsPerPageOptions={[10, 25, 50]}
                 component="div"
                 count={coins.length}
