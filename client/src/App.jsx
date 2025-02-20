@@ -29,6 +29,7 @@ function App() {
 
         <Route path='/dashboard' element={<Auth><UserLayout /></Auth>} >
           <Route index element={<UserMain />} />
+
           <Route path='payment' element={<Payment />} />
 
         </Route>

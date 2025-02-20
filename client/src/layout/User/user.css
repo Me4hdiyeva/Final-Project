@@ -1,0 +1,39 @@
+.user-data{
+    display: flex;
+    gap: 100px;
+    padding-left: 180px;
+    padding-top: 50px;
+}
+.user-data h1{
+    color: gray;
+}
+
+.user-name{
+    display: flex;
+    gap: 10px;
+    color: black ;
+    font-weight: 600;
+    font-size: 19px ;
+    font-weight: 600 ;
+    line-height: 24px ;
+}
+.user-name h1{
+    color: black;
+}
+.user-img{
+    border: 2px solid;
+    width: 80px;
+    height: 80px;
+}
+.id{
+    /* display: flex; */
+}
+.level{
+    /* display: flex; */
+}
+.following{
+    /* display: flex; */
+}
+.followers{
+    /* display: flex; */
+}
