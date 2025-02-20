@@ -144,8 +144,9 @@ body.dark ul li a:hover {
         display: block;
     }
 
+   
+
     .first-sec .row {
-        display: block;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -215,6 +216,7 @@ body.dark ul li a:hover {
         justify-content: center;
         /* padding-top: 30px; */
         gap: 20px;
+       
     }
 
     .footer {
