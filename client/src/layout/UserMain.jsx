@@ -1,5 +1,6 @@
 import React from 'react'
 import "./User/user.css"
+import LabTabs from '../components/markets-section/LabTabs'
 
 
 
@@ -59,6 +60,21 @@ function UserMain() {
 
                         <button>Deposit</button>
                         {/* <button></button> */}
+                    </div>
+
+
+                    <div className="markets">
+                        <h1>Markets</h1>
+                        <div className="nav-market">
+
+                            <LabTabs/>
+                        </div>
+
+
+
+
+
+
                     </div>
 
 
