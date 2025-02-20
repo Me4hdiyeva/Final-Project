@@ -13,6 +13,7 @@ import AllCoins from './pages/allcoins/AllCoins'
 import UserLayout from './layout/LoginLayout/UserLayout'
 import Payment from './pages/payment/Payment'
 import Auth from './layout/Auth'
+import Earn from './pages/earn/Earn'
 function App() {
 
   return (
@@ -24,6 +25,8 @@ function App() {
         <Route path='/' element={<Main />}>
           <Route index element={<Home />} />
           <Route path="/buyCrypto" element={<BuyCrypto />} />
+          <Route path="/earn" element={<Earn />} />
+
           <Route path='/allCoins' element={<AllCoins />} />
         </Route>
 

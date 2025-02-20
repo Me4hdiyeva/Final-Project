@@ -1,26 +1,25 @@
-.crypto-sec h1 {
-    font-size: 56px;
+.crypto-sec h1{
+ font-size: 56px;
     font-weight: 700;
 
     margin-bottom: 20px;
 }
-
-.crypto-sec {
-    padding-top: 90px;
+.crypto-sec{
+   padding-top: 90px;
 }
 
-.hot-Cryptos {
+.hot-Cryptos{
     border: 1px solid rgba(128, 128, 128, 0.544);
-    border-radius: 10px;
+    border-radius: 10px; 
 
 
-    margin-top: 70px;
-    margin-bottom: 90px;
-    padding: 10px;
+  margin-top: 70px;
+  margin-bottom: 90px;
+  padding: 10px;
 
 }
 
-.hot-Cryptos h3 {
+.hot-Cryptos h3{
     padding: 19px;
     line-height: 34px;
     font-weight: 500;
@@ -29,81 +28,75 @@
 
 }
 
-.hot-Cryptos img {
+.hot-Cryptos img{
     width: 24px;
     height: 24px;
 }
-
-.crypts {
+.crypts{
     display: flex;
     justify-content: space-between;
     padding-bottom: 12px;
     padding-top: 12px;
     padding-left: 16px;
     padding-right: 16px;
-    max-width: 550px;
+    width: 550px;
     cursor: pointer;
-
+ 
 }
-
-.div-img {
-    display: flex;
-    gap: 10px;
-    text-transform: uppercase;
-    font-size: 24px;
-    line-height: 22px;
-    padding-bottom: 12px;
+.div-img{
+display: flex;
+gap: 10px;
+text-transform: uppercase ;
+font-size: 24px;
+line-height: 22px;
+padding-bottom: 12px;
     /* padding-top: 12px; */
 }
-
-.price-crypyto {
+.price-crypyto{
     text-align: right;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0%;
-    margin-right: 30px;
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: 0%;
+margin-right: 30px;
 }
 
 
-.procent-crypto {
+.procent-crypto{
     color: red;
 }
 
-.buy-crypto {
+.buy-crypto{
     /* border: 1px solid gray; */
     padding-top: 150px;
-
+ 
 }
 
-.spend {
+.spend{
     display: flex;
     gap: 30px;
 }
 
-.buy-crypto input {
+.buy-crypto input{
     border: 1px solid gray;
     width: 400px;
     height: 80px;
     color: gray;
 
 }
-
-.receve {
+.receve{
     /* border: 1px solid; */
     display: flex;
     gap: 30px;
 }
-
-.buy-crypto h1 {
+.buy-crypto h1{
     font-size: 54px;
     font-weight: 600;
-    /* text-align: center; */
-    /* padding-top: 30px; */
-    padding-left: 25px;
-    padding-bottom: 20px;
+   /* text-align: center; */
+   /* padding-top: 30px; */
+   padding-left: 25px;
+   padding-bottom: 20px;
 
 }
-
 .custom-select {
     background-color: transparent;
     color: #333;
@@ -113,7 +106,7 @@
     font-size: 16px;
     cursor: pointer;
     outline: none;
-    appearance: none;
+    appearance: none; 
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
@@ -134,20 +127,20 @@
 
 
 .custom-select option {
-    padding: 12px;
+    padding: 12px; 
 }
 
-.buy-crypto button {
-    min-width: 270px;
-    max-width: 400px;
-    width: 100%;
-    height: 70px;
-    margin-left: 25px;
-    border: 1px solid;
-    padding-top: 5px;
-    margin-top: 20px;
-    background-color: #e4c64de1;
-    color: black;
-    font-size: 24px;
-    font-weight: 600;
+ .buy-crypto button{
+width: 400px;
+height: 70px;
+margin-left: 25px;
+border: 1px solid;
+padding-top: 5px;
+margin-top: 20px;
+background-color: #e4c64de1;
+color: black;
+font-size: 24px;
+font-weight: 600;
 }
+
+  

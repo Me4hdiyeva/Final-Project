@@ -69,7 +69,7 @@ function UserNavBar() {
                         </li>
                         <li>
                             <Link>
-                                Square
+                             Assets
 
                             </Link>
                         </li>

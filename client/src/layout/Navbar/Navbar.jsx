@@ -59,7 +59,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link>
+                            <Link to={"/earn"}>
                                 Earn
 
                             </Link>
