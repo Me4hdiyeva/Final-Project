@@ -13,6 +13,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { TableVirtuoso } from 'react-virtuoso';
 import Chance from 'chance';
+import axios from 'axios';
 
 const chance = new Chance(42);
 function createData(id) {
@@ -29,30 +30,30 @@ function createData(id) {
   const columns = [
     {
       width: 100,
-      label: 'First Name',
+      label: 'Coins',
       dataKey: 'firstName',
     },
     {
       width: 100,
-      label: 'Last Name',
+      label: 'Coin price',
       dataKey: 'lastName',
     },
     {
-      width: 50,
-      label: 'Age',
+      width: 150,
+      label: 'Price change 24h',
       dataKey: 'age',
       numeric: true,
     },
-    {
-      width: 110,
-      label: 'State',
-      dataKey: 'state',
-    },
-    {
-      width: 130,
-      label: 'Phone Number',
-      dataKey: 'phone',
-    },
+    // {
+    //   width: 110,
+    //   label: 'State',
+    //   dataKey: 'state',
+    // },
+    // {
+    //   width: 130,
+    //   label: 'Phone Number',
+    //   dataKey: 'phone',
+    // },
   ];
   
   const rows = Array.from({ length: 200 }, (_, index) => createData(index));
@@ -70,6 +71,14 @@ function createData(id) {
   };
   
   function fixedHeaderContent() {
+    const coins = axios.get("http://localhost:3000/api/coins")
+    console.log( coins.data);
+    // console.log(coins.object.data.coins );
+    
+    
+   
+
+
     return (
       <TableRow>
         {columns.map((column) => (

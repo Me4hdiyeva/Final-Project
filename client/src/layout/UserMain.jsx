@@ -1,6 +1,9 @@
 import React from 'react'
 import "./User/user.css"
 import LabTabs from '../components/markets-section/LabTabs'
+import SimpleBottomNavigation from '../components/CardsPending/SimpleBottomNavigation'
+import Restore from "@mui/icons-material/Restore";
+
 
 
 
@@ -35,6 +38,11 @@ function UserMain() {
                             <h1>Followers</h1>
                             <span>0</span>
                         </div>
+                    </div>
+
+                    <div className="pending">
+                        <h1>Get Started</h1>
+                        <SimpleBottomNavigation/>
                     </div>
 
                     <div className="balances">

@@ -41,6 +41,18 @@
     /* display: flex; */
 }
 
+.pending{
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+padding: 20px;
+margin-top: 50px;
+}
+.pending h1{
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
 .balances{
     margin-top: 100px;
     border: 1px solid #d8d8d8;

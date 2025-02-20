@@ -19,7 +19,7 @@ const BuyCrypto = () => {
         setData(coins.data)
         const top5Coins = coins.data.coins.slice(0, 5);
         setCoins(top5Coins)
-        console.log(coins.data);
+        console.log( coins.data);
         
     }
 
