@@ -14,6 +14,7 @@ import UserLayout from './layout/LoginLayout/UserLayout'
 import Payment from './pages/payment/Payment'
 import Auth from './layout/Auth'
 import Earn from './pages/earn/Earn'
+import About from './pages/about/About'
 function App() {
 
   return (
@@ -26,7 +27,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/buyCrypto" element={<BuyCrypto />} />
           <Route path="/earn" element={<Earn />} />
-
+          <Route path='/about' element={<About/>} />
+          <Route path='/allCoins'  element={<AllCoins/>}/>
           <Route path='/allCoins' element={<AllCoins />} />
         </Route>
 
