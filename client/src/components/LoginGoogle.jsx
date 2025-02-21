@@ -12,7 +12,7 @@ const LoginGoogle = () => {
         padding: "10px",
         // width: "85%",
         // border: "1px solid gray",
-        maxWidth: "424px",
+        // maxWidth: "424px",
         borderRadius: "5px",
         display: "flex",
         gap: "120px",
