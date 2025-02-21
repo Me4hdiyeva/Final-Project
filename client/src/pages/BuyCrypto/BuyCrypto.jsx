@@ -62,7 +62,7 @@ const BuyCrypto = () => {
                                     </div>
 
                                     <div className="price-crypyto">${coin.current_price}</div>
-                                    <div className="procent-crypto">{coin.price_change_percentage_24h}</div>
+                                    <div style={{ color: coin.price_change_percentage_24h >= 0 ? "green" : "red" }} className="procent-crypto">{coin.price_change_percentage_24h}</div>
                                 </div>
                             ))
 
