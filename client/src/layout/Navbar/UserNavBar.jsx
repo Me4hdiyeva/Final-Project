@@ -82,21 +82,21 @@ function UserNavBar() {
                 </div>
 
                 <div className="left-menu">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i className="fa-solid fa-magnifying-glass"></i>
                     <button onClick={logoutFunk} style={{ backgroundColor: "#CFAF30" }}>
                         Log out
                     </button>
 
-                    <i class="fa-solid fa-globe"></i>
-                    <i class="fa-solid fa-square-caret-down"></i>
-                    <i class="fa-solid fa-user"></i>
+                    <i className="fa-solid fa-globe"></i>
+                    <i className="fa-solid fa-square-caret-down"></i>
+                    <i className="fa-solid fa-user"></i>
                     <Link to={"settings"}>
-                    <i class="fa-solid fa-gear"></i>
+                    <i className="fa-solid fa-gear"></i>
                     
                     </Link>
                     <Mode />
                 </div>
-                <i class="fa-solid fa-bars bars"></i>
+                <i className="fa-solid fa-bars bars"></i>
             </div>
 
 

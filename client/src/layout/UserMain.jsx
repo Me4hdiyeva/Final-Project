@@ -1,30 +1,41 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./User/user.css"
 import LabTabs from '../components/markets-section/LabTabs'
 import SimpleBottomNavigation from '../components/CardsPending/SimpleBottomNavigation'
-import Restore from "@mui/icons-material/Restore";
-
-
-
-
+import { getUserById } from '../services/api'
 function UserMain() {
+
+    const [kripto, setKripto] = useState(97.381)
+    const [user, setUser] = useState(null)
+    const [verify, setVerify] = useState(false)
+    const [hidden, setHidden] = useState(false)
+    useEffect(() => {
+        getUserById(localStorage.getItem("userid")).then(
+            res => {
+                setUser(res)
+                setVerify(res.verified_email)
+            }
+        )
+    }, [])
+
     return (
         <>
-
             <div className="container">
                 <div className="users-page">
-
                     <div className="user-data">
                         <div className='user-name'>
                             <div className="user-img">
-                                <img src="" alt="" />
+                                <img src={user?.profileImage} alt="User profile foto" />
                             </div>
-                            <h1>User name</h1>
+                            <div>
+                                <h1>{user?.username}</h1>
+                                <p>{user?.email}</p>
+                            </div>
                         </div>
 
                         <div className="id">
                             <h1>UID</h1>
-                            <span>1068734689 </span>
+                            <span>{user?.id.slice(0,10)} </span>
                         </div>
                         <div className="level">
                             <h1>VIP Level</h1>
@@ -42,29 +53,27 @@ function UserMain() {
 
                     <div className="pending">
                         <h1>Get Started</h1>
-                        <SimpleBottomNavigation/>
+                        <SimpleBottomNavigation verify={verify} />
                     </div>
 
                     <div className="balances">
                         <h1>Estimated Balance </h1>
 
-                        <h2>0.00 <span>
-                            <select name="" id="">
-                                <option value="">BTC</option>
-                                <option value="">ETH</option>
-                                <option value="">BNB</option>
-                                <option value="">USDT</option>
+                        <h2>{hidden ? (user?.balance / +kripto) : "****"} <span>
+                            <select onChange={(e) => {
+                                setKripto(e.target.value)
+                            }} >
+                                <option value="97381">BTC</option>
+                                <option value="2646">ETH</option>
+                                <option value="648">BNB</option>
+                                <option value="0.998">USDT</option>
                             </select>
                         </span>
+                            <span>= ${hidden ? user?.balance : "****"}</span>
+
+                            <i style={{ display: hidden ? "inline-block" : "none" }} onClick={() => setHidden(!true)} className="fa-solid fa-eye"></i>
+                            <i style={{ display: !hidden ? "inline-block" : "none" }} onClick={() => setHidden(!false)} className="fa-solid fa-eye-slash"></i>
                         </h2>
-                        <span>= $0.00</span>
-                        <h3>Today‘s PnL
-                            <span>
-                                + $0.00(0.00%)
-                            </span>
-                            <i class="fa-solid fa-eye"></i>
-                            <i class="fa-solid fa-eye-slash"></i>
-                        </h3>
 
                         <button>Deposit</button>
                         {/* <button></button> */}
@@ -74,40 +83,13 @@ function UserMain() {
                     <div className="markets">
                         <h1>Markets</h1>
                         <div className="nav-market">
-
-                            <LabTabs/>
+                            <LabTabs />
                         </div>
-
-
-
-
-
-
                     </div>
-
-
 
                 </div>
 
-
-
-
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </>
     )
 }

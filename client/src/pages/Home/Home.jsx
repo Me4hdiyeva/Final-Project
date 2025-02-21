@@ -56,8 +56,8 @@ const Home = () => {
                     <div className="col-6">
                       <p>Or Continue  With</p>
                       <div className="icons-google">
-                        <i class="fa-brands fa-google"></i>
-                        <i class="fa-brands fa-apple"></i>
+                        <i className="fa-brands fa-google"></i>
+                        <i className="fa-brands fa-apple"></i>
                       </div>
                     </div>
 
@@ -65,7 +65,7 @@ const Home = () => {
                       <p>Download App</p>
                       <div className="icons-google">
 
-                        <i class="fa-solid fa-qrcode"></i>
+                        <i className="fa-solid fa-qrcode"></i>
                       </div>
                       {/* <QRScanner /> */}
 
@@ -167,17 +167,17 @@ const Home = () => {
             </div>
             <div className="icons-about">
               <div className="icons-p">
-            <i class="fa-brands fa-apple"></i>
+            <i className="fa-brands fa-apple"></i>
             <p>MacOS</p>
 
               </div>
               <div className="icons-p">
-            <i class="fa-brands fa-windows"></i>
+            <i className="fa-brands fa-windows"></i>
             <p>Windows</p>
             
               </div>
               <div className="icons-p">
-            <i class="fa-brands fa-linux"></i>
+            <i className="fa-brands fa-linux"></i>
             <p>Linux</p>
             </div>
 

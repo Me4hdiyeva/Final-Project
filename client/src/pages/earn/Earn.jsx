@@ -65,7 +65,7 @@ const Earn = () => {
                                 // setSelect1(e.target.value)
                                 handleChange()
                             }}
-                            class="custom-select">
+                            className="custom-select">
                             <option value="1">USD $</option>
                             {/* {data &&
                                 data.currency.map(item =>
@@ -91,7 +91,7 @@ const Earn = () => {
                                 // setSelect2(e.target.value)
                                 handleChange()
                             }}
-                            class="custom-select">
+                            className="custom-select">
                             {/* {data &&
                                 data.coins.map(item =>
                                     <option value={item.current_price}> {item.name} </option>

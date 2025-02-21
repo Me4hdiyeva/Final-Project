@@ -80,7 +80,7 @@ const Navbar = () => {
 
                     </div>
                     <div className="left-menu">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i className="fa-solid fa-magnifying-glass"></i>
                         <Link to={"/login"}>
 
                             <button>Log in</button>
@@ -93,10 +93,10 @@ const Navbar = () => {
 
                             </button>
                         </Link>
-                        <i class="fa-solid fa-globe"></i>
+                        <i className="fa-solid fa-globe"></i>
                         <Mode />
                     </div>
-                    <i class="fa-solid fa-bars bars"></i>
+                    <i className="fa-solid fa-bars bars"></i>
                 </div>
             </>
         )
