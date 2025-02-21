@@ -35,10 +35,12 @@ const TableCrypto = () => {
 
     return (
         <>
-            <TableContainer className='tableCryptos' style={{ paddingTop: "160px", paddingLeft: "30px", paddingRight: "30px" }} component={Paper}>
-                <Table sx={{ minWidth: 600 }} aria-label="caption table">
+        <div className="container">
+
+            <TableContainer className='tableCryptos' style={{ marginTop: "160px", paddingLeft: "30px", paddingRight: "30px" }} component={Paper}>
+                <Table  sx={{ minWidth: 600 }} aria-label="caption table">
                     <caption>A basic table example with a caption</caption>
-                    <TableHead>
+                    <TableHead >
                         <TableRow className='tableCryptoCell'>
                             <TableCell className='tableCryptoCell'>Name</TableCell>
                             <TableCell className='tableCryptoCell' align="right"></TableCell>
@@ -47,9 +49,9 @@ const TableCrypto = () => {
                             {/* <TableCell className='tableCryptoCell' align="right">Protein&nbsp;(g)</TableCell> */}
                         </TableRow>
                     </TableHead>
-                    <TableBody className='tableCryptoCell'>
+                    <TableBody  className='tableCryptoCell'>
                         {cryptoData.map((coin) => (
-                            <TableRow key={coin.id}>
+                            <TableRow  key={coin.id}>
                                 <TableCell style={{width:"10px", height:"10px"}} className='tableCryptoCell' component="th" scope="row">
                                     <img src={coin.image} alt={coin.name} width="10px" height="10px" />
                                 </TableCell>
@@ -63,6 +65,7 @@ const TableCrypto = () => {
                     </TableBody>
                 </Table>
             </TableContainer >
+        </div>
         </>
     )
 }
