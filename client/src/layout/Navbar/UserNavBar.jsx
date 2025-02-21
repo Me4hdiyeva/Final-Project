@@ -1,20 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router'
 import Mode from '../../components/Mode'
 import toast from 'react-hot-toast'
+import { STATUS } from '../../context/StatusContext'
 
 function UserNavBar() {
+    const { setStatus} = useContext(STATUS)
     const navigate = useNavigate()
     function logoutFunk() {
         localStorage.removeItem("token")
         localStorage.removeItem("username")
         localStorage.removeItem("userid")
         toast.success("Hesabdan çıxış edildi")
+        setStatus(false)
         navigate("/")
     }
     return (
         <>
-
             <div className="navbar">
                 <div className="right-menu">
                     <Link to={"/"}>

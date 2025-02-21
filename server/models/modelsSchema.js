@@ -4,13 +4,15 @@ const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  profileImage: { type: String }, // Profil şəkilinin yolu
-  createdAt: { type: Date, default: Date.now }
+  profileImage: { type: String }, // 
+  createdAt: { type: Date, default: Date.now },
+  balance: {type: String, default: 0}
 });
 
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
+
 
 // const productSchema = new mongoose.Schema({
 //   name: {

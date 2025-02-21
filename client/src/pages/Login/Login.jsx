@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router'
 import "./login.css"
 import toast from 'react-hot-toast';
 import { loginUser } from '../../services/api';
 import LoginGoogle from '../../components/LoginGoogle';
+import { STATUS } from '../../context/StatusContext';
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate()
+  const { setStatus } = useContext(STATUS)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,9 +21,9 @@ const Login = () => {
 
     try {
       const response = await loginUser(username, password)
-
       localStorage.setItem('token', response.data.token);
       toast.success("Giriş edildi!")
+      setStatus(true)
       navigate("/dashboard");
     } catch (err) {
       if (err.status == 401) return toast.error(err.response.data.message)
