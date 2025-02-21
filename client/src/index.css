@@ -76,7 +76,9 @@ body.dark .MuiStep-horizontal span{
 body.dark {
     color: aliceblue;
 }
-
+body.dark .grafichart{
+    background-color: #181A20;
+}
 
 
 /* Mobil üçün */

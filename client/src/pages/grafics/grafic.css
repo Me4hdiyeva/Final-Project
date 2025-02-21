@@ -1,0 +1,16 @@
+.trading h1{
+    text-align: center;
+    padding-top: 70px;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 30px;
+    /* color: aliceblue; */
+}
+
+.trading{
+    /* background-color: #000000; */
+}
+
+.grafichart{
+    background-color: white;
+}

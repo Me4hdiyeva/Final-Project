@@ -30,7 +30,7 @@ const Navbar = () => {
                             </li>
                             <li>
                                 <div className="dropdown">
-                                    <Link href="#">Trade</Link>
+                                    <Link to={"/grafic"}>Trade</Link>
                                     <div className="dropdown-content">
                                         <div>
 

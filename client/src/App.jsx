@@ -25,8 +25,8 @@ function App() {
       <Routes>
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/grafic' element={<Grafic />} />
         <Route path='/' element={<Main />}>
+        <Route path='/grafic' element={<Grafic />} />
           <Route index element={<Home />} />
           <Route path="/buyCrypto" element={<BuyCrypto />} />
           <Route path="/earn" element={<Earn />} />
