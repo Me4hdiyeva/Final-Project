@@ -3,6 +3,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { getCoins } from "../../services/api";
 import "../grafics/grafic.css"
 import BuyCrypto from "../BuyCrypto/BuyCrypto";
+import CryptoChart from "../../components/ChartCrypto.jsx/Chart";
 
 export default function Grafic() {
   const [chartData, setChartData] = useState([]);
@@ -36,11 +37,12 @@ export default function Grafic() {
 
 <div className="trading">
 <h1>Markets, everywhere</h1>
+  <CryptoChart/>
     <div style={{
       // marginLeft: "100px",
       backgroundColor: "black",
       height:500 ,
-      marginTop:"170px",
+      // marginTop:"170px",
       marginLeft:"30px",
       marginRight:"30px"
       // yerlesdireceyin componentin icine uygun css i bura yazacam!!!
@@ -49,10 +51,10 @@ export default function Grafic() {
       <ResponsiveContainer>
         <LineChart className="grafichart"  data={chartData}>
           <CartesianGrid  strokeDasharray="3 3" stroke="#444" />
-          <XAxis   dataKey="time" stroke="#8884d8" />
-          <YAxis  stroke="#8884d8" domain={[araliq.min, araliq.max]} />
+          <XAxis   dataKey="time" stroke="#808080" />
+          <YAxis  stroke="#808080" domain={[araliq.min, araliq.max]} />
           <Tooltip  contentStyle={{ backgroundColor: "#222", borderRadius: "5px" }} />
-          <Line   type="monotone" dataKey="price" stroke="#82ca9d" strokeWidth={1} dot={true} />
+          <Line   type="monotone" dataKey="price" stroke="#ff0000" strokeWidth={1} dot={true} />
         </LineChart>
       </ResponsiveContainer>
     </div>
