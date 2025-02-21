@@ -108,13 +108,18 @@ const Footer = () => {
 
 
             </div>
+            <div className="footer">
+
+
+
+            </div>
+
                     <hr   />
 
                     
 
-                    <p>Binance© 2025Cookie Preferences  </p>
+                    <p className='binancess'>Binance© 2025Cookie Preferences  </p>
                     
-
 
 
 

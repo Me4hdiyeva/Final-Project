@@ -12,9 +12,11 @@
     font-size: 19px;
 }
 
-.row {
+ .row {
     display: flex;
     justify-content: space-between;
+    gap: 180px;
+
 
     &>div {
         width: 40%;

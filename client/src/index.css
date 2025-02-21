@@ -97,6 +97,9 @@ body.dark .log-ins{
 
     .navbar {
         padding: 0px 10px !important;
+        display: flex !important;
+        /* gap: 40px; */
+        /* justify-content: space-between; */
 
     }
 
@@ -105,7 +108,7 @@ body.dark .log-ins{
     }
 
     .right-menu img {
-        width: 110px;
+        width: 192px;
     }
 
     .left-menu i {
@@ -118,17 +121,30 @@ body.dark .log-ins{
 
     .navbar .bars {
         display: flex !important;
+        /* padding-right: 720px; */
     }
 
+    .footer{
+padding-top: 80px;
+padding-left: 30px;
+    }
     .footer .row {
-        display: block !important;
-        /* flex-direction: column !important; */
+        
+        flex-direction: column !important;
         /* display: none; */
-        font-size: 10px;
+        gap: 30px;
+        /* font-size: 10px; */
+     
+    }
+    .footer i{
+        font-size: 30px !important;
+        display: flex;
     }
 
-    .footer .col-3 {
-        padding: 15px;
+    .footer h1 {
+        /* padding: 15px; */
+        font-size: 28px;
+        width: 200px;
     }
 
     .footer .col-3 ul {
@@ -170,6 +186,14 @@ body.dark .log-ins{
     .second-sec .row {
         display: block;
     }
+     hr{
+        width: 645px !important;
+    }
+    .binancess{
+    margin-left: 35%;
+    /* padding-left: 30px; */
+    }
+  
 
    
 
@@ -190,6 +214,37 @@ body.dark .log-ins{
         background-color: transparent;
         border: none;
     }
+
+    .crypto-sec h1{
+        font-size: 28px !important;
+    }
+    .hot-Cryptos h3{
+        font-size: 20px !important;
+    }
+    .hot-Cryptos{
+        width: 600px;
+        /* padding-left: 1px !important; */
+    }
+    .crypts{
+padding-left: 0px !important;
+    }
+    .price-crypyto {
+    /* text-align: left !important; */
+    font-size: 25px;
+    }
+     .procent-crypto{
+        /* text-align: left !important;
+        display: none; */
+        font-size: 25px;
+    } 
+   
+
+
+
+
+
+
+
 }
 
 /* Tablet üçün */
