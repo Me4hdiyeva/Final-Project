@@ -33,7 +33,7 @@ const CryptoChart = () => {
   }, []);
 
   return (
-    <div style={{ width: "1000px", height: "800px", margin: "0 auto", marginTop: "80px" }}>
+    <div style={{ width: "1000px", height: "800px", margin: "0 auto", marginTop: "90px" }}>
       <h2>Crypto Currency Prices</h2>
       {cryptoData.labels.length > 0 ? <Bar data={cryptoData} /> : <p>Loading...</p>}
     </div>

@@ -4,6 +4,7 @@ import { getCoins } from "../../services/api";
 import "../grafics/grafic.css"
 import BuyCrypto from "../BuyCrypto/BuyCrypto";
 import CryptoChart from "../../components/ChartCrypto.jsx/Chart";
+import TableCrypto from "../../components/TableCrypto/TableCrypto";
 
 export default function Grafic() {
   const [chartData, setChartData] = useState([]);
@@ -58,6 +59,7 @@ export default function Grafic() {
         </LineChart>
       </ResponsiveContainer>
     </div>
+    <TableCrypto/>
     <BuyCrypto/>
 
 
