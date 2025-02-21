@@ -23,6 +23,16 @@ async function verifyToken() {
     }
 }
 
+async function getCoins() {
+    try {
+        const verify = await axiosInstanse.get("/coins")
+        return verify.data
+    } catch (error) {
+        console.log(error);
+        return error
+    }
+}
+
 export {
-    loginUser, verifyToken
+    loginUser, verifyToken, getCoins
 }

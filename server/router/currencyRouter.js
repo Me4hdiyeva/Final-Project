@@ -1,4 +1,5 @@
-const express = require("express")
+const express = require("express");
+const { countDocuments } = require("../models/modelsSchema");
 const router = express.Router()
 
 const coins = [
@@ -3228,16 +3229,50 @@ const currency = [
     }
 ].filter(item => item.pair.includes("_USD"))
 
+
+function rand(min, max) {
+    return (Math.random() * (max - min + 1)) + min;
+}
+
 router.get("/currency", (req, res) => {
     res.status(200).json({
         currency
     })
 })
-
 router.get("/coins", (req, res) => {
-    res.status(200).json({
-        coins, currency
+    let newData = [];
+    let arg = +req.query.criptoId || 0
+    if (+req.query.criptoId > coins.length - 1) {
+        arg = 0
+    }
+     
+    let date = new Date();
+    let seconds = 0;
+    let minutes = date.getMinutes();
+    let hours = date.getHours();
 
+    for (let i = 0; i < 50; i++) {
+        const randomReqem = rand(-1, 0);
+        newData.push({
+            time: `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`,
+            price: coins[arg].current_price * ((100 - randomReqem) / 100)
+        });
+
+        seconds += 2;
+        if (seconds >= 60) {
+            seconds = 0;
+            minutes++;
+        }
+        if (minutes >= 60) {
+            minutes = 0;
+            hours++;
+        }
+    }
+
+    res.status(200).json({
+        graficStatistic: newData,
+        coins,
+        currency
     })
 })
 

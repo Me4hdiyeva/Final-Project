@@ -16,6 +16,7 @@ import Auth from './layout/Auth'
 import Earn from './pages/earn/Earn'
 import About from './pages/about/About'
 import Settings from './pages/settings/Settings'
+import Grafic from './pages/grafics/Grafics'
 function App() {
 
   return (
@@ -24,6 +25,7 @@ function App() {
       <Routes>
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/grafic' element={<Grafic />} />
         <Route path='/' element={<Main />}>
           <Route index element={<Home />} />
           <Route path="/buyCrypto" element={<BuyCrypto />} />
@@ -35,11 +37,8 @@ function App() {
 
         <Route path='/dashboard' element={<Auth><UserLayout /></Auth>} >
           <Route index element={<UserMain />} />
-
           <Route path='payment' element={<Payment />} />
           <Route path='settings' element={<Settings />} />
-
-
         </Route>
 
         <Route path='*' element={<Error404 />} />
