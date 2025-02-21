@@ -79,7 +79,15 @@ body.dark {
 body.dark .grafichart{
     background-color: #181A20;
 }
-
+body.dark .tableCryptos{
+    background-color: #181A20;
+}
+body.dark .tableCryptoCell{
+    color: aliceblue;
+}
+body.dark .log-ins{
+    color: aliceblue;
+}
 
 /* Mobil üçün */
 @media (max-width: 600px) {

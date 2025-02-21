@@ -39,7 +39,6 @@ const TableCrypto = () => {
 
             <TableContainer className='tableCryptos' style={{ marginTop: "160px", paddingLeft: "30px", paddingRight: "30px" }} component={Paper}>
                 <Table  sx={{ minWidth: 600 }} aria-label="caption table">
-                    <caption>A basic table example with a caption</caption>
                     <TableHead >
                         <TableRow className='tableCryptoCell'>
                             <TableCell className='tableCryptoCell'>Name</TableCell>
@@ -55,8 +54,8 @@ const TableCrypto = () => {
                                 <TableCell style={{width:"10px", height:"10px"}} className='tableCryptoCell' component="th" scope="row">
                                     <img src={coin.image} alt={coin.name} width="10px" height="10px" />
                                 </TableCell>
-                                <TableCell>{coin.name}</TableCell>
-                                <TableCell align="right">${coin.current_price.toFixed(2)}</TableCell>
+                                <TableCell  className='tableCryptoCell'>{coin.name}</TableCell>
+                                <TableCell  className='tableCryptoCell' align="right">${coin.current_price.toFixed(2)}</TableCell>
                                 <TableCell align="right" style={{ color: coin.price_change_percentage_24h >= 0 ? "green" : "red" }}>
                                     {coin.price_change_percentage_24h.toFixed(2)}%
                                 </TableCell>
