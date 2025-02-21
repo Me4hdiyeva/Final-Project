@@ -8,9 +8,15 @@ import Typography from '@mui/material/Typography';
 
 const steps = ['Verify Account  ', 'Deposit', 'Trade'];
 
-export default function HorizontalLinearStepper() {
+export default function HorizontalLinearStepper({ verify }) {
+  console.log(verify);
+
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
+
+  React.useEffect(() => {
+    setActiveStep(verify ? 1 : 0)
+  }, [verify])
 
   const isStepOptional = (step) => {
     return step === 1;
@@ -55,8 +61,8 @@ export default function HorizontalLinearStepper() {
   };
 
   return (
-    <Box   sx={{ width: '100%' }}>
-      <Stepper   activeStep={activeStep}>
+    <Box sx={{ width: '100%' }}>
+      <Stepper activeStep={activeStep}>
         {steps.map((label, index) => {
           const stepProps = {};
           const labelProps = {};
@@ -69,25 +75,28 @@ export default function HorizontalLinearStepper() {
             stepProps.completed = false;
           }
           return (
-            <Step  key={label} {...stepProps}>
+            <Step key={label} {...stepProps}>
               <StepLabel  {...labelProps}>{label}</StepLabel>
             </Step>
           );
         })}
       </Stepper>
       {activeStep === steps.length ? (
-        <React.Fragment>
+        <>
           <Typography sx={{ mt: 2, mb: 1 }}>
             All steps completed - you&apos;re finished
           </Typography>
-          <Box  sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Box sx={{ flex: '1 1 auto' }} />
             <Button onClick={handleReset}>Reset</Button>
           </Box>
-        </React.Fragment>
+        </>
       ) : (
         <React.Fragment>
-          <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
+          {
+            (verify && activeStep == 0) ? <Typography color='blue' sx={{ mt: 2, mb: 1 }}>Verified with Gmail</Typography> :
+              <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
+          }
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Button
               color="inherit"

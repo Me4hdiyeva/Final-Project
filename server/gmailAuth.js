@@ -19,6 +19,8 @@ passport.use(
                         username: profile.displayName,
                         email: profile.emails[0].value,
                         password: "google-auth", 
+                        profileImage: "/", 
+                        accessToken
                     });
 
                     await user.save();

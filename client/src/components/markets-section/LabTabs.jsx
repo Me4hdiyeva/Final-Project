@@ -20,100 +20,100 @@ import TableCoinsAll from '../TableCoinsAll';
 
 const chance = new Chance(42);
 function createData(id) {
-    return {
-      id,
-      firstName: chance.first(),
-      lastName: chance.last(),
-      age: chance.age(),
-      phone: chance.phone(),
-      state: chance.state({ full: true }),
-    };
-  }
-  
-  const columns = [
-    {
-      width: 100,
-      label: 'Coins',
-      dataKey: 'firstName',
-    },
-    {
-      width: 100,
-      label: 'Coin price',
-      dataKey: 'lastName',
-    },
-    {
-      width: 150,
-      label: 'Price change 24h',
-      dataKey: 'age',
-      numeric: true,
-    },
-    // {
-    //   width: 110,
-    //   label: 'State',
-    //   dataKey: 'state',
-    // },
-    // {
-    //   width: 130,
-    //   label: 'Phone Number',
-    //   dataKey: 'phone',
-    // },
-  ];
-  
-  const rows = Array.from({ length: 200 }, (_, index) => createData(index));
-  
-  const VirtuosoTableComponents = {
-    Scroller: React.forwardRef((props, ref) => (
-      <TableContainer component={Paper} {...props} ref={ref} />
-    )),
-    Table: (props) => (
-      <Table {...props} sx={{ borderCollapse: 'separate', tableLayout: 'fixed' }} />
-    ),
-    TableHead: React.forwardRef((props, ref) => <TableHead {...props} ref={ref} />),
-    TableRow,
-    TableBody: React.forwardRef((props, ref) => <TableBody {...props} ref={ref} />),
+  return {
+    id,
+    firstName: chance.first(),
+    lastName: chance.last(),
+    age: chance.age(),
+    phone: chance.phone(),
+    state: chance.state({ full: true }),
   };
-  
-  function fixedHeaderContent() {
-    const coins = axios.get("http://localhost:3000/api/coins")
-    console.log( coins.data);
-    // console.log(coins.object.data.coins );
-    
-    
-   
+}
+
+const columns = [
+  {
+    width: 100,
+    label: 'Coins',
+    dataKey: 'firstName',
+  },
+  {
+    width: 100,
+    label: 'Coin price',
+    dataKey: 'lastName',
+  },
+  {
+    width: 150,
+    label: 'Price change 24h',
+    dataKey: 'age',
+    numeric: true,
+  },
+  // {
+  //   width: 110,
+  //   label: 'State',
+  //   dataKey: 'state',
+  // },
+  // {
+  //   width: 130,
+  //   label: 'Phone Number',
+  //   dataKey: 'phone',
+  // },
+];
+
+const rows = Array.from({ length: 200 }, (_, index) => createData(index));
+
+const VirtuosoTableComponents = {
+  Scroller: React.forwardRef((props, ref) => (
+    <TableContainer component={Paper} {...props} ref={ref} />
+  )),
+  Table: (props) => (
+    <Table {...props} sx={{ borderCollapse: 'separate', tableLayout: 'fixed' }} />
+  ),
+  TableHead: React.forwardRef((props, ref) => <TableHead {...props} ref={ref} />),
+  TableRow,
+  TableBody: React.forwardRef((props, ref) => <TableBody {...props} ref={ref} />),
+};
+
+function fixedHeaderContent() {
+  const coins = axios.get("http://localhost:3000/api/coins")
+  console.log(coins.data);
+  // console.log(coins.object.data.coins );
 
 
-    return (
-      <TableRow>
-        {columns.map((column) => (
-          <TableCell
-            key={column.dataKey}
-            variant="head"
-            align={column.numeric || false ? 'right' : 'left'}
-            style={{ width: column.width }}
-            sx={{ backgroundColor: 'background.paper' }}
-          >
-            {column.label}
-          </TableCell>
-        ))}
-      </TableRow>
-    );
-  }
-  
-  function rowContent(_index, row) {
-    return (
-      <React.Fragment>
-        {columns.map((column) => (
-          <TableCell
-            key={column.dataKey}
-            align={column.numeric || false ? 'right' : 'left'}
-          >
-            {row[column.dataKey]}
-          </TableCell>
-        ))}
-      </React.Fragment>
-    );
-  }
-  
+
+
+
+  return (
+    <TableRow>
+      {columns.map((column) => (
+        <TableCell
+          key={column.dataKey}
+          variant="head"
+          align={column.numeric || false ? 'right' : 'left'}
+          style={{ width: column.width }}
+          sx={{ backgroundColor: 'background.paper' }}
+        >
+          {column.label}
+        </TableCell>
+      ))}
+    </TableRow>
+  );
+}
+
+function rowContent(_index, row) {
+  return (
+    <React.Fragment>
+      {columns.map((column) => (
+        <TableCell
+          key={column.dataKey}
+          align={column.numeric || false ? 'right' : 'left'}
+        >
+          {row[column.dataKey]}
+        </TableCell>
+      ))}
+    </React.Fragment>
+  );
+}
+
 
 export default function LabTabs() {
   const [value, setValue] = React.useState('1');
@@ -138,10 +138,10 @@ export default function LabTabs() {
           </TabList>
         </Box>
         <TabPanel value="1">
-     
-     
 
-        {/* <Paper style={{ height: 400, width: '100%'}}>
+
+
+          {/* <Paper style={{ height: 400, width: '100%'}}>
       <TableVirtuoso
     
         data={rows}

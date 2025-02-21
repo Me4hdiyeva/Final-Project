@@ -1,3 +1,4 @@
+import axios from "axios";
 import axiosInstanse from "./instance";
 
 async function loginUser(username, password) {
@@ -33,6 +34,24 @@ async function getCoins() {
     }
 }
 
+async function getUserById(id) {
+    try {
+        const user = await axiosInstanse.get(`/auth/users/${id}`)
+        const { data } = await axios.get('https://www.googleapis.com/oauth2/v2/userinfo', {
+            headers: { Authorization: `Bearer ${user.data.accessToken}` }
+        });
+        return {
+            ...user.data,
+            ...data,
+            profileImage: data.picture
+        }
+    } catch (error) {
+        console.log(error);
+        return error
+    }
+}
+
+
 export {
-    loginUser, verifyToken, getCoins
+    loginUser, verifyToken, getCoins, getUserById
 }

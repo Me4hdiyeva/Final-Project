@@ -18,7 +18,7 @@ const LoginGoogle = () => {
         paddingLeft: "15px",
       }} onClick={handleGoogleLogin}><i style={{
         paddingTop: "5px"
-      }} class="fa-brands fa-google"></i>Google sdscsilə Daxil Ol</button>
+      }} className="fa-brands fa-google"></i>Google sdscsilə Daxil Ol</button>
     </div>
   )
 }
