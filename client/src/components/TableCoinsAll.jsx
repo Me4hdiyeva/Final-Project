@@ -69,7 +69,7 @@ const TableCoinsAll = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {coins.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((coin) => (
+                        {coins?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((coin) => (
                             <TableRow hover role="checkbox" tabIndex={-1} key={coin.id}>
                                 {columns.map((column) => (
                                     <TableCell className='tablecell' key={column.id} align={column.align}>
