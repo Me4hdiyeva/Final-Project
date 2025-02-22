@@ -12,6 +12,7 @@ const Home = () => {
 
   const [userr, setUsers] = useState([])
 
+
   const getQuantifyUsers = async () => {
     try {
       const response = await axios.get('http://localhost:3000/api/auth/register');
@@ -30,8 +31,20 @@ const Home = () => {
   
   useEffect(() => {
     getQuantifyUsers();
+    const interval = setInterval(myUsers, 60000);
+    myUsers()
   }, []);
   
+
+  const myUsers = async () => {
+    const users = await axios.get("http://localhost:3000/api/auth/users")
+    console.log(users.data);
+    const user = users.data
+    const lengthUser = user.length
+    console.log(lengthUser);    
+    setUsers(lengthUser);
+
+  }
 
 
 
@@ -43,7 +56,7 @@ const Home = () => {
           <div className="first-sec">
             <div className="row">
               <div className="col-6">
-                <h1><span>333,333,333</span>
+                <h1><span>{userr}</span>
                   <br /> USERS <br />TRUST  US</h1>
                 <div className="email-phone-num-add-input">
                   <input className='phone-email-add' placeholder='Email/phone number' type="text" />

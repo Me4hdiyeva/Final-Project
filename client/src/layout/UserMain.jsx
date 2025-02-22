@@ -35,7 +35,7 @@ function UserMain() {
 
                         <div className="id">
                             <h1>UID</h1>
-                            <span>{user?.id.slice(0,10)} </span>
+                            {/* <span>{user?.id.slice(0,10)} </span> */}
                         </div>
                         <div className="level">
                             <h1>VIP Level</h1>

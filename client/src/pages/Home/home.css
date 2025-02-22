@@ -27,6 +27,7 @@
 
 .email-phone-num-add-input {
     display: flex;
+    gap: 20px;
 }
 
 .email-phone-num-add-input input {
@@ -37,6 +38,7 @@
     padding: 10px;
     margin-top: 10px;
     cursor: pointer;
+
 
 
 
