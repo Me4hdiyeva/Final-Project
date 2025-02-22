@@ -20,6 +20,10 @@
 .log-in input{
     width: 400px;
     margin-top: 40px;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 10px;
+
 }
 .log-in form{
     display: flex;
@@ -34,7 +38,7 @@
     width: 400px;
     border-radius: 5px;
     /* border: 1px solid gray; */
-    margin-left: 25px;
+    /* margin-left: 25px; */
     margin-top: 30px;
     height: 40px;
     background-color: #F0B90B;
@@ -52,6 +56,6 @@ min-height: 32px;
 margin-left: 15%;
 }
 .log-in form{
-    margin-left: 65px;
-    /* margin: 0 auto; */
+    /* margin-left: 65px; */
+    margin: 0 auto;
 }

@@ -11,13 +11,13 @@ const LoginGoogle = () => {
       <button className='text-center'  style={{
         padding: "10px",
         // width: "90%",
-        border: "1px solid gray",
+        // border: "1px solid gray",
         maxWidth: "424px",
         minWidth:"300px",
         borderRadius: "5px",
         display: "flex",
-        gap: "120px",
-        paddingLeft: "25px",
+        gap: "10px",
+        paddingLeft: "15px",
         marginLeft:"90px"
       }} onClick={handleGoogleLogin}><i style={{
         paddingTop: "5px"
