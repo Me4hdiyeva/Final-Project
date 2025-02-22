@@ -1,0 +1,73 @@
+.about h1{
+width: 500px;
+font-weight: 600;
+        font-size: 58px;
+        line-height: 56px;
+
+/* padding-top: 90px; */
+}
+.about {
+    /* padding-top: 20px; */
+}
+.about p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: "BinancePlex", Arial, sans-serif;
+    color: gray;
+    width: 700px;
+    /* padding-top: 60px; */
+}
+.about img{
+    width: 1000px;
+    /* height: 1000px;/ */
+  
+}
+.about .col-6{
+    width: 100%;
+    padding-top: 20px;
+
+}
+#panel1-header{
+    /* width: 100px; */
+    /* background-color: gray; */
+    margin-top: 10px;
+}
+.about .row{
+    display: flex;
+    /* gap: 20px; */
+    flex-wrap: nowrap;
+}
+.accordion{
+        background-color: gray;
+}
+.Our-Ecosystem {
+    /* display: flex; */
+    /* gap: 10px; */
+    /* padding-bottom: 20px; */
+    padding-left: 20px;
+}
+.Our-Ecosystem h1{
+    padding-bottom: 30px;
+}
+.Our-Ecosystem .row{
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 950px;
+}
+
+.binance-board {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.binance-board h1{
+    width: 700px;
+
+    padding-top: 50px;
+}
+.binance-board p{
+    width: 1000px;
+    padding-top: 20px;
+    padding-bottom: 90px;
+}
+

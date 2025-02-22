@@ -33,7 +33,6 @@ function App() {
           <Route path="/earn" element={<Earn />} />
           <Route path='/about' element={<About/>} />
           <Route path='/allCoins'  element={<AllCoins/>}/>
-          <Route path='/allCoins' element={<AllCoins />} />
         </Route>
 
         <Route path='/dashboard' element={<Auth><UserLayout /></Auth>} >
@@ -41,6 +40,10 @@ function App() {
 
           <Route path='payment' element={<Payment />} />
           <Route path='settings' element={<Settings />} />
+          <Route path='grafic' element={<Grafic/>} />
+          <Route path="buyCrypto" element={<BuyCrypto />} />
+          <Route path='allCoins'  element={<AllCoins/>}/>
+          <Route path="earn" element={<Earn />} />
 
 
         </Route>

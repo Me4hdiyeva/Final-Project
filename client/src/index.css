@@ -306,6 +306,15 @@ body.dark .fa-gear{
         display: none; */
         font-size: 25px;
     }
+    .about p{
+        width: 490px !important;
+    }
+    .about .col-6 img{
+        display: none;
+    }
+    .about h1{
+width: 460px !important;
+    }
 
 
 

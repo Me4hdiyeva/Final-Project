@@ -44,6 +44,11 @@
 
 
 }
+.footer-section .row{
+    display: flex;
+  
+    justify-content: space-between;
+}
 
 .email-phone-num-add-input button {
     width: 100%;
