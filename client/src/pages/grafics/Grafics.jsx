@@ -45,7 +45,8 @@ export default function Grafic() {
       height:500 ,
       // marginTop:"170px",
       marginLeft:"30px",
-      marginRight:"30px"
+      marginRight:"30px",
+      marginBottom:"160px"
       // yerlesdireceyin componentin icine uygun css i bura yazacam!!!
     }}>
  

@@ -16,6 +16,7 @@ import Chance from 'chance';
 import axios from 'axios';
 import NewListing from '../newlisting/NewListing';
 import TableCoinsAll from '../TableCoinsAll';
+import TableCrypto from '../TableCrypto/TableCrypto';
 
 
 const chance = new Chance(42);
@@ -125,37 +126,10 @@ export default function LabTabs() {
   return (
     <Box sx={{ width: '100%', typography: 'body1' }}>
       <TabContext value={value}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <TabList onChange={handleChange} aria-label="lab API tabs example">
-            <Tab label="Item One" value="1" />
-            <Tab label="Item Two" value="2" />
-            <Tab label="Item Three" value="3" />
-            <Tab label="Item Three" value="4" />
-
-            <Tab label="Item Three" value="5" />
-            <Tab label="Item Three" value="6" />
-
-          </TabList>
-        </Box>
+  
         <TabPanel value="1">
-
-
-
-          {/* <Paper style={{ height: 400, width: '100%'}}>
-      <TableVirtuoso
-    
-        data={rows}
-        components={VirtuosoTableComponents}
-        fixedHeaderContent={fixedHeaderContent}
-        itemContent={rowContent}
-      />
-    </Paper> */}
         </TabPanel>
-        <TabPanel value="2">Item Two</TabPanel>
-        <TabPanel value="3">Item Threez</TabPanel>
-        <TabPanel value="4">Item Threew</TabPanel>
-        <TabPanel value="5">Item Threewf</TabPanel>
-        <TabPanel value="6">Item Threed</TabPanel>
+     
 
 
       </TabContext>

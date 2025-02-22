@@ -4,6 +4,7 @@ import LabTabs from '../components/markets-section/LabTabs'
 import SimpleBottomNavigation from '../components/CardsPending/SimpleBottomNavigation'
 import { getUserById } from '../services/api'
 import { Link } from 'react-router'
+import TableCrypto from '../components/TableCrypto/TableCrypto'
 function UserMain() {
 
     const [kripto, setKripto] = useState(97.381)
@@ -91,7 +92,9 @@ function UserMain() {
                     <div className="markets">
                         <h1>Markets</h1>
                         <div className="nav-market">
-                            <LabTabs />
+                            {/* <LabTabs /> */}
+                     <TableCrypto/>
+                            
                         </div>
                     </div>
 

@@ -140,6 +140,16 @@ body.dark .userMain{
 body.dark .fa-gear{
     color: #e3e5e9;
 }
+body.dark .balances button{
+    background-color: #f0b90b;
+}
+body.dark .edit button{
+    color: #181a20;
+}
+body.dark .btn-del-set{
+    color: #181a20;
+}
+
 
 /* Mobil üçün */
 @media (max-width: 600px) {

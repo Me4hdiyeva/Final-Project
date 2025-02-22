@@ -37,7 +37,7 @@ const TableCrypto = () => {
         <>
         <div className="container">
 
-            <TableContainer className='tableCryptos' style={{ marginTop: "160px", paddingLeft: "30px", paddingRight: "30px" }} component={Paper}>
+            <TableContainer className='tableCryptos' style={{ paddingLeft: "30px", paddingRight: "30px" }} component={Paper}>
                 <Table  sx={{ minWidth: 600 }} aria-label="caption table">
                     <TableHead >
                         <TableRow className='tableCryptoCell'>

@@ -4,6 +4,8 @@
     border-radius: 10px;
     /* display: flex; */
     padding: 50px;
+    margin-top: 50px;
+    margin-bottom: 90px;
 }
 .about-settings p { 
   width: 700px;
@@ -24,7 +26,25 @@
     height: 50px;
 }
 .edit button{
-   border: 1px solid;
+   /* border: 1px solid; */
    width: 70px;
    height: 30px;
+   background-color: #dedbdb;
+   /* color: aliceblue; */
+}
+
+.settings h1{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+}
+.settings h2{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.settings .btn-del-set{
+   background-color:#dedbdb;
+    width:70px;
+     height:30px
 }
