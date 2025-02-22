@@ -10,9 +10,10 @@ const LoginGoogle = () => {
       {/* <h2 className='text-center'>Google ilə daxil ol</h2> */}
       <button className='text-center'  style={{
         padding: "10px",
-        // width: "85%",
-        // border: "1px solid gray",
-        // maxWidth: "424px",
+        // width: "90%",
+        border: "1px solid gray",
+        maxWidth: "424px",
+        minWidth:"300px",
         borderRadius: "5px",
         display: "flex",
         gap: "120px",

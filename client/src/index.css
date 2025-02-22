@@ -9,10 +9,9 @@
     display: flex;
     justify-content: space-between;
     max-width: 1600px;
-    
+
     margin: 0 auto;
     width: 90%;
-
 }
 
 ul {
@@ -34,15 +33,16 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 10px;
-
 }
 
 body {
-    transition: background 0.3s, color 0.3s;
+    transition:
+        background 0.3s,
+        color 0.3s;
 }
 
 body.dark {
-    background-color: #181A20;
+    background-color: #181a20;
     color: white;
 }
 
@@ -56,37 +56,76 @@ body.dark ul li a {
 }
 
 body.dark ul li a:hover {
-    color: #F0B90B;
+    color: #f0b90b;
 }
-body.dark .user-name h1{
+body.dark .user-name h1 {
     color: rgb(239, 235, 235);
 }
 
-body.dark .paper{
-    background-color: #181A20;
+body.dark .paper {
+    background-color: #181a20;
 }
-body.dark .tablecell{
-    background-color: #181A20;
+body.dark .tablecell {
+    background-color: #181a20;
     color: aliceblue;
 }
 
-body.dark .MuiStep-horizontal span{
+body.dark .MuiStep-horizontal span {
     color: aliceblue;
 }
 body.dark {
     color: aliceblue;
 }
-body.dark .grafichart{
-    background-color: #181A20;
+body.dark .grafichart {
+    background-color: #181a20;
 }
-body.dark .tableCryptos{
-    background-color: #181A20;
+body.dark .tableCryptos {
+    background-color: #181a20;
 }
-body.dark .tableCryptoCell{
+body.dark .tableCryptoCell {
     color: aliceblue;
 }
-body.dark .log-ins{
+body.dark .log-ins {
     color: aliceblue;
+}
+body.dark input {
+    color: aliceblue;
+}
+body.dark .email-phone-num-add-input input {
+    color: #e3e5e9;
+}
+body.dark .coin {
+    background-color: #1e2329;
+}
+body.dark .filter-buttons button {
+    color: gray;
+}
+body.dark .filter-buttons button:hover {
+    color: white;
+}
+body.dark .papular-list h1 {
+    color: #e3e5e9;
+}
+body.dark .papular-list p {
+    color: #e3e5e9;
+}
+body.dark .papular-list p:hover {
+    color: gray;
+}
+body.dark .hs h2 {
+    color: #e3e5e9;
+}
+body.dark .coin p {
+    color: #e3e5e9;
+}
+body.dark .coin p:hover {
+    color: gray;
+}
+body.dark .icons-p p {
+    color: #e3e5e9;
+}
+body.dark .about-binance h4 {
+    color: #e3e5e9;
 }
 
 /* Mobil üçün */
@@ -96,11 +135,10 @@ body.dark .log-ins{
     }
 
     .navbar {
-        padding: 0px 10px !important;
+        /* padding: 0px 10px !important; */
         display: flex !important;
         /* gap: 40px; */
         /* justify-content: space-between; */
-
     }
 
     .right-menu ul {
@@ -121,22 +159,21 @@ body.dark .log-ins{
 
     .navbar .bars {
         display: flex !important;
+        /* padding-left: 30px; */
         /* padding-right: 720px; */
     }
 
-    .footer{
-padding-top: 80px;
-padding-left: 30px;
+    .footer {
+        padding-top: 80px;
+        padding-left: 30px;
     }
     .footer .row {
-        
         flex-direction: column !important;
         /* display: none; */
         gap: 30px;
         /* font-size: 10px; */
-     
     }
-    .footer i{
+    .footer i {
         font-size: 30px !important;
         display: flex;
     }
@@ -151,18 +188,30 @@ padding-left: 30px;
         display: none;
     }
 
-    .first-sec .col-6 h1 {
+    /* .first-sec .col-6 h1 {
         font-size: 32px;
         font-weight: 700;
         line-height: 40px;
         text-align: center;
-    }
+    } */
 
+    .col-6 h1{
+        padding-top: 0px;
+    }
+    .coins-list h1{
+        padding-left: 8px !important;
+    }
     .first-sec .col-6 {
         /* font-size: 16px; */
         /* line-height: 24px; */
         text-align: center;
         /* margin-top: 20px; */
+    }
+    .coin p{
+        padding-left: 0px !important;
+    }
+    .coins-list{
+        gap: 15px !important;
     }
 
     .phone-email-add {
@@ -172,7 +221,6 @@ padding-left: 30px;
     .email-phone-num-add-input button {
         width: 160px !important;
         margin: 0 auto;
-
     }
 
     .first-sec .footer-section {
@@ -186,28 +234,36 @@ padding-left: 30px;
     .second-sec .row {
         display: block;
     }
-     hr{
+    hr {
         width: 645px !important;
+        max-width: 320px;
     }
-    .binancess{
-    margin-left: 35%;
-    /* padding-left: 30px; */
+    .binancess {
+        /* margin-left: 35%; */
+        padding-bottom: 30px;
     }
-  
-
-   
 
     .first-sec .row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: flex !important;
+        flex-direction: column;
+        /* align-items: center; */
+        /* justify-content: center; */
         margin: 0 auto;
-
+        /* background-color: #181a20; */
+    }
+    .first-sec .col-6{
+        padding: 0px;
+    }
+    .first-sec .filter-buttons{
+        gap: 0px;
+        /* display: block; */
+        margin-top: 0px;
     }
 
     .container {
         display: block;
         padding: 0px 10px;
+        /* width: 0%; */
     }
 
     .coins .coin {
@@ -215,29 +271,31 @@ padding-left: 30px;
         border: none;
     }
 
-    .crypto-sec h1{
+    .crypto-sec h1 {
         font-size: 28px !important;
     }
-    .hot-Cryptos h3{
+    .hot-Cryptos h3 {
         font-size: 20px !important;
     }
-    .hot-Cryptos{
+    .hot-Cryptos {
         width: 600px;
         /* padding-left: 1px !important; */
     }
-    .crypts{
-padding-left: 0px !important;
+    .crypts {
+        padding-left: 0px !important;
     }
     .price-crypyto {
-    /* text-align: left !important; */
-    font-size: 25px;
+        /* text-align: left !important; */
+        font-size: 25px;
     }
-     .procent-crypto{
+    .procent-crypto {
         /* text-align: left !important;
         display: none; */
         font-size: 25px;
-    } 
-   
+    }
+
+
+
 
 
 
@@ -258,7 +316,6 @@ padding-left: 0px !important;
         gap: 200px !important;
         display: flex !important;
         justify-content: space-between !important;
-
     }
 
     .right-menu ul {
@@ -272,7 +329,7 @@ padding-left: 0px !important;
     .left-menu {
         padding-right: 80px;
 
-        padding-left: 550PX;
+        padding-left: 550px;
     }
 
     .left-menu i {
@@ -298,7 +355,6 @@ padding-left: 0px !important;
         justify-content: center;
         /* padding-top: 30px; */
         gap: 20px;
-       
     }
 
     .footer {
@@ -313,14 +369,6 @@ padding-left: 0px !important;
     }
 
     p {
-
-        padding-left: 385PX;
+        padding-left: 385px;
     }
-
-
-
-
-
 }
-
-

@@ -25,7 +25,9 @@ function UserMain() {
                     <div className="user-data">
                         <div className='user-name'>
                             <div className="user-img">
-                                <img src={user?.profileImage} alt="User profile foto" />
+                                <img
+                                    src={user?.profileImage ? user.profileImage :"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Binance_Logo.svg/191px-Binance_Logo.svg.png?20210315012944" } alt="User profile foto"
+                                />
                             </div>
                             <div>
                                 <h1>{user?.username}</h1>
@@ -35,7 +37,7 @@ function UserMain() {
 
                         <div className="id">
                             <h1>UID</h1>
-                            {/* <span>{user?.id.slice(0,10)} </span> */}
+                            <span>{user?._id?.slice(0, 10)} </span>
                         </div>
                         <div className="level">
                             <h1>VIP Level</h1>

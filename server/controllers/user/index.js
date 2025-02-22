@@ -95,7 +95,28 @@ exports.getUserById = async (req, res) => {
         res.status(200).json(user);
     } catch (error) {
         // console.log("Server error", error);
-        if (error.name == "CastError") return res.status(404).json({message: "Verilmiş id üzrə istifadəçi tapılmadı"})
+        if (error.name == "CastError") return res.status(404).json({ message: "Verilmiş id üzrə istifadəçi tapılmadı" })
+        res.status(500).json(error)
+    }
+}
+
+exports.editByUser = async (req, res) => {
+    try {
+        const { amount } = req.body
+        const user = await User.findById({ _id: req.params.id })
+        if (!amount) {
+            return res.status(400).json({ message: "amount mutleq gonderilmelidir!" });
+        }
+        if(+amount < 0){
+            res.status(400).json({ message: "0 manat artirmaq olmaz!" });
+        }else {
+            user.balance = +user.balance + +amount
+            await user.save()
+            res.status(200).json(user);
+        }
+    } catch (error) {
+        // console.log("Server error", error);
+        if (error.name == "CastError") return res.status(404).json({ message: "Verilmiş id üzrə istifadəçi tapılmadı" })
         res.status(500).json(error)
     }
 }

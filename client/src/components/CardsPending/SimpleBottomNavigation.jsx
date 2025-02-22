@@ -5,6 +5,8 @@ import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import LoginGoogle from '../LoginGoogle';
+import { Link } from 'react-router';
 
 const steps = ['Verify Account  ', 'Deposit', 'Trade'];
 
@@ -92,10 +94,18 @@ export default function HorizontalLinearStepper({ verify }) {
           </Box>
         </>
       ) : (
-        <React.Fragment>
+        <div>
           {
-            (verify && activeStep == 0) ? <Typography color='blue' sx={{ mt: 2, mb: 1 }}>Verified with Gmail</Typography> :
-              <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
+            (verify && activeStep == 0) ?
+              <Typography color='blue' sx={{ mt: 2, mb: 1 }}>Verified with Gmail</Typography> :
+              <Typography sx={{ mt: 2, mb: 1 }}>
+                Step {activeStep + 1} <br />
+                Verify your account by signing up with Gmail <br />
+                {/* <LoginGoogle /> */}
+                Go to 
+                <Link to={"payment"}>Deposit</Link>
+            !
+              </Typography>
           }
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Button
@@ -116,7 +126,7 @@ export default function HorizontalLinearStepper({ verify }) {
               {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
             </Button>
           </Box>
-        </React.Fragment>
+        </div>
       )}
     </Box>
   );

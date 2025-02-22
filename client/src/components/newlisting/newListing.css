@@ -2,7 +2,7 @@
     display: flex;
     gap: 50px;
     justify-content: center;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .filter-buttons button{
@@ -12,13 +12,12 @@
     padding: 10px;
     margin-top: 10px;
     font-family: "BinancePlex", Arial, sans-serif;
- color: 
- rgb(234, 236, 239);
+color: #202630;
 
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    /* padding-top: 20px; */
+    padding-left: 20px;
 }
 
 .filter-buttons button:hover{
@@ -41,7 +40,8 @@
     line-height: 24px;
     font-weight: 600;
     font-family: "BinancePlex", Arial, sans-serif;
-    padding-left: 10%;
+    /* padding-left: 5%; */
+    margin-left: 10px;
 }
 .coins-list span{
     color: gray;
@@ -55,7 +55,7 @@
 }
 
 .coins-list p{
-    color: #f0f0f0;
+    color:#202630;
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;

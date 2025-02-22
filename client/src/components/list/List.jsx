@@ -26,7 +26,7 @@ const List = () => {
         </div>
         <div>
           <button onClick={() => handleClick(1)}>  <span>2</span> What products does Binance provide?</button>
-          {activeIndex === 1 && <p>Binance is the world's leading cryptocurrency exchange, catering to 235 million registered users in over 180 countries. With low fees and over 350 cryptocurrencies to trade, Binance is the preferred exchange to trade Bitcoin, Altcoins, and other virtual assets.
+          {activeIndex === 1 && <p className='aksd-quastion'>Binance is the world's leading cryptocurrency exchange, catering to 235 million registered users in over 180 countries. With low fees and over 350 cryptocurrencies to trade, Binance is the preferred exchange to trade Bitcoin, Altcoins, and other virtual assets.
 
             With Binance users can:
             Trade hundreds of cryptocurrencies on Spot, Margin, and Futures markets.

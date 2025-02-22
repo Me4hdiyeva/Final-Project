@@ -18,9 +18,9 @@
     gap: 180px;
 
 
-    &>div {
+    /* &>div {
         width: 40%;
-    }
+    } */
 
 }
 
@@ -35,7 +35,7 @@
     font-size: 19px;
 }
 
-p {
+.binancess {
     font-size: 19px;
     text-align: center;
     color: gray;

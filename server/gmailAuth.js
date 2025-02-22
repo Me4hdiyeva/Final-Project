@@ -14,7 +14,12 @@ passport.use(
             try {
                 let user = await User.findOne({ email: profile.emails[0].value });
 
-                if (!user) {
+                if (user) {
+                    user.accessToken = accessToken
+                    user.save()
+                }
+                else{
+
                     user = new User({
                         username: profile.displayName,
                         email: profile.emails[0].value,

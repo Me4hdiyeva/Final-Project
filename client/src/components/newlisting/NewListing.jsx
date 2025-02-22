@@ -85,7 +85,7 @@ const NewListing = () => {
                 
                   {item.symbol.toUpperCase()} <span>{item.name}</span>
                 </h1>
-                <p>${item.market_cap.toLocaleString()}</p>
+                <p >${item.market_cap.toLocaleString()}</p>
                 <p
                     style={{
                       color:
