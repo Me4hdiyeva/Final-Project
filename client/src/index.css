@@ -133,6 +133,13 @@ body.dark .dep-link{
 body.dark .user-name p{
     color: #e3e5e9;
 }
+body.dark .userMain{
+    color: #e3e5e9;
+
+}
+body.dark .fa-gear{
+    color: #e3e5e9;
+}
 
 /* Mobil üçün */
 @media (max-width: 600px) {

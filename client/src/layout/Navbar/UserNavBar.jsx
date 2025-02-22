@@ -91,7 +91,7 @@ function UserNavBar() {
                     <i class="fa-solid fa-globe"></i>
                     <i class="fa-solid fa-square-caret-down"></i>
                     <Link to={"/dashboard"}>
-                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid userMain fa-user"></i>
                     </Link>
                     <Link to={"settings"}>
                         <i class="fa-solid fa-gear"></i>
