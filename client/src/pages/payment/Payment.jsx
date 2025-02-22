@@ -1,17 +1,55 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { addToBalance } from '../../services/api'
+import { useNavigate } from 'react-router'
 
 function Payment() {
+
+    const navigate = useNavigate()
+    const [balance, setBalance] = useState()
+    async function addDeposit(e) {
+        e.preventDefault()
+        const id = localStorage.getItem("userid")
+        await addToBalance(id , balance)
+        navigate('/dashboard')
+    }
+
     return (
-        <section className="fixed inset-0 flex justify-center align-center h-screen bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
+        <section className="fixed inset-0 flex justify-center items-center h-screen bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
             <div className="w-[90%] mx-auto max-w-screen-xl px-4 2xl:px-0">
-                <div className="mx-auto max-w-5xl">
-                    <h2 className="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">
+                <div className="mx-auto text-center">
+                    <h2 className="text-xl pb-[20px] font-semibold text-gray-900 dark:text-white sm:text-2xl">
                         Payment
                     </h2>
-                    <div className="mt-6 sm:mt-8 lg:flex lg:items-start lg:gap-12 ">
+                    <div className="flex flex-col items-center gap-[20px] ">
+                        <div className="mt-6 grow sm:mt-8 lg:mt-0">
+                            <div className="mt-6 flex items-center justify-center gap-8">
+                                <div className="">
+                                    <label
+                                        htmlFor="full_name"
+                                        className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+                                    >
+                                        Miqdar yazin!
+                                    </label>
+                                    <input
+                                        onChange={(e) => { setBalance(e.target.value)  }}
+                                        type="number"
+                                        id="full_name"
+                                        className="block w-full min-w-[400px] rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 
+                                        focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 
+                                        dark:focus:border-primary-500 dark:focus:ring-primary-500"
+                                        placeholder="Dosage amount"
+                                        required=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
                         <form
+                            style={{
+                                padding: 20,
+                                marginLeft: 0
+                            }}
                             action="#"
-                            className="w-full !ml-0 rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6 lg:max-w-xl lg:p-8"
+                            className=" rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6 lg:max-w-xl lg:p-8"
                         >
                             <div className="mb-6 grid grid-cols-2 gap-4">
                                 <div className="col-span-2 sm:col-span-1">
@@ -127,58 +165,18 @@ function Payment() {
                                     />
                                 </div>
                             </div>
+                            <br /><br />
                             <button
+                                onClick={addDeposit}
                                 type="submit"
-                                className="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                                className="flex w-full min-h-[50px] bg-[green] items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white "
                             >
                                 Pay now
                             </button>
+
+
                         </form>
-                        <div className="mt-6 grow sm:mt-8 lg:mt-0">
-                            <div className="space-y-4 rounded-lg border border-gray-100 bg-gray-50 p-6 dark:border-gray-700 dark:bg-gray-800">
-                                <div className="space-y-2">
-                                    <dl className="flex items-center justify-between gap-4">
-                                        <dt className="text-base font-normal text-gray-500 dark:text-gray-400">
-                                            Original price
-                                        </dt>
-                                        <dd className="text-base font-medium text-gray-900 dark:text-white">
-                                            $6,592.00
-                                        </dd>
-                                    </dl>
-                                    <dl className="flex items-center justify-between gap-4">
-                                        <dt className="text-base font-normal text-gray-500 dark:text-gray-400">
-                                            Savings
-                                        </dt>
-                                        <dd className="text-base font-medium text-green-500">
-                                            -$299.00
-                                        </dd>
-                                    </dl>
-                                    <dl className="flex items-center justify-between gap-4">
-                                        <dt className="text-base font-normal text-gray-500 dark:text-gray-400">
-                                            Store Pickup
-                                        </dt>
-                                        <dd className="text-base font-medium text-gray-900 dark:text-white">
-                                            $99
-                                        </dd>
-                                    </dl>
-                                    <dl className="flex items-center justify-between gap-4">
-                                        <dt className="text-base font-normal text-gray-500 dark:text-gray-400">
-                                            Tax
-                                        </dt>
-                                        <dd className="text-base font-medium text-gray-900 dark:text-white">
-                                            $799
-                                        </dd>
-                                    </dl>
-                                </div>
-                                <dl className="flex items-center justify-between gap-4 border-t border-gray-200 pt-2 dark:border-gray-700">
-                                    <dt className="text-base font-bold text-gray-900 dark:text-white">
-                                        Total
-                                    </dt>
-                                    <dd className="text-base font-bold text-gray-900 dark:text-white">
-                                        $7,191.00
-                                    </dd>
-                                </dl>
-                            </div>
+                        <div className="mt-6 grow sm:mt-8 lg:max-w-xl lg:mt-0">
                             <div className="mt-6 flex items-center justify-center gap-8">
                                 <img
                                     className="h-8 w-auto dark:hidden"
@@ -213,25 +211,7 @@ function Payment() {
                             </div>
                         </div>
                     </div>
-                    <p className="mt-6 text-center text-gray-500 dark:text-gray-400 sm:mt-8 lg:text-left">
-                        Payment processed by{" "}
-                        <a
-                            href="#"
-                            title=""
-                            className="font-medium text-primary-700 underline hover:no-underline dark:text-primary-500"
-                        >
-                            Paddle
-                        </a>{" "}
-                        for{" "}
-                        <a
-                            href="#"
-                            title=""
-                            className="font-medium text-primary-700 underline hover:no-underline dark:text-primary-500"
-                        >
-                            Flowbite LLC
-                        </a>
-                        - United States Of America
-                    </p>
+
                 </div>
             </div>
         </section>

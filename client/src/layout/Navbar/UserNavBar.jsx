@@ -5,7 +5,7 @@ import toast from 'react-hot-toast'
 import { STATUS } from '../../context/StatusContext'
 
 function UserNavBar() {
-    const { setStatus} = useContext(STATUS)
+    const { setStatus } = useContext(STATUS)
     const navigate = useNavigate()
     function logoutFunk() {
         localStorage.removeItem("token")
@@ -69,7 +69,7 @@ function UserNavBar() {
 
                             </Link>
                         </li>
-                   
+
                         <li>
                             <Link>
                                 More
@@ -87,13 +87,21 @@ function UserNavBar() {
                         Log out
                     </button>
 
+
                     <i class="fa-solid fa-globe"></i>
                     <i class="fa-solid fa-square-caret-down"></i>
                     <Link to={"/dashboard"}>
-                    <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-user"></i>
                     </Link>
                     <Link to={"settings"}>
-                    <i class="fa-solid fa-gear"></i>
+                        <i class="fa-solid fa-gear"></i>
+                    </Link>
+                    <i className="fa-solid fa-globe"></i>
+                    <i className="fa-solid fa-square-caret-down"></i>
+                    <Link to={"/dashboard"}> <i className="fa-solid fa-user"></i></Link>
+                    <Link to={"settings"}>
+                        <i className="fa-solid fa-gear"></i>
+
                     </Link>
                     <Mode />
                 </div>

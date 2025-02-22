@@ -37,14 +37,28 @@ async function getCoins() {
 async function getUserById(id) {
     try {
         const user = await axiosInstanse.get(`/auth/users/${id}`)
-        const { data } = await axios.get('https://www.googleapis.com/oauth2/v2/userinfo', {
-            headers: { Authorization: `Bearer ${user.data.accessToken}` }
-        });
+        let data = {}
+        if (user.data.accessToken) {
+            const melumat = await axios.get('https://www.googleapis.com/oauth2/v2/userinfo', {
+                headers: { Authorization: `Bearer ${user.data.accessToken}` }
+            });
+            data = melumat.data
+        }
         return {
             ...user.data,
             ...data,
-            profileImage: data.picture
+            profileImage: data?.picture
         }
+    } catch (error) {
+        console.log(error);
+        return error
+    }
+}
+
+async function addToBalance(id, amount) {
+    try {
+        const { data } = await axiosInstanse.put(`/auth/users/${id}`, { amount })
+        return data
     } catch (error) {
         console.log(error);
         return error
@@ -53,5 +67,5 @@ async function getUserById(id) {
 
 
 export {
-    loginUser, verifyToken, getCoins, getUserById
+    loginUser, verifyToken, getCoins, getUserById, addToBalance
 }
