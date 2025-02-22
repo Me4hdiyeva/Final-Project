@@ -96,13 +96,13 @@ function UserNavBar() {
                     <Link to={"settings"}>
                         <i class="fa-solid fa-gear"></i>
                     </Link>
-                    <i className="fa-solid fa-globe"></i>
-                    <i className="fa-solid fa-square-caret-down"></i>
-                    <Link to={"/dashboard"}> <i className="fa-solid fa-user"></i></Link>
-                    <Link to={"settings"}>
+                    {/* <i className="fa-solid fa-globe"></i>/ */}
+                    {/* <i className="fa-solid fa-square-caret-down"></i> */}
+                    {/* <Link to={"/dashboard"}> <i className="fa-solid fa-user"></i></Link> */}
+                    {/* <Link to={"settings"}>
                         <i className="fa-solid fa-gear"></i>
 
-                    </Link>
+                    </Link> */}
                     <Mode />
                 </div>
                 <i class="fa-solid fa-bars bars"></i>

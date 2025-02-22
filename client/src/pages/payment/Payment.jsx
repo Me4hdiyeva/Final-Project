@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { addToBalance } from '../../services/api'
 import { useNavigate } from 'react-router'
+import "../payment/payment.css"
 
 function Payment() {
 
@@ -14,10 +15,10 @@ function Payment() {
     }
 
     return (
-        <section className="fixed inset-0 flex justify-center items-center h-screen bg-white py-8 antialiased dark:bg-gray-900 md:py-16">
+        <section className="fixed inset-0 flex justify-center items-center h-screen bg-white py-8 antialiased dark:bg-gray-900 md:py-16 payment">
             <div className="w-[90%] mx-auto max-w-screen-xl px-4 2xl:px-0">
                 <div className="mx-auto text-center">
-                    <h2 className="text-xl pb-[20px] font-semibold text-gray-900 dark:text-white sm:text-2xl">
+                    <h2 className="text-xl pb-[20px] font-semibold text-gray-900 dark:text-white sm:text-2xl ">
                         Payment
                     </h2>
                     <div className="flex flex-col items-center gap-[20px] ">
@@ -28,13 +29,13 @@ function Payment() {
                                         htmlFor="full_name"
                                         className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
                                     >
-                                        Miqdar yazin!
+                                      Write the quantity!
                                     </label>
                                     <input
                                         onChange={(e) => { setBalance(e.target.value)  }}
                                         type="number"
                                         id="full_name"
-                                        className="block w-full min-w-[400px] rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 
+                                        className="block w-full min-w-[300px] rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 
                                         focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 
                                         dark:focus:border-primary-500 dark:focus:ring-primary-500"
                                         placeholder="Dosage amount"
@@ -68,7 +69,7 @@ function Payment() {
                                         required=""
                                     />
                                 </div>
-                                <div className="col-span-2 sm:col-span-1">
+                                <div className="col-span-2 sm:col-span-1 card-number">
                                     <label
                                         htmlFor="card-number-input"
                                         className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -93,7 +94,7 @@ function Payment() {
                                         Card expiration*{" "}
                                     </label>
                                     <div className="relative">
-                                        <div className="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3.5">
+                                        <div className="pointer-events-none absolute inset-y-0 i start-0 flex items-center ps-3.5">
                                             <svg
                                                 className="h-4 w-4 text-gray-500 dark:text-gray-400"
                                                 aria-hidden="true"

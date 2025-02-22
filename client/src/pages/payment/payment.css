@@ -1,0 +1,37 @@
+.payment{
+    
+}
+.payment h2{
+    font-size: 40px;
+    /* padding-bottom: 20px; */
+}
+.payment label{
+    font-size: 21px;
+    /* padding-top: 30px; */
+    /* border: 10px; */
+}
+#full_name{
+    padding: 9px;
+    margin-top: 17px;
+}
+.payment .card-number {
+    padding-top: 27px;
+}
+#card-number-input{
+    /* border: 1px; */
+    padding: 10px;
+    margin-top: 20px;
+}
+#card-expiration-input{
+    padding: 10px;
+    margin-top: 20px;
+    /* padding: 20px; */
+    padding-left: 20px;
+}
+#cvv-input{
+    padding: 10px;
+    margin-top: 20px;  
+}
+.relative .i{
+    margin-left: 5px;
+}
