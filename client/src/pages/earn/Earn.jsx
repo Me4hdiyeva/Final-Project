@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import './earn.css'
 import axios from 'axios'
+import TableCrypto from '../../components/TableCrypto/TableCrypto'
 
 const Earn = () => {
     // const [inp2, setInp2] = useState("")
@@ -104,7 +105,15 @@ const Earn = () => {
                     <button>Verify Identity</button>
 
                 </div>
+             
+
+
             </div>
+            <div style={{paddingBottom:"130px"}} className="tables">
+            <TableCrypto/>
+
+            </div>
+
     </>
   )
 }
