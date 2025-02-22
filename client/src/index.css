@@ -127,6 +127,12 @@ body.dark .icons-p p {
 body.dark .about-binance h4 {
     color: #e3e5e9;
 }
+body.dark .dep-link{
+    color: #e3e5e9;
+}
+body.dark .user-name p{
+    color: #e3e5e9;
+}
 
 /* Mobil üçün */
 @media (max-width: 600px) {

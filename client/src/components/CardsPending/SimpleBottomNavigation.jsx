@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import LoginGoogle from '../LoginGoogle';
 import { Link } from 'react-router';
+import "../CardsPending/cardspending.css"
 
 const steps = ['Verify Account  ', 'Deposit', 'Trade'];
 
@@ -103,7 +104,8 @@ export default function HorizontalLinearStepper({ verify }) {
                 Verify your account by signing up with Gmail <br />
                 {/* <LoginGoogle /> */}
                 Go to 
-                <Link to={"payment"}>Deposit</Link>
+            
+                <Link className='dep-link'  to={"payment"}>Deposit</Link>
             !
               </Typography>
           }
