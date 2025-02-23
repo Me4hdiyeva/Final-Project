@@ -1,9 +1,7 @@
 import React from 'react'
-// import Navbar from './Navbar/Navbar'
-// import Footer from './Footer/Footer'
 import { Outlet } from 'react-router'
-import Navbar from './navbar/Navbar'
 import Footer from './Footer/Footer'
+import Navbar from './Navbar/Navbar'
 
 const Main = () => {
   return (

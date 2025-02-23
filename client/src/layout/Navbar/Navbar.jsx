@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
 import Mode from '../../components/Mode'
 import { Link } from 'react-router'
-import './Navbar.css'
-import UserNavBar from './UserNavBar'
+import './navbar.css'
 import { STATUS } from '../../context/StatusContext'
+import UserNavBar from './UserNavBar'
 
 const Navbar = () => {
-    const {status} = useContext(STATUS)
+    const { status } = useContext(STATUS)
     if (status) {
         return <UserNavBar />
     } else {
