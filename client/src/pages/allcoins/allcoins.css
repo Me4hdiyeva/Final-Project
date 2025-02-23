@@ -24,7 +24,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 55px;
 }
 .allcoins .col-3{
     width: 40%;
