@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import myImage from "../../img/img.png";
 import myImage2 from '../../img/img2.png';
 import myImage3 from '../../img/img3.png';
-import './photochoose.css';
+import './PhotoChoose.css';
 
 const PhotoChoose = () => {
     const [selectedImage, setSelectedImage] = useState('image1');

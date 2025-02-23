@@ -16,6 +16,7 @@ function UserMain() {
         getUserById(localStorage.getItem("userid")).then(
             res => {
                 setUser(res)
+                console.log(res)
                 setVerify(res.verified_email)
             }
         )
@@ -81,7 +82,7 @@ function UserMain() {
                                 <option value="0.998">USDT</option>
                             </select>
                         </span>
-                            <span>= ${hidden ? user?.balance : "****"}</span>
+                            <span>= ${hidden ? Number(user?.balance).toFixed(2) : "****"}</span>
 
                             <i style={{ display: hidden ? "inline-block" : "none" }} onClick={() => setHidden(!true)} className="fa-solid fa-eye"></i>
                             <i style={{ display: !hidden ? "inline-block" : "none" }} onClick={() => setHidden(!false)} className="fa-solid fa-eye-slash"></i>

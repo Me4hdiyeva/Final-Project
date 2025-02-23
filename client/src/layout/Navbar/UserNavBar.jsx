@@ -78,7 +78,7 @@ function UserNavBar() {
           <Link to={"/dashboard"}>
             <i class="fa-solid userMain fa-user"></i>
           </Link>
-          <Link to={"settings"}>
+          <Link to={"/dashboard/settings"}>
             <i class="fa-solid fa-gear"></i>
           </Link>
           {/* <i className="fa-solid fa-globe"></i>/ */}

@@ -1,52 +1,71 @@
-.profile-settings{
+.profile-settings {
     border: 1px solid gray;
     margin-left: 100px;
     border-radius: 10px;
-    /* display: flex; */
-    padding: 50px;
     margin-top: 50px;
+    padding: 20px;
     margin-bottom: 90px;
 }
-.about-settings p { 
-  width: 700px;
-  text-align: left;
+
+.about-settings p {
+    width: 700px;
+    text-align: left;
 }
-.edit{
+
+.edit {
     display: flex;
     padding-top: 30px;
     gap: 20px;
 }
-.about-set-profile-avatar{
+
+.about-set-profile-avatar {
     display: flex;
-    padding-top: 20px;
-    gap: 390px;
+    padding-top: 30px;
 }
-.div-avatar{
+
+.div-avatar {
     border: 1px solid gray;
     width: 50px;
     height: 50px;
-}
-.edit button{
-   /* border: 1px solid; */
-   width: 70px;
-   height: 30px;
-   background-color: #dedbdb;
-   /* color: aliceblue; */
+    position: relative;
+
+    &:hover #userLabel {
+        display: flex;
+    }
 }
 
-.settings h1{
+#userLabel {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: none;
+}
+
+.edit button {
+    /* border: 1px solid; */
+    width: 70px;
+    height: 30px;
+    background-color: #dedbdb;
+    /* color: aliceblue; */
+}
+
+.settings h1 {
     font-size: 24px;
     font-weight: 600;
     line-height: 32px;
 }
-.settings h2{
+
+.settings h2 {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
 }
-.settings .btn-del-set{
-   background-color:#dedbdb;
-    width:70px;
-     height:30px;
-     margin-left: 350px;
-    }
+
+.settings .btn-del-set {
+    background-color: #dedbdb;
+    width: 70px;
+    height: 30px
+}
