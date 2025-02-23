@@ -144,6 +144,18 @@ async function updateUserNickname(userId, username) {
         throw error;
     }
 }
+async function updateProfileImg(userId, profileImg) {
+    console.log(profileImg);
+    console.log(userId);
+    
+    try {
+        const response = await axiosInstanse.put(`/auth/users/profileImg/${userId}`, { profileImage: profileImg });
+        return response.data;
+    } catch (error) {
+        console.error("Nickname yenilənərkən xəta baş verdi:", error.response?.data || error.message);
+        throw error;
+    }
+}
 
 async function updateUserEmail(userId, email) {
     try {
@@ -170,5 +182,5 @@ async function updateUserPassword(userId, currentPassword, newPassword) {
 
 export {
     loginUser, verifyToken, getCoins, getUserById, addToBalance, buyCripto, getAllUserCoins, sellUserCoin,
-    deleteUser, updateUserNickname, updateUserEmail, updateUserPassword, editProfileImg
+    deleteUser, updateUserNickname, updateUserEmail, updateUserPassword, editProfileImg, updateProfileImg
 }

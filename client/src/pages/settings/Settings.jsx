@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import "../settings/settings.css"
-import { deleteUser, editProfileImg, updateUserNickname, updateUserPassword } from '../../services/api'
+import { deleteUser, editProfileImg, updateProfileImg, updateUserNickname, updateUserPassword } from '../../services/api'
 import { useNavigate } from 'react-router'
 import { STATUS } from '../../context/StatusContext'
 import toast from 'react-hot-toast'
@@ -35,6 +35,12 @@ const Settings = () => {
 
             if (response.message) {
                 setImg(path + response.user.profileImage)
+                // console.log(response.user.profileImage);
+                
+                const img = await updateProfileImg(id, response.user.profileImage)
+                console.log(img);
+                
+                localStorage.setItem("profileImage", img.user.profileImage)
                 toast.success(response.message);
             } else {
                 toast.error("Şəkil yüklənərkən xəta baş verdi.");

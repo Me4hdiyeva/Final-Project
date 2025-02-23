@@ -5,16 +5,12 @@ const jwt = require("jsonwebtoken");
 
 passport.use(
     new GoogleStrategy(
-        // {
-        //     clientID: process.env.GOOGLE_CLIENT_ID,
-        //     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        //     callbackURL: process.env.GOOGLE_REDIRECT_URI,
-        // },
         {
-            clientID: "187050017878-eq10cvllner6ia953ahtjebqnh7267v6.apps.googleusercontent.com",
-            clientSecret: "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",
-            callbackURL: "http://localhost:3000/api/auth/google/callback",
+            clientID: process.env.GOOGLE_CLIENT_ID,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+            callbackURL: process.env.GOOGLE_REDIRECT_URI,
         },
+       
         async (accessToken, refreshToken, profile, done) => {
             try {
                 let user = await User.findOne({ email: profile.emails[0].value });
