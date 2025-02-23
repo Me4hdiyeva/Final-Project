@@ -63,11 +63,14 @@ function Payment() {
                             <div className="mt-6 flex items-center justify-center gap-8">
                                 <div className="">
                                     <label style={{
-                                        paddingBottom:"10px"
+                                        paddingBottom:"10px",
+                                      
                                     }} htmlFor="balance" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
                                         Write the quantity!
                                     </label>
                                     <input
+                                    style={{padding:"5px"}}
+                                    
                                         onChange={(e) => setBalance(e.target.value)}
                                         type="number"
                                         id="balance"
