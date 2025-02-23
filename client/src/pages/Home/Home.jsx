@@ -97,7 +97,7 @@ const Home = () => {
                       <h2>News</h2>
                       <h3>View All News</h3>
                     </div>
-                    <p>Grayscale Announces Job Openings For Key Positions</p>
+                    <p style={{paddingTop:"10px"}}>Grayscale Announces Job Openings For Key Positions</p>
                     <p>
                       Ethereum Name Service Sees Surge In January <br />{" "}
                       Registrations
