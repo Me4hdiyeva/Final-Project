@@ -16,6 +16,11 @@
     padding-bottom: 20px;
 }
 
+.first-sec{
+    /* display: flex; */
+    /* gap: 100px; */
+    /* justify-content: space-between !important; */
+}
 .col-6 span {
     font-weight: 700;
     /* font-size: 16px; */
