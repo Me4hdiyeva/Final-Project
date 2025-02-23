@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import LoginGoogle from '../LoginGoogle';
 import { Link } from 'react-router';
-import "./cardspending.css"
+import "../CardsPending/cardspending.css"
 
 const steps = ['Verify Account  ', 'Deposit', 'Trade'];
 

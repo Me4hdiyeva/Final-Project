@@ -178,7 +178,6 @@ body.dark .btn-del-set {
     color: #181a20;
 }
 
-
 /* Mobil üçün */
 @media (max-width: 600px) {
     body {
@@ -439,7 +438,7 @@ body.dark .btn-del-set {
     }
 
     .footer {
-        padding: 0px 40px;
+        padding: 40px;
     }
 
     hr {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import './list.css'
+import './List.css'
 
 const List = () => {
 

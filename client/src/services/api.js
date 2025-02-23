@@ -71,7 +71,6 @@ async function addToBalance(id, amount) {
 
 async function buyCripto(user, type, count, currency) {
     try {
-        console.log(user, type, count, currency);
         
         const { data } = await axiosInstanse.post(`/cripto`,
             { type, count, currency, user }

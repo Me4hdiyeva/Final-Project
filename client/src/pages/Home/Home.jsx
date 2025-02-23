@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import "./home.css";
+import "./Home.css";
 import NewListing from "../../components/newlisting/NewListing";
 import PhotoChoose from "../../components/fotochoose/PhotoChoose";
 // import QRScanner from '../../components/QRScanner.JSX'
@@ -27,10 +27,9 @@ const Home = () => {
   //   }
   // };
 
-  useEffect(() => {
-    // getQuantifyUsers();
-    myUsers()
-  }, []);
+  // useEffect(() => {
+  //   getQuantifyUsers();
+  // }, []);
 
   const myUsers = async () => {
     const users = await axios.get("http://localhost:3000/api/auth/users");
@@ -40,7 +39,6 @@ const Home = () => {
     console.log(lengthUser);
     setUsers(lengthUser);
   };
-
 
   return (
     <>
