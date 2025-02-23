@@ -55,16 +55,28 @@ const BuyCrypto = () => {
 
 
     async function buyCoin() {
-        const id = localStorage.getItem("userid");
-        if(!id) navigate("/login")
         const balance = localStorage.getItem("balance")
+        if(!balance) {
+            navigate("/login")
+            return toast.error("Evvelce hesabiniza giris edin!")
+        }
         if (+balance < +inp1) {
             return toast.error("Balansinizda kifayet qeder mebleg yoxdur!")
         }
+        if (+balance < +inp1) {
+            return toast.error("Balansinizda kifayet qeder mebleg yoxdur!")
+        }
+        if(balance <= 0 ){
+            localStorage.setItem("balance", 0)
+            return toast.error("Balansiniz bitmisdir")
+        }
 
         try {
+            const id = localStorage.getItem("userid");
             const alis = await buyCripto(id, name, inp2, (Number(inp1).toFixed() / inp2))
-            localStorage.setItem("balance", balance - inp2)
+            console.log(alis.user);
+            
+            localStorage.setItem("balance", alis.user.balance)
             toast.success("Coin pul qabina elave olundu")
         } catch (error) {
             console.log(error);
@@ -81,7 +93,7 @@ const BuyCrypto = () => {
                     console.log(param)
                 }}>
                 sdfjcgsdhufcbshdjb</button> */}
-            <div className="container">
+            <div className="container sevCon">
                 <div className="crypto-sec">
                     <h1>Buy Crypto</h1>
                     <div className='hot-Cryptos'>
