@@ -5,10 +5,15 @@ const jwt = require("jsonwebtoken");
 
 passport.use(
     new GoogleStrategy(
+        // {
+        //     clientID: process.env.GOOGLE_CLIENT_ID,
+        //     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+        //     callbackURL: process.env.GOOGLE_REDIRECT_URI,
+        // },
         {
-            clientID: process.env.GOOGLE_CLIENT_ID,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-            callbackURL: process.env.GOOGLE_REDIRECT_URI,
+            clientID: "187050017878-eq10cvllner6ia953ahtjebqnh7267v6.apps.googleusercontent.com",
+            clientSecret: "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",
+            callbackURL: "http://localhost:3000/api/auth/google/callback",
         },
         async (accessToken, refreshToken, profile, done) => {
             try {
@@ -18,13 +23,13 @@ passport.use(
                     user.accessToken = accessToken
                     user.save()
                 }
-                else{
+                else {
 
                     user = new User({
                         username: profile.displayName,
                         email: profile.emails[0].value,
-                        password: "google-auth", 
-                        profileImage: "/", 
+                        password: "google-auth",
+                        profileImage: "/",
                         accessToken
                     });
 
