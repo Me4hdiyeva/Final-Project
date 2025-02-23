@@ -103,7 +103,7 @@ export default function LabTabs() {
         {coins &&
           coins.map(item => {
             return (
-              <TabPanel value={item._id}>
+              <TabPanel  value={item._id}>
                 {item.count} {item.type} = {(Number(item?.currency).toFixed(3) * item.count).toFixed(3)}$
               </TabPanel>)
           })
