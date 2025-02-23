@@ -52,7 +52,7 @@ const Home = () => {
       <div className="container">
         <div className="sections">
           <div className="first-sec">
-            <div className="row flex-wrap !justify-center">
+            <div className="row gap-100  flex-wrap !justify-center">
               <div className="col-6">
                 <h1>
                   <span>{userr}</span>
@@ -116,7 +116,7 @@ const Home = () => {
           {
             <div className="second-sec">
               <div className="about-binance">
-                <div className="row flex-wrap !justify-center">
+                <div className="row gap-50 flex-wrap !justify-center">
                   <div className="col-6">
                     <PhotoChoose />
                   </div>
