@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import Mode from '../../components/Mode'
 import { Link } from 'react-router'
-import './Navbar.css'
+import './navbar.css'
 import { STATUS } from '../../context/StatusContext'
 import UserNavBar from './UserNavBar'
 
