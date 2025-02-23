@@ -478,4 +478,32 @@ body.dark .btn-del-set {
     p {
         /* padding-left: 385px; */
     }
+    .profile-settings{
+        margin-left: 0px !important;
+        width: 600px !important;
+        /* margin-right: 10px !important; */
+
+    }
+    .about-settings p {
+        width: 500px !important;
+
+    }
+    .about-set-profile-avatar{
+        display: block !important;
+    }
+    .settings .btn-del-set{
+        margin-left: 0px !important;
+        height: 40px !important;
+    }
+    .set-three{
+        gap: 0px !important;
+    }
+    .set-second{
+display: none !important;
+    }
+
+    
+
+
+
 }

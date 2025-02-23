@@ -79,7 +79,7 @@ const Settings = () => {
         <div className="profile-settings">
                 <h1>Privacy</h1>
                 <div className="about-set-profile-avatar">
-            <div style={{display:"flex", gap:"743px", justifyContent:"space-between"}} className="about-settings">
+            <div style={{display:"flex", gap:"743px", justifyContent:"space-between"}} className="about-settings set-three">
             <h2>Delete Account</h2>
           <button className='btn-del-set' >Delete</button>
             </div>
