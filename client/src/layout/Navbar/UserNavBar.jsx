@@ -11,6 +11,7 @@ function UserNavBar() {
         localStorage.removeItem("token")
         localStorage.removeItem("username")
         localStorage.removeItem("userid")
+        localStorage.removeItem("balance")
         toast.success("Hesabdan çıxış edildi")
         setStatus(false)
         navigate("/")
@@ -25,18 +26,17 @@ function UserNavBar() {
                     <ul>
                         <li>
                             <Link to={"/buyCrypto"}>
-                                Buy Cryptos
+                                Buy Crypto
                             </Link>
                         </li>
                         <li>
-                            <Link>
+                            <Link to={"/allCoins"}>
                                 Markets
                             </Link>
                         </li>
                         <li>
-
                             <div className="dropdown">
-                                <Link href="#">Trade</Link>
+                                <Link to={"/grafic"}>Trade</Link>
                                 <div className="dropdown-content">
                                     <div>
 
@@ -54,8 +54,8 @@ function UserNavBar() {
                                 </div>
                             </div>
                             {/* <Link>
-            Trade
-        </Link> */}
+                                                   Trade
+                                               </Link> */}
                         </li>
                         <li>
                             <Link>
@@ -64,16 +64,20 @@ function UserNavBar() {
                             </Link>
                         </li>
                         <li>
-                            <Link>
+                            <Link to={"/earn"}>
                                 Earn
 
                             </Link>
                         </li>
-
                         <li>
                             <Link>
-                                More
+                                Square
 
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to={"payment"}>
+                                Payment
                             </Link>
                         </li>
 
@@ -95,13 +99,6 @@ function UserNavBar() {
                     </Link>
                     <Link to={"settings"}>
                         <i class="fa-solid fa-gear"></i>
-                    </Link>
-                    <i className="fa-solid fa-globe"></i>
-                    <i className="fa-solid fa-square-caret-down"></i>
-                    <Link to={"/dashboard"}> <i className="fa-solid fa-user"></i></Link>
-                    <Link to={"settings"}>
-                        <i className="fa-solid fa-gear"></i>
-
                     </Link>
                     <Mode />
                 </div>

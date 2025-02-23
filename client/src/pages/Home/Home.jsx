@@ -12,26 +12,26 @@ const Home = () => {
 
   const [userr, setUsers] = useState([])
 
-  const getQuantifyUsers = async () => {
-    try {
-      const response = await axios.get('http://localhost:3000/api/auth/register');
-      
-      // Cavabın strukturunu yoxlayın
-      if (response && response.data) {
-        const users = response.data;
-        console.log(users); // Cavabı yoxlayın
-      } else {
-        console.log('No users data found');
-      }
-    } catch (error) {
-      console.log("Error:", error);
-    }
-  };
-  
-  useEffect(() => {
-    getQuantifyUsers();
-  }, []);
-  
+  // const getQuantifyUsers = async () => {
+  //   try {
+  //     const response = await axios.get('http://localhost:3000/api/auth/register');
+
+  //     // Cavabın strukturunu yoxlayın
+  //     if (response && response.data) {
+  //       const users = response.data;
+  //       console.log(users); // Cavabı yoxlayın
+  //     } else {
+  //       console.log('No users data found');
+  //     }
+  //   } catch (error) {
+  //     console.log("Error:", error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   getQuantifyUsers();
+  // }, []);
+
 
 
 
@@ -144,61 +144,61 @@ const Home = () => {
 
 
 
- 
-          { <div className="second-sec">
-          <div className="about-binance">
-        <div className="row">
+
+          {<div className="second-sec">
+            <div className="about-binance">
+              <div className="row">
 
 
-          <div className="col-6">
-            <PhotoChoose/>
+                <div className="col-6">
+                  <PhotoChoose />
 
 
-          </div>
-          <div className="col-6">
-            <h1>Trade on the go. Anywhere, anytime.</h1>
-            <div className="qr">
+                </div>
+                <div className="col-6">
+                  <h1>Trade on the go. Anywhere, anytime.</h1>
+                  <div className="qr">
 
-            <img src={Qrcode} alt="code" />
-            <p>Scan to Download App <br /><h1 style={{
-              color:"white"
-            }}>iOS and Android</h1></p>
+                    <img src={Qrcode} alt="code" />
+                    <p>Scan to Download App <br /><h1 style={{
+                      color: "white"
+                    }}>iOS and Android</h1></p>
 
-            </div>
-            <div className="icons-about">
-              <div className="icons-p">
-            <i className="fa-brands fa-apple"></i>
-            <p>MacOS</p>
+                  </div>
+                  <div className="icons-about">
+                    <div className="icons-p">
+                      <i className="fa-brands fa-apple"></i>
+                      <p>MacOS</p>
+
+                    </div>
+                    <div className="icons-p">
+                      <i className="fa-brands fa-windows"></i>
+                      <p>Windows</p>
+
+                    </div>
+                    <div className="icons-p">
+                      <i className="fa-brands fa-linux"></i>
+                      <p>Linux</p>
+                    </div>
+
+
+                  </div>
+                  <h4>More Download Options</h4>
+                </div>
 
               </div>
-              <div className="icons-p">
-            <i className="fa-brands fa-windows"></i>
-            <p>Windows</p>
-            
-              </div>
-              <div className="icons-p">
-            <i className="fa-brands fa-linux"></i>
-            <p>Linux</p>
+
+
+
             </div>
 
-                
-            </div>
-            <h4>More Download Options</h4>
-          </div>
+          </div>}
 
-          </div>
+          {<div className="three-sec">
 
 
-
-        </div>
-
-</div> }
-
-          { <div className="three-sec">
-
-
-<List/>
-</div> }
+            <List />
+          </div>}
 
 
         </div>

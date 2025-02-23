@@ -16,6 +16,7 @@ import Chance from 'chance';
 import axios from 'axios';
 import NewListing from '../newlisting/NewListing';
 import TableCoinsAll from '../TableCoinsAll';
+import { getAllUserCoins } from '../../services/api';
 
 
 const chance = new Chance(42);
@@ -116,8 +117,15 @@ function rowContent(_index, row) {
 
 
 export default function LabTabs() {
-  const [value, setValue] = React.useState('1');
-
+  const [value, setValue] = React.useState();
+  const [coins, setCoins] = React.useState(null);
+  React.useEffect(() => {
+    getAllUserCoins().then(res => {
+      console.log(res);
+      setCoins(res)
+      setValue(res[0]?._id)
+    })
+  }, [])
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -127,37 +135,28 @@ export default function LabTabs() {
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
-            <Tab label="Item One" value="1" />
+            {/* <Tab label="Item One" value="1" />
             <Tab label="Item Two" value="2" />
-            <Tab label="Item Three" value="3" />
+            <Tab label="Item Three" value="9" />
             <Tab label="Item Three" value="4" />
 
             <Tab label="Item Three" value="5" />
-            <Tab label="Item Three" value="6" />
-
+            <Tab label="Item Three" value="6" /> */}
+            {
+              coins && coins.map((item, i) => {
+                return <Tab key={i} label={item.type} value={item._id} />
+              })
+            }
           </TabList>
         </Box>
-        <TabPanel value="1">
 
-
-
-          {/* <Paper style={{ height: 400, width: '100%'}}>
-      <TableVirtuoso
-    
-        data={rows}
-        components={VirtuosoTableComponents}
-        fixedHeaderContent={fixedHeaderContent}
-        itemContent={rowContent}
-      />
-    </Paper> */}
-        </TabPanel>
-        <TabPanel value="2">Item Two</TabPanel>
-        <TabPanel value="3">Item Threez</TabPanel>
-        <TabPanel value="4">Item Threew</TabPanel>
-        <TabPanel value="5">Item Threewf</TabPanel>
-        <TabPanel value="6">Item Threed</TabPanel>
-
-
+        {coins &&
+          coins.map(item => {
+            return <TabPanel value={item._id}>
+              {item.count} {item.type} = {(Number(item?.currency).toFixed(3) * item.count).toFixed(3)  }$
+            </TabPanel>
+          })
+        }
       </TabContext>
     </Box>
   );

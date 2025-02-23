@@ -24,9 +24,13 @@ async function verifyToken() {
     }
 }
 
-async function getCoins() {
+async function getCoins(param) {
+    let x = param
+    if (!param) {
+        x = 0
+    }
     try {
-        const verify = await axiosInstanse.get("/coins")
+        const verify = await axiosInstanse.get(`/coins?criptoId=${x}`)
         return verify.data
     } catch (error) {
         console.log(error);
@@ -65,7 +69,31 @@ async function addToBalance(id, amount) {
     }
 }
 
+async function buyCripto(user, type, count, currency) {
+    try {
+        console.log(user, type, count, currency);
+        
+        const { data } = await axiosInstanse.post(`/cripto`,
+            { type, count, currency, user }
+        )
+        return data
+    } catch (error) {
+        console.log(error);
+        return error
+    }
+}
+
+async function getAllUserCoins() {
+    try {
+        const { data } = await axiosInstanse.get(`/cripto/${localStorage.getItem("userid")}`)
+        return data.coins
+    } catch (error) {
+        console.log(error);
+        return error
+    }
+}
+
 
 export {
-    loginUser, verifyToken, getCoins, getUserById, addToBalance
+    loginUser, verifyToken, getCoins, getUserById, addToBalance, buyCripto, getAllUserCoins
 }
