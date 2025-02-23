@@ -6,7 +6,7 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 const { default: mongoose } = require('mongoose');
-require("./gmailAuth");
+// require("./gmailAuth");
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 const session = require("express-session");
 app.use(session({
