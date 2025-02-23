@@ -149,7 +149,9 @@ body.dark .edit button{
 body.dark .btn-del-set{
     color: #181a20;
 }
-body.dark .
+body.dark .balances button:hover{
+background-color: #ba8f02;
+}
 
 /* Mobil üçün */
 @media (max-width: 600px) {
@@ -324,6 +326,54 @@ body.dark .
     }
     .about h1{
 width: 460px !important;
+    }
+    .trading h1 {
+        /* font-weight: 100; */
+        line-height:  40px;
+    }
+    .spend{
+        display: block !important;
+    }
+    .receve{
+        display: block !important;
+    }
+    .user-data .id{
+        display: none !important;
+    }
+    .user-data .level{
+        display: none !important;
+    }
+
+    .user-data .following{
+        display: none !important;
+    }
+    .user-data .followers{
+        display: none !important;
+    }
+    .users-page{
+        padding-left: 0px !important;
+    }
+    .user-data{
+        padding-top: 20px !important;
+    }
+    .user-name p{
+        display: none !important;
+        /* margin-top: 30px !important; */
+    }
+    .css-mlh15c-MuiStep-root{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .balances h1{
+        font-size: 18px;
+    }
+    .balances h2{
+        font-size: 16px;
+    }
+    .balances button{
+        position: relative !important;
+        margin-left: 30px !important;
+        margin-bottom: 20px;
     }
 
 

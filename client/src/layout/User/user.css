@@ -93,6 +93,9 @@ padding: 9px;
  */
 background-color: #eaecef;
 }
+.balances button:hover{
+    background-color: rgb(182, 177, 177);
+}
 
 
 .markets {
@@ -110,5 +113,5 @@ background-color: #eaecef;
 }
 
 .nav-market{
-    
+    padding-bottom: 160px;
 }

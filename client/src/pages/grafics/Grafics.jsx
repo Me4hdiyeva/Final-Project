@@ -75,8 +75,13 @@ export default function Grafic() {
 
         <BuyCrypto  />
         <CryptoChart />
+        <div style={{paddingBottom:"200px"}} className="table-cripto">
+
 
         <TableCrypto />
+
+        </div>
+
 
 
 
