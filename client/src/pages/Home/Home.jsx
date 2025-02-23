@@ -7,6 +7,7 @@ import PhotoChoose from "../../components/fotochoose/PhotoChoose";
 import Qrcode from "../../img/qrcode.png";
 import List from "../../components/list/List";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const [userr, setUsers] = useState([]);
@@ -44,6 +45,12 @@ const Home = () => {
 
   return (
     <>
+            <Helmet>
+        <title>Binance</title>
+        {/* <link rel="canonical" href="https://dyor.io/blog/content/images/2024/08/b3318d9f54cc5aa0e22fb5ce2a435be819092f2eb2197b930de6b9bff8419877.jpg" /> */}
+
+      </Helmet>
+
       <div className="container">
         <div className="sections">
           <div className="first-sec">
