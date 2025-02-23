@@ -60,3 +60,44 @@ exports.deleteCoin = async (req, res) => {
         res.status(500).json({ error: 'Server xətası' });
     }
 };
+
+exports.sellCoin = async (req, res) => {
+    try {
+        const { userId, type, count, currency } = req.body;
+
+        if (!userId || !type || !count || !currency) {
+            return res.status(400).json({ success: false, message: 'Bütün sahələri daxil edin.' });
+        }
+
+        let coin = await Coin.findOne({ user: userId, type });
+
+        if (!coin) {
+            return res.status(404).json({ success: false, message: 'Sizdə bu növ coin yoxdur!' });
+        }
+
+        if (parseFloat(coin.count) < parseFloat(count)) {
+            return res.status(400).json({ success: false, message: 'Satmaq istədiyiniz qədər coin balansınızda yoxdur!' });
+        }
+
+        let mongoUser = await User.findOne({ _id: userId });
+
+        if (!mongoUser) {
+            return res.status(404).json({ success: false, message: 'İstifadəçi tapılmadı!' });
+        }
+
+        coin.count = (parseFloat(coin.count) - parseFloat(count)).toString();
+
+        if (parseFloat(coin.count) === 0) {
+            await Coin.findByIdAndDelete(coin._id);
+        } else {
+            await coin.save();
+        }
+
+        mongoUser.balance = (parseFloat(mongoUser.balance) + parseFloat(currency)).toFixed(2);
+        await mongoUser.save();
+
+        return res.status(200).json({ success: true, message: 'Coin uğurla satıldı', newBalance: mongoUser.balance });
+    } catch (error) {
+        return res.status(500).json({ success: false, message: error.message });
+    }
+};

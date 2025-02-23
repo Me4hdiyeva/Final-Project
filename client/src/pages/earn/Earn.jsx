@@ -4,64 +4,81 @@ import './earn.css'
 import axios from 'axios'
 import TableCrypto from '../../components/TableCrypto/TableCrypto'
 import toast from 'react-hot-toast';
-import { buyCripto } from '../../services/api';
+import { buyCripto, getAllUserCoins, sellUserCoin } from '../../services/api';
+import { Link } from 'react-router';
 
 const Earn = () => {
-    const [param, setParam] = useState(new URLSearchParams(location.search).get("param"));
 
     const [inp1, setInp1] = useState("")
     const [inp2, setInp2] = useState("")
-    const [select1, setSelect1] = useState("1")
     const [select2, setSelect2] = useState("96326")
-    const [flag, setFlag] = useState(true)
-    const [data, setData] = useState(null)
-    const [name, setName] = useState("Bitcoin")
+    const [data, setData] = useState([])
+    const [name, setName] = useState(null)
+    const [count, setCount] = useState(null)
 
-    const getHotCoins = async () => {
-        const coins = await axios.get(`http://localhost:3000/api/coins`)
-        setData(coins.data)
+    async function handleData() {
+        const cripto = await getAllUserCoins()
+        setData(cripto);
+        setSelect2(cripto[0]?.currency)
+        setCount(cripto[0]?.count)
+        setName(cripto[0]?.type)
+        console.log(data);
+
     }
 
     useEffect(() => {
-        getHotCoins();
-        const interval = setInterval(() => {
-            getHotCoins();
-        }, 240000);
-        return () => clearInterval(interval);
-    }, []);
-
+        handleData()
+    }, [])
 
     useEffect(() => {
         handleChange()
-    }, [inp1, inp2, select1, select2])
+    }, [inp1, inp2, select2])
 
     function handleChange() {
-        if (flag) {
-            setInp2((select1 / select2) * inp1)
-        } else {
-            setInp1((select2 / select1) * inp2)
-        }
+        setInp1((select2) * inp2)
     }
 
+    async function sellCoin() {
+        if (!localStorage.getItem("userid")) {
+            return navigate("/login")
+        }
 
+        if (data.length == 0) {
+            return toast.error("Balansinizda kifayet coin yoxdur!")
+        }
 
-    async function buyCoin() {
-        const balance = localStorage.getItem("balance")
-        if (+balance < +inp1) {
-            return toast.error("Balansinizda kifayet qeder mebleg yoxdur!")
+        if (+inp2 > +count) {
+            return toast.error("Balansinizda kifayet coin yoxdur!")
         }
 
         try {
             const id = localStorage.getItem("userid");
-            const alis = await buyCripto(id, name, inp2, inp1)
-            localStorage.setItem("balance", balance - inp2)
-            toast.success("Coin pul qabina elave olundu")
+            const satis = await sellUserCoin(id, name, inp2, inp1)
+            localStorage.setItem("balance", satis.newBalance)
+            toast.success("Coin satisa verildi")
         } catch (error) {
             console.log(error);
             return toast.error("Gozlenilmez xeta bas verdi")
-
         }
+    }
 
+    if (data?.length == 0) {
+        return (
+            <>
+                <main className='h-screen flex justify-center items-top'>
+                    <div className='text-center'>
+                        <h1 className='font-bold'>
+                            Sizin sata bileceyiniziz coininiz yoxdur!
+                        </h1>
+                        <Link to={"/grafic"}>
+                            <button style={{ padding: 10, marginTop: "30px" }} class="bg-blue-500  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                Özünüzə coin alın
+                            </button>
+                        </Link>
+                    </div>
+                </main>
+            </>
+        )
     }
     return (
         <>
@@ -75,29 +92,30 @@ const Earn = () => {
                         <input
                             value={inp2}
                             onChange={(e) => {
-                                setFlag(false)
                                 setInp2(e.target.value)
                                 handleChange()
                             }}
                             placeholder='3.000-1,350,000' type="text" />
                         {
-                            data &&
+                            data.length > 0 &&
                             <select
                                 value={select2}
-                                defaultValue={data?.coins[param]?.name
-                                }
                                 onChange={(e) => {
-                                    setFlag(false);
                                     setSelect2(e.target.value);
                                     handleChange();
+                                    setCount(e.target.options[e.target.selectedIndex].dataset.count)
                                     setName(e.target.options[e.target.selectedIndex].dataset.name)
                                 }}
                                 className="custom-select"
                             >
 
-                                {data.coins.map((item, i) => (
-                                    <option key={i} value={item.current_price} data-id={i} data-name={item.name}>
-                                        {item.name}
+                                {data?.map((item, i) => (
+                                    <option key={i}
+                                        value={item.currency}
+                                        data-count={item.count}
+                                        data-name={item.type}
+                                    >
+                                        {item.type} count:({item.count})
                                     </option>
                                 ))}
                             </select>
@@ -112,28 +130,21 @@ const Earn = () => {
                             onChange={(e) => {
                                 setInp1(e.target.value)
                                 handleChange()
-                                setFlag(true)
                             }} placeholder='0' type="text" />
 
                         <div className='custom-select1'>
                             USD $
                         </div>
                     </div>
-
-                    <button onClick={buyCoin}>Verify Identity</button>
-
+                    <button onClick={sellCoin}>Verify Identity</button>
                 </div>
-             
-
-
             </div>
-            <div style={{paddingBottom:"130px"}} className="tables">
-            <TableCrypto/>
-
+            <div style={{ paddingBottom: "130px" }} className="tables">
+                <TableCrypto />
             </div>
 
-    </>
-  )
+        </>
+    )
 }
 
 export default Earn

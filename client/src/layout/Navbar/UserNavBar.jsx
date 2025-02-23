@@ -11,6 +11,7 @@ function UserNavBar() {
         localStorage.removeItem("token")
         localStorage.removeItem("username")
         localStorage.removeItem("userid")
+        localStorage.removeItem("profileImage")
         localStorage.removeItem("balance")
         toast.success("Hesabdan çıxış edildi")
         setStatus(false)
@@ -76,7 +77,7 @@ function UserNavBar() {
                             </Link>
                         </li>
                         <li>
-                            <Link to={"payment"}>
+                            <Link to={"/dashboard/payment"}>
                                 Payment
                             </Link>
                         </li>
