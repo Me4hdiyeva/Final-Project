@@ -399,6 +399,13 @@ body.dark .btn-del-set {
         display: none;
     }
 
+    .settings .btn-del-set{
+        margin-left: 0px !important;
+        height: 40px !important;
+    }
+    .set-three{
+        gap: 10px !important;
+    }
 
 
 
@@ -500,6 +507,11 @@ body.dark .btn-del-set {
     }
     .set-second{
 display: none !important;
+    }
+
+    .about-set-profile-avatar .edit{
+        display: flex !important;
+        gap: 50px !important;
     }
 
     
