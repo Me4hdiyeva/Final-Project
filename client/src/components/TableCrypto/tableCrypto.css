@@ -1,7 +1,10 @@
 .tableCryptos{
     /* background-color: black; */
     color: aliceblue;
+    /* color: ; */
+    /* background-color: #F3BB2B; */
 }
+/* style={{color:"#F3BB2B"}} */
 .tableCryptoCell{
     /* color: aliceblue */
 }

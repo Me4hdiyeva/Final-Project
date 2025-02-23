@@ -63,56 +63,56 @@ export default function HorizontalLinearStepper({ verify, balance }) {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Stepper activeStep={activeStep}>
+      <Stepper  activeStep={activeStep}>
         {steps.map((label, index) => {
           const stepProps = {};
           const labelProps = {};
           if (isStepOptional(index)) {
             labelProps.optional = (
-              <Typography variant="caption">Optional</Typography>
+              <Typography  variant="caption">Optional</Typography>
             );
           }
           if (isStepSkipped(index)) {
             stepProps.completed = false;
           }
           return (
-            <Step key={label} {...stepProps}>
-              <StepLabel  {...labelProps}>{label}</StepLabel>
+            <Step  key={label} {...stepProps}>
+              <StepLabel   {...labelProps}>{label}</StepLabel>
             </Step>
           );
         })}
       </Stepper>
       {activeStep === steps.length ? (
         <>
-          <Typography sx={{ mt: 2, mb: 1 }}>
+          <Typography style={{color:"#F3BB2B"}} sx={{ mt: 2, mb: 1 }}>
             All steps completed - you&apos;re finished
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Box sx={{ flex: '1 1 auto' }} />
-            <Button onClick={handleReset}>Reset</Button>
+            <Button style={{ color: "gray " }}   onClick={handleReset}>Reset</Button>
           </Box>
         </>
       ) : (
         <div>
           {
-            (verify && activeStep == 0) && <Typography color='blue' sx={{ mt: 2, mb: 1 }}>Verified with Gmail</Typography>
+            (verify && activeStep == 0) && <Typography color='#F3BB2B' sx={{ mt: 2, mb: 1 }}>Verified with Gmail</Typography>
           }
           {
-            (!verify && activeStep == 0 && balance == 0) && <Typography color='blue' sx={{ mt: 2, mb: 1 }}>
+            (!verify && activeStep == 0 && balance == 0) && <Typography color='#F3BB2B' sx={{ mt: 2, mb: 1 }}>
               Verify your account by signing up with Gmail <br />
               <LoginGoogle />
             </Typography>
           }
           {
-            (!verify && activeStep == 1 && balance == 0) && <Typography color='blue' sx={{ mt: 2, mb: 1 }}>
+            (!verify && activeStep == 1 && balance == 0) && <Typography color='#F3BB2B' sx={{ mt: 2, mb: 1 }}>
               <Link to={"payment"}>
                 Go to deposit! <br />
               </Link>
             </Typography>
           }
           {
-            (!verify && activeStep == 2) && <Typography color='blue' sx={{ mt: 2, mb: 1 }}>
-              <Link style={{ color: "blue" }} to={"/earn"}> 
+            (!verify && activeStep == 2) && <Typography color='#F3BB2B' sx={{ mt: 2, mb: 1 }}>
+              <Link style={{ color: "#F3BB2B " }} to={"/earn"}> 
               Click me
               <br />
 
@@ -123,7 +123,9 @@ export default function HorizontalLinearStepper({ verify, balance }) {
 
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Button
-              color="inherit"
+           style={{ color: "gray" }}
+
+             
               disabled={activeStep === 0}
               onClick={handleBack}
               sx={{ mr: 1 }}
@@ -132,7 +134,7 @@ export default function HorizontalLinearStepper({ verify, balance }) {
             </Button>
             <Box sx={{ flex: '1 1 auto' }} />
             {isStepOptional(activeStep) && (
-              <Button color="inherit" onClick={handleSkip} sx={{ mr: 1 }}>
+              <Button style={{ color: "gray " }} onClick={handleSkip} sx={{ mr: 1 }}>
                 Skip
               </Button>
             )}
