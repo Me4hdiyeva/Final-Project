@@ -19,11 +19,12 @@ const passport = require("passport");
 app.use(passport.initialize());
 app.use(passport.session());
 
-const { userRouter, uploadRouter, currencyRouter } = require('./router/routers');
+const { userRouter, uploadRouter, currencyRouter, criptoRouter } = require('./router/routers');
 
 app.use('/api/auth', userRouter);
 app.use('/api/', uploadRouter);
 app.use('/api/', currencyRouter);
+app.use('/api/', criptoRouter);
 
 const PORT = process.env.PORT || 3000;
 const MONGODB_URI = process.env.MONGODB_URI;

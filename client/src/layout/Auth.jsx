@@ -24,6 +24,7 @@ function Auth({ children }) {
             if (!verify.status) navigate("/login")
             setStatus(verify.status)
             localStorage.setItem("username", verify.username)
+            localStorage.setItem("balance", verify.balance)
             localStorage.setItem("userid", verify.user_id)
         } else {
             navigate("/login")

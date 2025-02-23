@@ -11,14 +11,12 @@ import "../CardsPending/cardspending.css"
 
 const steps = ['Verify Account  ', 'Deposit', 'Trade'];
 
-export default function HorizontalLinearStepper({ verify }) {
-  console.log(verify);
-
+export default function HorizontalLinearStepper({ verify, balance }) {
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
 
   React.useEffect(() => {
-    setActiveStep(verify ? 1 : 0)
+    setActiveStep(balance != 0 ? 2 : verify ? 1 : 0)
   }, [verify])
 
   const isStepOptional = (step) => {
@@ -97,18 +95,32 @@ export default function HorizontalLinearStepper({ verify }) {
       ) : (
         <div>
           {
-            (verify && activeStep == 0) ?
-              <Typography color='blue' sx={{ mt: 2, mb: 1 }}>Verified with Gmail</Typography> :
-              <Typography sx={{ mt: 2, mb: 1 }}>
-                Step {activeStep + 1} <br />
-                Verify your account by signing up with Gmail <br />
-                {/* <LoginGoogle /> */}
-                Go to 
-            
-                <Link className='dep-link'  to={"payment"}>Deposit</Link>
-            !
-              </Typography>
+            (verify && activeStep == 0) && <Typography color='blue' sx={{ mt: 2, mb: 1 }}>Verified with Gmail</Typography>
           }
+          {
+            (!verify && activeStep == 0 && balance == 0) && <Typography color='blue' sx={{ mt: 2, mb: 1 }}>
+              Verify your account by signing up with Gmail <br />
+              <LoginGoogle />
+            </Typography>
+          }
+          {
+            (!verify && activeStep == 1 && balance == 0) && <Typography color='blue' sx={{ mt: 2, mb: 1 }}>
+              <Link to={"payment"}>
+                Go to deposit! <br />
+              </Link>
+            </Typography>
+          }
+          {
+            (!verify && activeStep == 2) && <Typography color='blue' sx={{ mt: 2, mb: 1 }}>
+              <Link style={{ color: "blue" }} to={"/earn"}> 
+              Click me
+              <br />
+
+              You can start trading
+              </Link>
+            </Typography>
+          }
+
           <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Button
               color="inherit"

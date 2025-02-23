@@ -17,6 +17,7 @@ import axios from 'axios';
 import NewListing from '../newlisting/NewListing';
 import TableCoinsAll from '../TableCoinsAll';
 import TableCrypto from '../TableCrypto/TableCrypto';
+import { getAllUserCoins } from '../../services/api';
 
 
 const chance = new Chance(42);
@@ -117,8 +118,15 @@ function rowContent(_index, row) {
 
 
 export default function LabTabs() {
-  const [value, setValue] = React.useState('1');
-
+  const [value, setValue] = React.useState();
+  const [coins, setCoins] = React.useState(null);
+  React.useEffect(() => {
+    getAllUserCoins().then(res => {
+      console.log(res);
+      setCoins(res)
+      setValue(res[0]?._id)
+    })
+  }, [])
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -126,12 +134,30 @@ export default function LabTabs() {
   return (
     <Box sx={{ width: '100%', typography: 'body1' }}>
       <TabContext value={value}>
-  
-        <TabPanel value="1">
-        </TabPanel>
-     
+        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+          <TabList onChange={handleChange} aria-label="lab API tabs example">
+            {/* <Tab label="Item One" value="1" />
+            <Tab label="Item Two" value="2" />
+            <Tab label="Item Three" value="9" />
+            <Tab label="Item Three" value="4" />
 
+            <Tab label="Item Three" value="5" />
+            <Tab label="Item Three" value="6" /> */}
+            {
+              coins && coins.map((item, i) => {
+                return <Tab key={i} label={item.type} value={item._id} />
+              })
+            }
+          </TabList>
+        </Box>
 
+        {coins &&
+          coins.map(item => {
+            return <TabPanel value={item._id}>
+              {item.count} {item.type} = {(Number(item?.currency).toFixed(3) * item.count).toFixed(3)  }$
+            </TabPanel>
+          })
+        }
       </TabContext>
     </Box>
   );

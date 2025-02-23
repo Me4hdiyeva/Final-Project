@@ -29,7 +29,6 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/buyCrypto" element={<BuyCrypto />} />
           <Route path='/grafic' element={<Grafic/>} />
-          {/* <Route path='/grafic' element={<Grafics/>} /> */}
           <Route path="/earn" element={<Earn />} />
           <Route path='/about' element={<About/>} />
           <Route path='/allCoins'  element={<AllCoins/>}/>
@@ -40,14 +39,7 @@ function App() {
 
           <Route path='payment' element={<Payment />} />
           <Route path='settings' element={<Settings />} />
-          <Route path='grafic' element={<Grafic/>} />
-          <Route path="buyCrypto" element={<BuyCrypto />} />
-          <Route path='allCoins'  element={<AllCoins/>}/>
-          <Route path="earn" element={<Earn />} />
-
-
         </Route>
-
         <Route path='*' element={<Error404 />} />
       </Routes>
     </>

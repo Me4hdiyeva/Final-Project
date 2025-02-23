@@ -13,7 +13,7 @@ router.post('/login', loginUsers);
 
 router.get("/verify-token", authenticateToken, (req, res) => {
     try {
-        res.status(200).send({ message: 'Token təstiqləndi!', status: true, user_id: req.user._id, username: req.user.username });
+        res.status(200).send({ message: 'Token təstiqləndi!', status: true, user_id: req.user._id, username: req.user.username, balance:req.user.balance  });
     } catch (error) {
         res.status(500).json(error)
     }

@@ -12,29 +12,26 @@ const Home = () => {
 
   const [userr, setUsers] = useState([])
 
+  // const getQuantifyUsers = async () => {
+  //   try {
+  //     const response = await axios.get('http://localhost:3000/api/auth/register');
 
-  const getQuantifyUsers = async () => {
-    try {
-      const response = await axios.get('http://localhost:3000/api/auth/register');
-      
-      // Cavabın strukturunu yoxlayın
-      if (response && response.data) {
-        const users = response.data;
-        console.log(users); // Cavabı yoxlayın
-      } else {
-        console.log('No users data found');
-      }
-    } catch (error) {
-      console.log("Error:", error);
-    }
-  };
-  
-  useEffect(() => {
-    getQuantifyUsers();
-    const interval = setInterval(myUsers, 60000);
-    myUsers()
-  }, []);
-  
+  //     // Cavabın strukturunu yoxlayın
+  //     if (response && response.data) {
+  //       const users = response.data;
+  //       console.log(users); // Cavabı yoxlayın
+  //     } else {
+  //       console.log('No users data found');
+  //     }
+  //   } catch (error) {
+  //     console.log("Error:", error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   getQuantifyUsers();
+  // }, []);
+
 
   const myUsers = async () => {
     const users = await axios.get("http://localhost:3000/api/auth/users")
@@ -136,39 +133,41 @@ const Home = () => {
 
             </div>
 
-            </div>
-            <div className="icons-about">
-              <div className="icons-p">
-            <i className="fa-brands fa-apple"></i>
-            <p>MacOS</p>
+                  </div>
+                  <div className="icons-about">
+                    <div className="icons-p">
+                      <i className="fa-brands fa-apple"></i>
+                      <p>MacOS</p>
+
+                    </div>
+                    <div className="icons-p">
+                      <i className="fa-brands fa-windows"></i>
+                      <p>Windows</p>
+
+                    </div>
+                    <div className="icons-p">
+                      <i className="fa-brands fa-linux"></i>
+                      <p>Linux</p>
+                    </div>
+
+
+                  </div>
+                  <h4>More Download Options</h4>
+                </div>
 
               </div>
-              <div className="icons-p">
-            <i className="fa-brands fa-windows"></i>
-            <p>Windows</p>
-            
-              </div>
-              <div className="icons-p">
-            <i className="fa-brands fa-linux"></i>
-            <p>Linux</p>
+
+
+
             </div>
 
-                
-            </div>
-            <h4>More Download Options</h4>
-          </div>
+          </div>}
 
-          </div>
+          {<div className="three-sec">
 
 
-
-        </div>
-
-</div> }
-
-          { <div className="three-sec">
-<List/>
-</div> }
+            <List />
+          </div>}
 
 
         </div>

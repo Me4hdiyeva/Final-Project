@@ -102,9 +102,28 @@ margin-right: 30px;
 
 }
 .custom-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: transparent;
     color: #333;
     padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    appearance: none; 
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.custom-select1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: transparent;
+    color: #333;
+    padding: 8px 15px;
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 16px;
