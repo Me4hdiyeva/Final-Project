@@ -1,24 +1,27 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "../../src/index.css"
+import { STATUS } from '../context/StatusContext';
 
 const LoginGoogle = () => {
+  const { setStatus } = useContext(STATUS)
   const handleGoogleLogin = () => {
+    setStatus(true)
     window.open("http://localhost:3000/api/auth/google", "_self");
   };
   return (
     <div>
       {/* <h2 className='text-center'>Google ilə daxil ol</h2> */}
-      <button className='text-center'  style={{
+      <button className='text-center' style={{
         padding: "10px",
         // width: "90%",
         // border: "1px solid gray",
         maxWidth: "424px",
-        minWidth:"300px",
+        minWidth: "300px",
         borderRadius: "5px",
         display: "flex",
         gap: "10px",
         paddingLeft: "15px",
-        marginLeft:"90px"
+        marginLeft: "90px"
       }} onClick={handleGoogleLogin}><i style={{
         paddingTop: "5px"
       }} className="fa-brands fa-google"></i>Google ilə daxil ol</button>

@@ -107,9 +107,9 @@ exports.editByUser = async (req, res) => {
         if (!amount) {
             return res.status(400).json({ message: "amount mutleq gonderilmelidir!" });
         }
-        if(+amount < 0){
+        if (+amount < 0) {
             res.status(400).json({ message: "0 manat artirmaq olmaz!" });
-        }else {
+        } else {
             user.balance = +user.balance + +amount
             await user.save()
             res.status(200).json(user);
@@ -128,5 +128,86 @@ exports.deleteAllUsers = async (req, res) => {
         res.status(200).json({ msj: `Deleted ${result.deletedCount} users.` });
     } catch (error) {
         console.error("Error deleting users:", error);
+    }
+}
+
+exports.deleteUserById = async (req, res) => {
+    try {
+        const id = req.params.id
+        const result = await User.findByIdAndDelete({ _id: id });
+        res.status(200).json({ msj: `Deleted ${result.username} user.`, result });
+    } catch (error) {
+        console.error("Error deleting users:", error);
+    }
+}
+
+
+exports.userNickname = async (req, res) => {
+    try {
+        const { username } = req.body;
+        if (!username) {
+            return res.status(400).json({ message: "Nickname daxil edilməlidir!" });
+        }
+
+        const user = await User.findById(req.params.id);
+        if (!user) {
+            return res.status(404).json({ message: "İstifadəçi tapılmadı!" });
+        }
+
+        user.username = username;
+        await user.save();
+
+        res.json({ message: "Nickname uğurla yeniləndi!", user });
+    } catch (error) {
+        res.status(500).json({ message: "Xəta baş verdi!" });
+    }
+};
+
+exports.userEmail = async (req, res) => {
+    try {
+        const { email } = req.body;
+        if (!email) {
+            return res.status(400).json({ message: "E-poçt daxil edilməlidir!" });
+        }
+
+        const user = await User.findById(req.params.id);
+        if (!user) {
+            return res.status(404).json({ message: "İstifadəçi tapılmadı!" });
+        }
+
+        user.email = email;
+        await user.save();
+
+        res.json({ message: "E-poçt uğurla yeniləndi!", user });
+    } catch (error) {
+        res.status(500).json({ message: "Xəta baş verdi!" });
+    }
+};
+
+exports.userPassword = async (req, res) => {
+    try {
+        const { currentPassword, newPassword } = req.body;
+
+        if (!currentPassword || !newPassword) {
+            return res.status(400).json({ message: "Parollar daxil edilməlidir!" });
+        }
+
+        const user = await User.findById(req.params.id);
+        if (!user) {
+            return res.status(404).json({ message: "İstifadəçi tapılmadı!" });
+        }
+
+        const isMatch = await bcrypt.compare(currentPassword, user.password);
+        if (!isMatch) {
+            return res.status(400).json({ message: "Cari parol səhvdir!" });
+        }
+
+        const hashedPassword = await bcrypt.hash(newPassword, 10);
+        user.password = hashedPassword;
+        await user.save();
+
+        res.json({ message: "Parol uğurla yeniləndi!", user });
+    } catch (error) {
+        res.status(500).json({ message: "Xəta baş verdi!" });
     }
 }

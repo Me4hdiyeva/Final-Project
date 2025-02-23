@@ -55,14 +55,21 @@ const BuyCrypto = () => {
 
 
     async function buyCoin() {
+        if (!localStorage.getItem("userid")) {
+            return navigate("/login")
+        }
+        
         const balance = localStorage.getItem("balance")
         if (+balance < +inp1) {
             return toast.error("Balansinizda kifayet qeder mebleg yoxdur!")
         }
+        if (+inp1 == 0) {
+            return toast.error(" 0 Coin almaq olmaz!")
+        }
 
         try {
             const id = localStorage.getItem("userid");
-            const alis = await buyCripto(id, name, inp2, inp1)
+            const alis = await buyCripto(id, name, inp2, (Number(inp1).toFixed() / inp2))
             localStorage.setItem("balance", balance - inp2)
             toast.success("Coin pul qabina elave olundu")
         } catch (error) {
