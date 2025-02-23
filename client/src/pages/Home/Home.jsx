@@ -43,7 +43,7 @@ const Home = () => {
 
   return (
     <>
-            <Helmet>
+      <Helmet>
         <title>Binance</title>
         {/* <link rel="canonical" href="https://dyor.io/blog/content/images/2024/08/b3318d9f54cc5aa0e22fb5ce2a435be819092f2eb2197b930de6b9bff8419877.jpg" /> */}
 

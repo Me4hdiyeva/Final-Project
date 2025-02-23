@@ -163,6 +163,27 @@ exports.userNickname = async (req, res) => {
     }
 };
 
+exports.profileImg = async (req, res) => {
+    try {
+        const { profileImage } = req.body;
+        if (!profileImage) {
+            return res.status(400).json({ message: "profileImage daxil edilməlidir!" });
+        }
+
+        const user = await User.findById(req.params.id);
+        if (!user) {
+            return res.status(404).json({ message: "İstifadəçi tapılmadı!" });
+        }
+
+        user.profileImage = "http://localhost:3000" + profileImage;
+        await user.save();
+
+        res.json({ message: "Nickname uğurla yeniləndi!", user });
+    } catch (error) {
+        res.status(500).json({ message: "Xəta baş verdi!" });
+    }
+};
+
 exports.userEmail = async (req, res) => {
     try {
         const { email } = req.body;

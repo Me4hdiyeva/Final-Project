@@ -2,7 +2,7 @@ const express = require('express');
 const { createUser, getUsers, loginUsers, deleteAllUsers, getUserById, editByUser } = require('../controllers/controllers.js');
 const { authenticateToken } = require('../middleware/verifyToken.js');
 const passport = require('passport');
-const { deleteUserById, userNickname, userEmail, userPassword } = require('../controllers/user/index.js');
+const { deleteUserById, userNickname, userEmail, userPassword, profileImg } = require('../controllers/user/index.js');
 const router = express.Router();
 // router.get('/deluser', deleteAllUsers);
 
@@ -10,6 +10,7 @@ router.get('/users', getUsers);
 router.get('/users/:id', getUserById);
 router.put('/users/:id', editByUser);
 router.put('/users/username/:id', userNickname);
+router.put('/users/profileImg/:id', profileImg);
 router.put('/users/useremail/:id', userEmail);
 router.put('/users/password/:id', userPassword);
 router.delete('/users/:id', deleteUserById);
