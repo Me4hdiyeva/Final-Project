@@ -62,7 +62,9 @@ function Payment() {
                         <div className="mt-6 grow sm:mt-8 lg:mt-0">
                             <div className="mt-6 flex items-center justify-center gap-8">
                                 <div className="">
-                                    <label htmlFor="balance" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
+                                    <label style={{
+                                        paddingBottom:"10px"
+                                    }} htmlFor="balance" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
                                         Write the quantity!
                                     </label>
                                     <input
@@ -136,6 +138,7 @@ function Payment() {
                                 </div>
                             </div>
                             <button
+                            style={{marginTop:"30px"}}
                                 onClick={addDeposit}
                                 type="submit"
                                 className="flex w-full min-h-[50px] bg-[green] items-center justify-center rounded-lg px-5 py-2.5 text-sm font-medium text-white"
