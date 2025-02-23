@@ -372,6 +372,32 @@ body.dark .btn-del-set {
     .about h1 {
         width: 460px !important;
     }
+    .profile-settings{
+        margin-left: 0px !important;
+        /* gap: 10px !important; */
+    }
+    .profile-settings h1{
+        font-size: 28px !important;
+    }
+    .about-set-profile-avatar{
+        display: block !important;
+    }
+    .about-settings p{
+        width: 200px !important ;
+
+    }
+    .edit button{
+    height: 40px !important;
+    /* width: 30px; */
+    padding: 10px;
+        margin: 10px;
+    }
+    .about-settings{
+        gap: 10px !important;
+    }
+    .set-second{
+        display: none;
+    }
 
 
 

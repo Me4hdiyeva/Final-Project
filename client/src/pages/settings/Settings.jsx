@@ -30,7 +30,7 @@ const Settings = () => {
             </div>
             <div className="edit">
                 <div className="div-avatar">
-                    {/* bash herfi */}
+                 
                     <img src="" alt="" />
                 </div>
                 <span>gmail.com</span>
@@ -50,7 +50,7 @@ const Settings = () => {
             </div>
                 </div>
         </div>
-        <div className="profile-settings">
+        <div className="profile-settings set-second">
                 <h1>Notifications</h1>
                 <div className="about-set-profile-avatar">
             <div className="about-settings">
@@ -58,9 +58,7 @@ const Settings = () => {
             <p>This will affect the language settings of E-mail and App push..</p>
             </div>
             <div style={{paddingLeft:"90px"}} className="edit">
-                {/* <div className="div-avatar">
-                    <img src="" alt="" />
-                </div> */}
+         
                 <span>Default</span>
                 <button>Edit</button>
             </div>
@@ -71,10 +69,7 @@ const Settings = () => {
             <p>Once configured, you will receive relevant on-site inbox notifications within the app and website.</p>
             </div>
             <div className="edit">
-                {/* <div className="div-avatar">
-                 
-                    <img src="" alt="" />
-                </div> */}
+           
                 <span style={{width:"200px", paddingLeft:"90px"}}>Activities, Trade Notification, Binance News</span>
                 <button>Edit</button>
             </div>
@@ -97,7 +92,7 @@ const Settings = () => {
 
 
 
-
+   {/* bash herfi */}
       </div>
 
 
