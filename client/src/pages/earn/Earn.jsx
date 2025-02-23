@@ -11,7 +11,7 @@ const Earn = () => {
     const [inp2, setInp2] = useState(""); // Dollar miqdarı
     const [selectCoin, setSelectCoin] = useState("1"); // Seçilən Coin
     const [coins, setCoins] = useState(null); // API-dən gələn coinlər
-    const [userCoins, setUserCoins] = useState(null); // İstifadəçinin coini
+    const [userCoins, setUserCoins] = useState([]); // İstifadəçinin coini
 
     async function fetchUserCoins() {
         const cripto = await getAllUserCoins();
@@ -63,7 +63,7 @@ const Earn = () => {
                 Sizin əvvəlcə giriş etməlisiniz
             </h2>
             <Link to={"/login"} >
-                <button style={{ padding: 10 , marginTop:20}} className=" bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition duration-200">
+                <button style={{ padding: 10, marginTop: 20 }} className=" bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition duration-200">
                     Giriş et
                 </button>
             </Link>
@@ -71,6 +71,18 @@ const Earn = () => {
     }
 
 
+    if (userCoins?.length == 0) {
+        return <div className="flex flex-col items-center justify-center h-screen bg-gray-100 ">
+            <h2 className="text-2xl font-semibold text-gray-900  mb-4">
+                Sizin satmaq üçün coininiz yoxdur!
+            </h2>
+            <Link to={"/grafic"} >
+                <button style={{ padding: 10, marginTop: 20 }} className=" bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition duration-200">
+                    Coin al
+                </button>
+            </Link>
+        </div>
+    }
 
     return (
         <>
