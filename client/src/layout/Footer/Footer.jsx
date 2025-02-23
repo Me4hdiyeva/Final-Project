@@ -1,6 +1,5 @@
 import { Link } from "react-router";
-import "./Footer.css";
-import Sidebar from "../Sidebar";
+import './navbar.css'import Sidebar from "../Sidebar";
 
 const Footer = () => {
   return (

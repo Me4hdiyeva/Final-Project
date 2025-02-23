@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { addToBalance } from '../../services/api'
 import { useNavigate } from 'react-router'
-import "../payment/payment.css"
+import "./payment.css"
 
 function Payment() {
     const navigate = useNavigate();

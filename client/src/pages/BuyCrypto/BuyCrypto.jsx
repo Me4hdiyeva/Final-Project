@@ -74,7 +74,7 @@ const BuyCrypto = () => {
         try {
             const id = localStorage.getItem("userid");
             const alis = await buyCripto(id, name, inp2, (Number(inp1).toFixed() / inp2))
-            console.log(alis);
+            console.log(alis.user);
             
             localStorage.setItem("balance", alis.user.balance)
             toast.success("Coin pul qabina elave olundu")

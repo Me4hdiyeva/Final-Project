@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import "./Home.css";
+import "./home.css";
 import NewListing from "../../components/newlisting/NewListing";
 import PhotoChoose from "../../components/fotochoose/PhotoChoose";
 // import QRScanner from '../../components/QRScanner.JSX'

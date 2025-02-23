@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Register.css';
+import './register.css';
 import LoginGoogle from '../../components/LoginGoogle';
 import axios from 'axios';
 import toast from 'react-hot-toast';

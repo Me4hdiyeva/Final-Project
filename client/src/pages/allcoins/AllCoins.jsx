@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import './allCoins.css'
+import './allcoins.css'
 import TableCoinsAll from '../../components/TableCoinsAll'
 
 const AllCoins = () => {
