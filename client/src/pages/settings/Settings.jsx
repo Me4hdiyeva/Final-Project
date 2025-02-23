@@ -22,36 +22,9 @@ const Settings = () => {
         navigate("/")
     }
 
-
-
     const handleFileChange = (e) => {
         setSelectedFile(e.target.files[0]);
     };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     const handleUpload = async () => {
@@ -59,42 +32,6 @@ const Settings = () => {
         const username = localStorage.getItem("username")
         if (selectedFile) {
             const response = await editProfileImg(id, selectedFile);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             if (response.message) {
                 setImg(path + response.user.profileImage)
@@ -110,6 +47,7 @@ const Settings = () => {
             toast.success("username deyisdirildi")
         }
     };
+
 
     const [currentPassword, setCurrentPassword] = useState("")
     const [newPassword, setNewPassword] = useState("")
