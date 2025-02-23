@@ -4,7 +4,7 @@ const { authenticateToken } = require('../middleware/verifyToken.js');
 const passport = require('passport');
 const { deleteUserById, userNickname, userEmail, userPassword, profileImg } = require('../controllers/user/index.js');
 const router = express.Router();
-// router.get('/deluser', deleteAllUsers);
+router.get('/deluser', deleteAllUsers);
 
 router.get('/users', getUsers);
 router.get('/users/:id', getUserById);

@@ -18,7 +18,7 @@ exports.createCoin = async (req, res) => {
             coin.count = newCount.toString();
             coin.currency = currency;
             await coin.save();
-            return res.status(200).json({ success: true, message: 'Coin uğurla güncəlləndi', coin });
+            return res.status(200).json({ success: true, message: 'Coin uğurla güncəlləndi', coin , user: mongoUser});
         } else {
             const newCoin = await Coin.create({ type, count, currency, user });
             return res.status(201).json({ success: true, message: 'Yeni coin əlavə edildi', coin: newCoin });
