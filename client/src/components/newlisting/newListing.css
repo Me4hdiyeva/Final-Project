@@ -30,7 +30,7 @@ color: #202630;
 } */
 .coins-list{
     display: flex;
-    gap: 30px;
+    /* gap: 30px; */
     /* justify-content:baseline */
 }
 .coins-list h1{

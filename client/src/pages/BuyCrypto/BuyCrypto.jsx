@@ -55,16 +55,9 @@ const BuyCrypto = () => {
 
 
     async function buyCoin() {
-        if (!localStorage.getItem("userid")) {
-            return navigate("/login")
-        }
-        
         const balance = localStorage.getItem("balance")
         if (+balance < +inp1) {
             return toast.error("Balansinizda kifayet qeder mebleg yoxdur!")
-        }
-        if (+inp1 == 0) {
-            return toast.error(" 0 Coin almaq olmaz!")
         }
 
         try {

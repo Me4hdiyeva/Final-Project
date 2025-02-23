@@ -85,8 +85,8 @@ const AllCoins = () => {
             <div className="container">
 
                 <div className="allcoins">
-                    <div className="row">
-                        <div className="col-3">
+                    <div className="row flex-wrap justify-center lg:justify-between">
+                        <div className="col-3 !w-[500px]">
                             <div className='hot-Cryptos'>
                                 <h3>Hot Cryptos</h3>
                                 {
@@ -136,7 +136,7 @@ const AllCoins = () => {
 
 
                         </div>
-                        <div className="col-3">
+                        <div className="col-3 !w-[500px]">
                             <div className='hot-Cryptos'>
                                 <h3>New Cryptos</h3>
                                 {
@@ -186,7 +186,7 @@ const AllCoins = () => {
 
 
                         </div>
-                        <div className="col-3">
+                        <div className="col-3 !w-[500px]">
                             <div className='hot-Cryptos'>
                                 <h3>Market Cap</h3>
                                 {
@@ -236,7 +236,7 @@ const AllCoins = () => {
 
 
                         </div>
-                        <div className="col-3">
+                        <div className="col-3 !w-[500px]">
                             <div className='hot-Cryptos'>
                                 <h3>Trading Volume</h3>
                                 {

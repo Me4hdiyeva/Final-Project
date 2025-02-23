@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 * {
     margin: 0;
     padding: 0;
@@ -6,12 +7,11 @@
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
     max-width: 1600px;
-
     margin: 0 auto;
-    width: 90%;
+    width: 95%;
 }
 
 ul {
@@ -47,6 +47,7 @@ body.dark {
 }
 
 ul li a {
+    white-space: nowrap;
     color: 181A20;
     transition: color 0.3s ease-in-out;
 }
@@ -58,6 +59,7 @@ body.dark ul li a {
 body.dark ul li a:hover {
     color: #f0b90b;
 }
+
 body.dark .user-name h1 {
     color: rgb(239, 235, 235);
 }
@@ -65,6 +67,7 @@ body.dark .user-name h1 {
 body.dark .paper {
     background-color: #181a20;
 }
+
 body.dark .tablecell {
     background-color: #181a20;
     color: aliceblue;
@@ -73,90 +76,113 @@ body.dark .tablecell {
 body.dark .MuiStep-horizontal span {
     color: aliceblue;
 }
+
 body.dark {
     color: aliceblue;
 }
+
 body.dark .grafichart {
     background-color: #181a20;
 }
+
 body.dark .tableCryptos {
     background-color: #181a20;
 }
+
 body.dark .tableCryptoCell {
     color: aliceblue;
 }
+
 body.dark .log-ins {
     color: aliceblue;
 }
+
 body.dark input {
     color: aliceblue;
 }
+
 body.dark .email-phone-num-add-input input {
     color: #e3e5e9;
 }
+
 body.dark .coin {
     background-color: #1e2329;
 }
+
 body.dark .filter-buttons button {
     color: gray;
 }
+
 body.dark .filter-buttons button:hover {
     color: white;
 }
+
 body.dark .papular-list h1 {
     color: #e3e5e9;
 }
+
 body.dark .papular-list p {
     color: #e3e5e9;
 }
+
 body.dark .papular-list p:hover {
     color: gray;
 }
+
 body.dark .hs h2 {
     color: #e3e5e9;
 }
+
 body.dark .coin p {
     color: #e3e5e9;
 }
+
 body.dark .coin p:hover {
     color: gray;
 }
+
 body.dark .icons-p p {
     color: #e3e5e9;
 }
+
 body.dark .about-binance h4 {
     color: #e3e5e9;
 }
-body.dark .dep-link{
+
+body.dark .dep-link {
     color: #e3e5e9;
 }
-body.dark .user-name p{
+
+body.dark .user-name p {
     color: #e3e5e9;
 }
-body.dark .userMain{
+
+body.dark .userMain {
     color: #e3e5e9;
 
 }
-body.dark .fa-gear{
+
+body.dark .fa-gear {
     color: #e3e5e9;
 }
-body.dark .balances button{
+
+body.dark .balances button {
     background-color: #f0b90b;
 }
-body.dark .edit button{
+
+body.dark .edit button {
     color: #181a20;
 }
-body.dark .btn-del-set{
+
+body.dark .btn-del-set {
     color: #181a20;
 }
-body.dark .balances button:hover{
-background-color: #ba8f02;
-}
+
 
 /* Mobil üçün */
 @media (max-width: 600px) {
     body {
-        background-color: red;
+        /* background-color: red; */
     }
 
     .navbar {
@@ -192,12 +218,14 @@ background-color: #ba8f02;
         padding-top: 80px;
         padding-left: 30px;
     }
+
     .footer .row {
         flex-direction: column !important;
         /* display: none; */
         gap: 30px;
         /* font-size: 10px; */
     }
+
     .footer i {
         font-size: 30px !important;
         display: flex;
@@ -220,22 +248,26 @@ background-color: #ba8f02;
         text-align: center;
     } */
 
-    .col-6 h1{
+    .col-6 h1 {
         padding-top: 0px;
     }
-    .coins-list h1{
+
+    .coins-list h1 {
         padding-left: 8px !important;
     }
+
     .first-sec .col-6 {
         /* font-size: 16px; */
         /* line-height: 24px; */
         text-align: center;
         /* margin-top: 20px; */
     }
-    .coin p{
+
+    .coin p {
         padding-left: 0px !important;
     }
-    .coins-list{
+
+    .coins-list {
         gap: 15px !important;
     }
 
@@ -259,10 +291,12 @@ background-color: #ba8f02;
     .second-sec .row {
         display: block;
     }
+
     hr {
         width: 645px !important;
         max-width: 320px;
     }
+
     .binancess {
         /* margin-left: 35%; */
         padding-bottom: 30px;
@@ -276,10 +310,12 @@ background-color: #ba8f02;
         margin: 0 auto;
         /* background-color: #181a20; */
     }
-    .first-sec .col-6{
+
+    .first-sec .col-6 {
         padding: 0px;
     }
-    .first-sec .filter-buttons{
+
+    .first-sec .filter-buttons {
         gap: 0px;
         /* display: block; */
         margin-top: 0px;
@@ -299,81 +335,42 @@ background-color: #ba8f02;
     .crypto-sec h1 {
         font-size: 28px !important;
     }
+
     .hot-Cryptos h3 {
         font-size: 20px !important;
     }
+
     .hot-Cryptos {
-        width: 600px;
+        max-width: 600px;
+        width: 100%;
         /* padding-left: 1px !important; */
     }
+
     .crypts {
         padding-left: 0px !important;
     }
+
     .price-crypyto {
         /* text-align: left !important; */
         font-size: 25px;
     }
+
     .procent-crypto {
         /* text-align: left !important;
         display: none; */
         font-size: 25px;
     }
-    .about p{
+
+    .about p {
         width: 490px !important;
     }
-    .about .col-6 img{
+
+    .about .col-6 img {
         display: none;
     }
-    .about h1{
-width: 460px !important;
-    }
-    .trading h1 {
-        /* font-weight: 100; */
-        line-height:  40px;
-    }
-    .spend{
-        display: block !important;
-    }
-    .receve{
-        display: block !important;
-    }
-    .user-data .id{
-        display: none !important;
-    }
-    .user-data .level{
-        display: none !important;
-    }
 
-    .user-data .following{
-        display: none !important;
-    }
-    .user-data .followers{
-        display: none !important;
-    }
-    .users-page{
-        padding-left: 0px !important;
-    }
-    .user-data{
-        padding-top: 20px !important;
-    }
-    .user-name p{
-        display: none !important;
-        /* margin-top: 30px !important; */
-    }
-    .css-mlh15c-MuiStep-root{
-        padding-left: 0px !important;
-        padding-right: 0px !important;
-    }
-    .balances h1{
-        font-size: 18px;
-    }
-    .balances h2{
-        font-size: 16px;
-    }
-    .balances button{
-        position: relative !important;
-        margin-left: 30px !important;
-        margin-bottom: 20px;
+    .about h1 {
+        width: 460px !important;
     }
 
 
@@ -388,14 +385,13 @@ width: 460px !important;
 }
 
 /* Tablet üçün */
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1040px) {
     body {
-        background-color: blue;
+        /* background-color: blue; */
     }
 
     .navbar {
         padding: 0px 30px !important;
-        gap: 200px !important;
         display: flex !important;
         justify-content: space-between !important;
     }
@@ -406,12 +402,15 @@ width: 460px !important;
 
     .right-menu img {
         width: 150px;
+        max-width: none;
     }
 
     .left-menu {
-        padding-right: 80px;
-
-        padding-left: 550px;
+        /* padding-right: 80px; */
+        /* padding-left: 550px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .left-menu i {
@@ -451,6 +450,6 @@ width: 460px !important;
     }
 
     p {
-        padding-left: 385px;
+        /* padding-left: 385px; */
     }
 }

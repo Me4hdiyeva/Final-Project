@@ -80,7 +80,7 @@ const NewListing = () => {
         <div className="coins-container">
           {coins.length > 0 ? (
             coins.map((item) => (
-              <div className="coins-list" key={item.id}>
+              <div className="coins-list lg:gap-[20px] xl:gap-[30px]" key={item.id}>
                 <h1>
                 
                   {item.symbol.toUpperCase()} <span>{item.name}</span>

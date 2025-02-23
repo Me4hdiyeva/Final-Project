@@ -75,7 +75,7 @@ const VirtuosoTableComponents = {
 
 export default function LabTabs() {
   const [value, setValue] = React.useState();
-  const [coins, setCoins] = React.useState([]);
+  const [coins, setCoins] = React.useState(null);
   React.useEffect(() => {
     getAllUserCoins().then(res => {
       console.log(res);
@@ -93,17 +93,17 @@ export default function LabTabs() {
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
             {
-              coins.length && coins.map((item, i) => {
+              coins && coins.map((item, i) => {
                 return <Tab key={i} label={item.type} value={item._id} />
               })
             }
           </TabList>
         </Box>
 
-        {(coins.length >0) &&
+        {coins &&
           coins.map(item => {
             return (
-              <TabPanel  value={item._id}>
+              <TabPanel value={item._id}>
                 {item.count} {item.type} = {(Number(item?.currency).toFixed(3) * item.count).toFixed(3)}$
               </TabPanel>)
           })

@@ -23,11 +23,12 @@
 .allcoins .row{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
 }
 .allcoins .col-3{
     width: 40%;
-  
-    
 }
+
+
 

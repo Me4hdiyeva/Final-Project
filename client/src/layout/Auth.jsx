@@ -16,9 +16,7 @@ function Auth({ children }) {
     async function yonlendir() {
         if (token) {
             localStorage.setItem("token", token)
-            setStatus(true)
             navigate("/dashboard")
-
         }
 
         if (token || localToken) {
@@ -26,7 +24,6 @@ function Auth({ children }) {
             if (!verify.status) navigate("/login")
             setStatus(verify.status)
             localStorage.setItem("username", verify.username)
-            localStorage.setItem("profileImage", verify.profileImage)
             localStorage.setItem("balance", verify.balance)
             localStorage.setItem("userid", verify.user_id)
         } else {

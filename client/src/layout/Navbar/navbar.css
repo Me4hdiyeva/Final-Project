@@ -1,6 +1,7 @@
 img {
     width: 200px;
 }
+
 .right-menu {
     display: flex;
     gap: 20px;
@@ -13,20 +14,36 @@ img {
     justify-content: space-between;
     padding: 0px 40px;
 }
+
 .navbar .bars {
     display: none;
 }
+
+.scrollbar {
+    /* max-width: 600px; */
+    white-space: nowrap;
+}
+
+.scrollbar::-webkit-scrollbar {
+    overflow-x: auto;
+    height: 0;
+}
+
+
 .left-menu {
     display: flex;
     gap: 20px;
     align-items: center;
 }
+
 .left-menu button {
     padding: 15px;
 }
+
 .left-menu i {
     font-size: 20px;
 }
+
 .left-menu i:hover {
     color: #cfaf30;
     cursor: pointer;
@@ -41,14 +58,17 @@ img {
     cursor: pointer;
     transition: color 0.3s ease-in-out;
 }
- a:hover {
+
+a:hover {
     color: #F0B90B;
 }
+
 .dropdown {
     /* position: relative; */
     /* display: inline-block; */
     /* height: auto;  */
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -70,4 +90,11 @@ img {
 body.dark .dropdown-content {
     background-color: black;
     color: white;
+}
+
+@media (max-width: 1250px) {
+    .right-menu{
+        max-width: 650px !important;
+    }
+ 
 }
