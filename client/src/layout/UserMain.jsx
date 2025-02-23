@@ -16,6 +16,7 @@ function UserMain() {
         getUserById(localStorage.getItem("userid")).then(
             res => {
                 setUser(res)
+                console.log(res)
                 setVerify(res.verified_email)
             }
         )
