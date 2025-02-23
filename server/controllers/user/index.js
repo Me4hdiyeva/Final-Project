@@ -92,6 +92,8 @@ exports.getUsers = async (req, res) => {
 exports.getUserById = async (req, res) => {
     try {
         const user = await User.findById({ _id: req.params.id })
+        console.log(user);
+
         res.status(200).json(user);
     } catch (error) {
         // console.log("Server error", error);
@@ -112,6 +114,7 @@ exports.editByUser = async (req, res) => {
         } else {
             user.balance = +user.balance + +amount
             await user.save()
+
             res.status(200).json(user);
         }
     } catch (error) {
