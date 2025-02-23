@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { STATUS } from "../../context/StatusContext";
 
 function UserNavBar() {
-  const { setStatus } = useContext(STATUS);
+  const { setStatus , handleSidebar} = useContext(STATUS);
   const navigate = useNavigate();
   function logoutFunk() {
     localStorage.removeItem("token");
@@ -90,7 +90,7 @@ function UserNavBar() {
                     </Link> */}
           <Mode />
         </div>
-        <i class="fa-solid fa-bars bars"></i>
+        <i onClick={handleSidebar} class="fa-solid fa-bars bars"></i>
       </div>
     </>
   );

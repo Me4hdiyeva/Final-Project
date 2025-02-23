@@ -1,9 +1,11 @@
 import { Link } from "react-router";
 import "./Footer.css";
+import Sidebar from "../Sidebar";
 
 const Footer = () => {
   return (
     <>
+      <Sidebar />
       <div className="container">
         <div className="footer">
           <div className="row flex !justify-between">
