@@ -11,12 +11,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { TableVirtuoso } from 'react-virtuoso';
 import Chance from 'chance';
 import axios from 'axios';
-import NewListing from '../newlisting/NewListing';
-import TableCoinsAll from '../TableCoinsAll';
-import TableCrypto from '../TableCrypto/TableCrypto';
 import { getAllUserCoins } from '../../services/api';
 
 
@@ -75,46 +71,6 @@ const VirtuosoTableComponents = {
   TableBody: React.forwardRef((props, ref) => <TableBody {...props} ref={ref} />),
 };
 
-function fixedHeaderContent() {
-  const coins = axios.get("http://localhost:3000/api/coins")
-  console.log(coins.data);
-  // console.log(coins.object.data.coins );
-
-
-
-
-
-  return (
-    <TableRow>
-      {columns.map((column) => (
-        <TableCell
-          key={column.dataKey}
-          variant="head"
-          align={column.numeric || false ? 'right' : 'left'}
-          style={{ width: column.width }}
-          sx={{ backgroundColor: 'background.paper' }}
-        >
-          {column.label}
-        </TableCell>
-      ))}
-    </TableRow>
-  );
-}
-
-function rowContent(_index, row) {
-  return (
-    <React.Fragment>
-      {columns.map((column) => (
-        <TableCell
-          key={column.dataKey}
-          align={column.numeric || false ? 'right' : 'left'}
-        >
-          {row[column.dataKey]}
-        </TableCell>
-      ))}
-    </React.Fragment>
-  );
-}
 
 
 export default function LabTabs() {
@@ -136,13 +92,6 @@ export default function LabTabs() {
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
-            {/* <Tab label="Item One" value="1" />
-            <Tab label="Item Two" value="2" />
-            <Tab label="Item Three" value="9" />
-            <Tab label="Item Three" value="4" />
-
-            <Tab label="Item Three" value="5" />
-            <Tab label="Item Three" value="6" /> */}
             {
               coins && coins.map((item, i) => {
                 return <Tab key={i} label={item.type} value={item._id} />
@@ -153,9 +102,10 @@ export default function LabTabs() {
 
         {coins &&
           coins.map(item => {
-            return <TabPanel value={item._id}>
-              {item.count} {item.type} = {(Number(item?.currency).toFixed(3) * item.count).toFixed(3)  }$
-            </TabPanel>
+            return (
+              <TabPanel value={item._id}>
+                {item.count} {item.type} = {(Number(item?.currency).toFixed(3) * item.count).toFixed(3)}$
+              </TabPanel>)
           })
         }
       </TabContext>

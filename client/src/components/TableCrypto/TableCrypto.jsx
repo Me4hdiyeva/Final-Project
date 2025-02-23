@@ -22,7 +22,7 @@ const TableCrypto = () => {
     const getCoins = async () => {
         try {
             const response = await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd");
-            setCryptoData(response.data);
+            setCryptoData(response.data.slice(0,10));
         } catch (error) {
             console.error("Error fetching crypto data:", error);
         }

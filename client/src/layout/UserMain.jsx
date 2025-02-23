@@ -95,10 +95,14 @@ function UserMain() {
                     <div className="markets">
                         <h1>Coins</h1>
                         <div className="nav-market">
-                            {/* <LabTabs /> */}
-                     <TableCrypto/>
-                            
+                            <LabTabs />
                         </div>
+
+                    </div>
+
+                    <div className='nav-market'>
+                        <TableCrypto />
+
                     </div>
 
                 </div>
