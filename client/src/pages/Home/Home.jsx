@@ -27,9 +27,10 @@ const Home = () => {
   //   }
   // };
 
-  // useEffect(() => {
-  //   getQuantifyUsers();
-  // }, []);
+  useEffect(() => {
+    // getQuantifyUsers();
+    myUsers()
+  }, []);
 
   const myUsers = async () => {
     const users = await axios.get("http://localhost:3000/api/auth/users");
@@ -39,6 +40,7 @@ const Home = () => {
     console.log(lengthUser);
     setUsers(lengthUser);
   };
+
 
   return (
     <>

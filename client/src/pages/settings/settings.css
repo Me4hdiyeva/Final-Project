@@ -18,7 +18,8 @@
 }
 .about-set-profile-avatar{
     display: flex;
-    padding-top: 30px;
+    padding-top: 20px;
+    gap: 390px;
 }
 .div-avatar{
     border: 1px solid gray;
@@ -46,5 +47,6 @@
 .settings .btn-del-set{
    background-color:#dedbdb;
     width:70px;
-     height:30px
-}
+     height:30px;
+     margin-left: 350px;
+    }
